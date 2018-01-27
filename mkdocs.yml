@@ -1,0 +1,98 @@
+site_name: 以太坊家园版文档
+site_description: 以太坊家园版中文文档
+site_author: Nosy
+copyright: '版权 &copy; 2018 -  wohugb.github.io'
+
+repo_name: wohugb/ethdocs
+repo_url: https://github.com/wohugb/ethdocs
+edit_uri: ""
+
+theme:
+  name: material
+
+  include_search_page: false
+  search_index_only: true
+
+  language: zh
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  logo:
+    icon: "\uE80C"
+  extra_css: [assets/stylesheets/extra.css]
+extra:
+  social:
+    - type: globe
+      link: http://wohugb.github.io
+    - type: github-alt
+      link: https://github.com/wohugb
+    - type: twitter
+      link: https://twitter.com/wohugb
+    - type: linkedin
+      link: https://linkedin.com/in/wohugb
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: false
+  - footnotes
+  - meta
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+
+pages:
+  - 前言: index.md
+  - 简介:
+    -  什么是以太坊？: introduction/what-is-ethereum.md
+    -  如何使用本指南？: introduction/how-to-use-this-guide.md
+    -  家园版: introduction/the-homestead-release.md
+    -  Web 3: introduction/web3.md
+    -  以太网的历史: introduction/history-of-ethereum.md
+    -  社区: introduction/community.md
+    -  以太坊基金会: introduction/foundation.md
+    -  贡献者: introduction/contributors.md
+  - 客户端:
+    -  选择一个客户端: clients/choosing-a-client.md
+    -  cpp-ethereum: clients/cpp-ethereum/index.md
+    -  go-ethereum: clients/go-ethereum/index.md
+    -  pyethapp: clients/pyethapp/index.md
+    -  ethereumjs-lib: clients/ethereumjs-lib/index.md
+    -  ethereum(j): clients/ethereumj/index.md
+    -  ethereumH: clients/ethereumh/index.md
+    -  parity: clients/parity/index.md
+    -  ruby-ethereum: clients/ruby-ethereum/index.md
+  - 链接:
+    -  简介: connecting-to-clients/index.md
+    -  web3.js: connecting-to-clients/web3.js/index.md
+    -  web3j: connecting-to-clients/web3j/index.md
+    -  Nethereum: connecting-to-clients/nethereum/index.md
+    -  ethereum-ruby: connecting-to-clients/ethereum-ruby/index.md
+  - 账号:
+    - 账号: account-management.md
+  - 以太币:
+    - 以太币: ether.md
+  - 网络:
+    -  连接到网络: network/connecting-to-the-network.md
+    -  测试网络: network/test-networks.md
+  - 挖矿:
+    - 挖矿: mining.md
+  - 合约和交易:
+    -  帐户类型燃料交易: contracts-and-transactions/account-types-gas-and-transactions.md
+    -  合同: contracts-and-transactions/contracts.md
+    -  访问合约和交易: contracts-and-transactions/accessing-contracts-and-transactions.md
+    -  mix: contracts-and-transactions/mix.md
+    -  dapps: contracts-and-transactions/developer-tools.md
+    -  测试: contracts-and-transactions/ethereum-tests/index.md
+    -  WEB3基本层服务: contracts-and-transactions/web3-base-layer-services.md
+  - 常见问题: faq/faq.md
+  - 术语: glossary.md
+  - 关于: about.md
+
