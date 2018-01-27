@@ -1,0 +1,1517 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="以太坊家园版中文文档">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>什么是以太坊？ - 以太坊家园版文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="以太坊家园版文档" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                以太坊家园版文档
+              </span>
+              <span class="md-header-nav__topic">
+                什么是以太坊？
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="前言" class="md-tabs__link">
+        前言
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="简介" class="md-tabs__link md-tabs__link--active">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../clients/choosing-a-client/" title="客户端" class="md-tabs__link">
+          客户端
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../connecting-to-clients/" title="链接" class="md-tabs__link">
+          链接
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../account-management/" title="账号" class="md-tabs__link">
+          账号
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ether/" title="以太币" class="md-tabs__link">
+          以太币
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../network/connecting-to-the-network/" title="网络" class="md-tabs__link">
+          网络
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mining/" title="挖矿" class="md-tabs__link">
+          挖矿
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../contracts-and-transactions/account-types-gas-and-transactions/" title="合约和交易" class="md-tabs__link">
+          合约和交易
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    以太坊家园版文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        什么是以太坊？
+      </label>
+    
+    <a href="./" title="什么是以太坊？" class="md-nav__link md-nav__link--active">
+      什么是以太坊？
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-next-generation-blockchain" title="A next generation blockchain" class="md-nav__link">
+    A next generation blockchain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethereum-virtual-machine" title="Ethereum Virtual Machine" class="md-nav__link">
+    Ethereum Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-ethereum-work" title="How does Ethereum work?" class="md-nav__link">
+    How does Ethereum work?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learn-about-ethereum" title="Learn about Ethereum" class="md-nav__link">
+    Learn about Ethereum
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr-videos-with-some-pathos" title="PR videos with some pathos:" class="md-nav__link">
+    PR videos with some pathos:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blockchain-and-ethereum-101" title="Blockchain and Ethereum 101" class="md-nav__link">
+    Blockchain and Ethereum 101
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" title="Videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infographics" title="Infographics" class="md-nav__link">
+    Infographics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-to-alternatives" title="Comparison to alternatives" class="md-nav__link">
+    Comparison to alternatives
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../how-to-use-this-guide/" title="如何使用本指南？" class="md-nav__link">
+      如何使用本指南？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../the-homestead-release/" title="家园版" class="md-nav__link">
+      家园版
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web3/" title="Web 3" class="md-nav__link">
+      Web 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../history-of-ethereum/" title="以太网的历史" class="md-nav__link">
+      以太网的历史
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../community/" title="社区" class="md-nav__link">
+      社区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../foundation/" title="以太坊基金会" class="md-nav__link">
+      以太坊基金会
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contributors/" title="贡献者" class="md-nav__link">
+      贡献者
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      客户端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        客户端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/choosing-a-client/" title="选择一个客户端" class="md-nav__link">
+      选择一个客户端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/cpp-ethereum/" title="cpp-ethereum" class="md-nav__link">
+      cpp-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/go-ethereum/" title="go-ethereum" class="md-nav__link">
+      go-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/pyethapp/" title="pyethapp" class="md-nav__link">
+      pyethapp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumjs-lib/" title="ethereumjs-lib" class="md-nav__link">
+      ethereumjs-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumj/" title="ethereum(j)" class="md-nav__link">
+      ethereum(j)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumh/" title="ethereumH" class="md-nav__link">
+      ethereumH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/parity/" title="parity" class="md-nav__link">
+      parity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ruby-ethereum/" title="ruby-ethereum" class="md-nav__link">
+      ruby-ethereum
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      链接
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        链接
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/web3.js/" title="web3.js" class="md-nav__link">
+      web3.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/web3j/" title="web3j" class="md-nav__link">
+      web3j
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/nethereum/" title="Nethereum" class="md-nav__link">
+      Nethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/ethereum-ruby/" title="ethereum-ruby" class="md-nav__link">
+      ethereum-ruby
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      账号
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        账号
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../account-management/" title="账号" class="md-nav__link">
+      账号
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      以太币
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        以太币
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ether/" title="以太币" class="md-nav__link">
+      以太币
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../network/connecting-to-the-network/" title="连接到网络" class="md-nav__link">
+      连接到网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../network/test-networks/" title="测试网络" class="md-nav__link">
+      测试网络
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      挖矿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        挖矿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/" title="挖矿" class="md-nav__link">
+      挖矿
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      合约和交易
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        合约和交易
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/account-types-gas-and-transactions/" title="帐户类型燃料交易" class="md-nav__link">
+      帐户类型燃料交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/contracts/" title="合同" class="md-nav__link">
+      合同
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/accessing-contracts-and-transactions/" title="访问合约和交易" class="md-nav__link">
+      访问合约和交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/mix/" title="mix" class="md-nav__link">
+      mix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/developer-tools/" title="dapps" class="md-nav__link">
+      dapps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/ethereum-tests/" title="测试" class="md-nav__link">
+      测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/web3-base-layer-services/" title="WEB3基本层服务" class="md-nav__link">
+      WEB3基本层服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/faq/" title="常见问题" class="md-nav__link">
+      常见问题
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="术语" class="md-nav__link">
+      术语
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="关于" class="md-nav__link">
+      关于
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-next-generation-blockchain" title="A next generation blockchain" class="md-nav__link">
+    A next generation blockchain
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethereum-virtual-machine" title="Ethereum Virtual Machine" class="md-nav__link">
+    Ethereum Virtual Machine
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-ethereum-work" title="How does Ethereum work?" class="md-nav__link">
+    How does Ethereum work?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learn-about-ethereum" title="Learn about Ethereum" class="md-nav__link">
+    Learn about Ethereum
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pr-videos-with-some-pathos" title="PR videos with some pathos:" class="md-nav__link">
+    PR videos with some pathos:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blockchain-and-ethereum-101" title="Blockchain and Ethereum 101" class="md-nav__link">
+    Blockchain and Ethereum 101
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#videos" title="Videos" class="md-nav__link">
+    Videos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infographics" title="Infographics" class="md-nav__link">
+    Infographics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-to-alternatives" title="Comparison to alternatives" class="md-nav__link">
+    Comparison to alternatives
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p>Note that some information on this website may no longer be relevant or
+out-of-date. You can also refer to the <a href="https://github.com/ethereum/wiki">Ethereum
+wiki</a> for the latest information.</p>
+<h1 id="what-is-ethereum">What is Ethereum?<a class="headerlink" href="#what-is-ethereum" title="Permanent link">&para;</a></h1>
+<p>Ethereum is an open blockchain platform that lets anyone build and use
+decentralized applications that run on blockchain technology. Like
+Bitcoin, no one controls or owns Ethereum -- it is an open-source
+project built by many people around the world. But unlike the Bitcoin
+protocol, Ethereum was designed to be adaptable and flexible. It is easy
+to create new applications on the Ethereum platform, and with the
+<a href="../homestead-release">Homestead release</a>, it is now safe for anyone to use
+those applications.</p>
+<h2 id="a-next-generation-blockchain">A next generation blockchain<a class="headerlink" href="#a-next-generation-blockchain" title="Permanent link">&para;</a></h2>
+<p>Blockchain technology is the technological basis of Bitcoin, first
+described by its mysterious author Satoshi Nakamoto in his white paper
+\"Bitcoin: A Peer-to-Peer Electronic Cash System\", published in 2008.
+While the use of blockchains for more general uses was already discussed
+in the original paper, it was not until a few years later that
+blockchain technology emerged as a generic term. A blockchain is a
+distributed computing architecture where every network node executes and
+records the same transactions, which are grouped into blocks. Only one
+block can be added at a time, and every block contains a mathematical
+proof that it follows in sequence from the previous block. In this way,
+the blockchain's \"distributed database\" is kept in consensus across
+the whole network. Individual user interactions with the ledger
+(transactions) are secured by strong cryptography. Nodes that maintain
+and verify the network are incentivized by mathematically enforced
+economic incentives coded into the protocol.</p>
+<p>In Bitcoin\'s case the distributed database is conceived of as a table
+of account balances, a ledger, and transactions are transfers of the
+bitcoin token to facilitate trustless finance between individuals. But
+as bitcoin began attracting greater attention from developers and
+technologists, novel projects began to use the bitcoin network for
+purposes other than transfers of value tokens. Many of these took the
+form of \"alt coins\" - separate blockchains with cryptocurrencies of
+their own which improved on the original bitcoin protocol to add new
+features or capabilities. In late 2013, Ethereum\'s inventor Vitalik
+Buterin proposed that a single blockchain with the capability to be
+reprogrammed to perform any arbitrarily complex computation could
+subsume these many other projects.</p>
+<p>In 2014, Ethereum founders Vitalik Buterin, Gavin Wood and Jeffrey
+Wilcke began work on a next-generation blockchain that had the ambitions
+to implement a general, fully trustless smart contract platform.</p>
+<h2 id="ethereum-virtual-machine">Ethereum Virtual Machine<a class="headerlink" href="#ethereum-virtual-machine" title="Permanent link">&para;</a></h2>
+<p>Ethereum is a programmable blockchain. Rather than give users a set of
+pre-defined operations (e.g. bitcoin transactions), Ethereum allows
+users to create their own operations of any complexity they wish. In
+this way, it serves as a platform for many different types of
+decentralized blockchain applications, including but not limited to
+cryptocurrencies.</p>
+<p>Ethereum in the narrow sense refers to a suite of protocols that define
+a platform for decentralised applications. At the heart of it is the
+[Ethereum Virtual Machine (\"EVM\") \&lt;the-EVM>]{role="ref"}, which can
+execute code of arbitrary algorithmic complexity. In computer science
+terms, Ethereum is \"Turing complete\". Developers can create
+applications that run on the EVM using friendly programming languages
+modelled on existing languages like JavaScript and Python.</p>
+<p>Like any blockchain, Ethereum also includes a peer-to-peer network
+protocol. The Ethereum blockchain database is maintained and updated by
+many nodes connected to the network. Each and every node of the network
+runs the EVM and executes the same instructions. For this reason,
+Ethereum is sometimes described evocatively as a \"world computer\".</p>
+<p>This massive parallelisation of computing across the entire Ethereum
+network is not done to make computation more efficient. In fact, this
+process makes computation on Ethereum far slower and more expensive than
+on a traditional \"computer\". Rather, every Ethereum node runs the EVM
+in order to maintain consensus across the blockchain. Decentralized
+consensus gives Ethereum extreme levels of fault tolerance, ensures zero
+downtime, and makes data stored on the blockchain forever unchangeable
+and censorship-resistant.</p>
+<p>The Ethereum platform itself is featureless or value-agnostic. Similar
+to programming languages, it is up to entrepreneurs and developers to
+decide what it should be used for. However, it is clear that certain
+application types benefit more than others from Ethereum\'s
+capabilities. Specifically, ethereum is <strong>suited for applications that
+automate direct interaction between peers or facilitate coordinated
+group action across a network</strong>. For instance, applications for
+coordinating peer-to-peer marketplaces, or the automation of complex
+financial contracts. Bitcoin allows for individuals to exchange cash
+without involving any middlemen like financial institutions, banks, or
+governments. Ethereum's impact may be more far-reaching. In theory,
+financial interactions or exchanges of any complexity could be carried
+out automatically and reliably using code running on Ethereum. Beyond
+financial applications, any environments where trust, security, and
+permanence are important -- for instance, asset-registries, voting,
+governance, and the internet of things -- could be massively impacted by
+the Ethereum platform.</p>
+<h2 id="how-does-ethereum-work">How does Ethereum work?<a class="headerlink" href="#how-does-ethereum-work" title="Permanent link">&para;</a></h2>
+<p>Ethereum incorporates many features and technologies that will be
+familiar to users of Bitcoin, while also introducing many modifications
+and innovations of its own.</p>
+<p>Whereas the Bitcoin blockchain was purely a list of transactions,
+[Ethereum\'s basic unit is the account \&lt;Accounts>]{role="ref"}. The
+Ethereum blockchain tracks the state of every account, and all state
+transitions on the Ethereum blockchain are transfers of value and
+information between accounts. There are two types of accounts:</p>
+<ul>
+<li>Externally Owned Accounts (EOAs), which are controlled by private
+    keys</li>
+<li>Contract Accounts, which are controlled by their contract code and
+    can only be \"activated\" by an EOA</li>
+</ul>
+<p>For most users, the basic difference between these is that human users
+control EOAs - because they can control the private keys which give
+control over an EOA. Contract accounts, on the other hand, are governed
+by their internal code. If they are \"controlled\" by a human user, it
+is because they are <em>programmed</em> to be controlled by an EOA with a
+certain address, which is in turn controlled by whoever holds the
+private keys that control that EOA. The popular term \"smart contracts\"
+refers to code in a Contract Account -- programs that execute when a
+transaction is sent to that account. Users can create new contracts by
+deploying code to the blockchain.</p>
+<p>Contract accounts only perform an operation when instructed to do so by
+an EOA. So it is not possible for a Contract account to be performing
+native operations like random number generation or API calls -- it can
+do these things only if prompted by an EOA. This is because Ethereum
+requires nodes to be able to agree on the outcome of computation, which
+requires a guarantee of strictly deterministic execution.</p>
+<p>Like in Bitcoin, users must pay small transaction fees to the network.
+This protects the Ethereum blockchain from frivolous or malicious
+computational tasks, like DDoS attacks or infinite loops. The sender of
+a transaction must pay for each step of the \"program\" they activated,
+including computation and memory storage. These fees are paid in amounts
+of Ethereum\'s native value-token, ether.</p>
+<p>These transaction fees are collected by the nodes that validate the
+network. These \"miners\" are nodes in the Ethereum network that
+receive, propagate, verify, and execute transactions. The miners then
+group the transactions -- which include many updates to the \"state\" of
+accounts in the Ethereum blockchain -- into what are called \"blocks\",
+and miners then compete with one another for <em>their</em> block to be the
+next one to be added to the blockchain. Miners are rewarded with ether
+for each successful block they mine. This provides the economic
+incentive for people to dedicate hardware and electricity to the
+Ethereum network.</p>
+<p>Just as in the Bitcoin network, miners are tasked with solving a complex
+mathematical problem in order to successfully \"mine\" a block. This is
+known as a \"Proof of Work\". Any computational problem that requires
+orders of magnitude more resources to solve algorithmically than it
+takes to verify the solution is a good candidate for proof of work. In
+order to discourage centralisation due to the use of specialised
+hardware (e.g. [ASICs](<a href="https://en.bitcoin.it/wiki/ASIC">https://en.bitcoin.it/wiki/ASIC</a>), ), as has
+occurred in the Bitcoin network, Ethereum chose a memory-hard
+computational problem. If the problem requires memory as well as CPU,
+the ideal hardware is in fact the general computer. This makes
+Ethereum\'s Proof of Work ASIC-resistant, allowing a more decentralized
+distribution of security than blockchains whose mining is dominated by
+specialized hardware, like Bitcoin.</p>
+<h3 id="learn-about-ethereum">Learn about Ethereum<a class="headerlink" href="#learn-about-ethereum" title="Permanent link">&para;</a></h3>
+<p>[to be extended]</p>
+<h4 id="pr-videos-with-some-pathos">PR videos with some pathos:<a class="headerlink" href="#pr-videos-with-some-pathos" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=j23HnORQXvs">Ethereum: the World
+    Computer</a></li>
+<li><a href="https://vimeo.com/88959651">Ethereum -- your turn</a></li>
+</ul>
+<h4 id="blockchain-and-ethereum-101">Blockchain and Ethereum 101<a class="headerlink" href="#blockchain-and-ethereum-101" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://medium.com/@nik5ter/explain-bitcoin-like-im-five-73b4257ac833">Explain bitcoin like I\'m
+    five</a> -
+    an excellent introduction to blockchain technology and bitcoin to
+    the mildly techsavvy layperson.</li>
+<li><a href="https://medium.com/@creole/7-a-simple-view-of-ethereum-e276f76c980b">https://medium.com/@creole/7-a-simple-view-of-ethereum-e276f76c980b</a></li>
+<li><a href="https://blog.chain.com/explaining-ethereum-fd043c7d602e">https://blog.chain.com/explaining-ethereum-fd043c7d602e</a></li>
+<li><a href="http://ethereum.stackexchange.com/questions/45/how-would-i-explain-ethereum-to-a-non-technical-friend">Explain Ethereum to non-technical people Q&amp;A on
+    stackexchange</a></li>
+<li>Reddit threads on ELI5-ing Ethereum:</li>
+</ul>
+<p><a href="https://www.reddit.com/r/ethereum/comments/43brik/explaining_ethereum_to_friends/">[1]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/3c132d/eli5_what_you_guys_do_here/">[2]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/1vvz13/eli5_ethereum/">[3]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/1vb1gc/is_ethereum_an_alt_coin_can_anyone_eli5/">[4]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/4279dh/eli5_what_exactly_is_ethereum/">[5]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/2hl10p/eli5_ethereum/">[6]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/41y8by/the_best_way_i_can_eli5_ethereum_to_someone/">[7]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/44b69e/i_dont_understand_the_technology/">[8]</a>
+<a href="https://medium.com/@nik5ter/explain-bitcoin-like-im-five-73b4257ac833">[9]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/1vb1gc/is_ethereum_an_alt_coin_can_anyone_eli5/">[10]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/2dpgwy/eli5_ethereum/">[11]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/47u5y9/explain_what_ethereum_is_to_a_bitcoin_trader/">[12]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/27wsgq/eli5_ethereum_its_uses_its_features_its_future/">[13]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/4936d3/are_you_new_to_ethereum_here_are_many/">[14]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/4279dh/eli5_what_exactly_is_ethereum/">[15]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/3n37dp/explaining_ethereum_ecosystem_for_normal/">[16]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/271qdz/can_someone_explain_the_concept_of_gas_in_ethereum/">[17]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/3hg7id/why_should_the_average_person_care_about_ethereum/">[18]</a>
+<a href="https://www.reddit.com/r/ethereum/comments/43exre/what_are_the_advantages_of_ethereum_over_other/">[19]</a></p>
+<h4 id="videos">Videos<a class="headerlink" href="#videos" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://change.is/video/ethereum-the-world-computer-featuring-dr-gavin-wood">http://change.is/video/ethereum-the-world-computer-featuring-dr-gavin-wood</a></li>
+</ul>
+<h4 id="infographics">Infographics<a class="headerlink" href="#infographics" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://blog.ethereum.org/wp-content/uploads/2015/06/Ethereum-image-infographic-beginners-guide.png">Ethereum explained...[to your
+    mother]</a></li>
+<li><a href="http://decentral.ca/wp-content/uploads/2016/03/infographic.jpg">http://decentral.ca/wp-content/uploads/2016/03/infographic.jpg</a></li>
+<li><a href="https://medium.com/@angelomilan/ethereum-explained-to-my-mom-infographic-673e32054c1c#.n9kzhme6v">https://medium.com/@angelomilan/ethereum-explained-to-my-mom-infographic-673e32054c1c#.n9kzhme6v</a></li>
+</ul>
+<h4 id="comparison-to-alternatives">Comparison to alternatives<a class="headerlink" href="#comparison-to-alternatives" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://www.reddit.com/r/ethereum/comments/23aejv/eli5_what_is_the_qnce_between_ethereum_and/">NXT</a></li>
+<li><a href="https://www.reddit.com/r/ethereum/comments/22r49u/how_is_maidsafe_different_then_etherium/">MaidSafe</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../.." title="前言" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                前言
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../how-to-use-this-guide/" title="如何使用本指南？" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                如何使用本指南？
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2018 -  wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
