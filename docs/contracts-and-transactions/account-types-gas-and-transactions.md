@@ -1,38 +1,34 @@
-Account Types, Gas, and Transactions
-====================================
+# 账户类型，燃料和交易
 
-EOA vs contract accounts
-------------------------
+## EOA与合约账户
 
-There are two types of accounts in Ethereum
+以太网中有两种类型的账户
 
-:   -   Externally Owned Accounts
-    -   Contracts Accounts
+:   - 外部拥有的帐户
+    - 合约账户
 
-This distinction might be eliminated in Serenity.
+宁静中可以消除这种区别。
 
-### Externally owned accounts (EOAs)
+### 外部账户（EOAs）
 
-An externally controlled account
+一个外部控制的账户
 
--   has an ether balance,
--   can send transactions (ether transfer or trigger contract code),
--   is controlled by private keys,
--   has no associated code.
+- has an ether balance,
+- can send transactions (ether transfer or trigger contract code),
+- is controlled by private keys,
+- has no associated code.
 
-### Contract accounts
+### 合约帐户
 
 A contract
 
--   has an ether balance,
--   has associated code,
--   code execution is triggered by transactions or messages (calls)
-    received from other contracts.
--   when executed
-    -   perform operations of arbitrary complexity (Turing completeness)
-    -   manipulate its own persistent storage, i.e., can have its own
-        permanent state
-    -   can call other contracts
+- has an ether balance,
+- has associated code,
+- code execution is triggered by transactions or messages (calls) received from other contracts.
+- when executed
+    - perform operations of arbitrary complexity (Turing completeness)
+    - manipulate its own persistent storage, i.e., can have its own permanent state
+    - can call other contracts
 
 All action on the Ethereum block chain is set in motion by transactions
 fired from externally owned accounts. Every time a contract account
@@ -55,53 +51,45 @@ is 1e18 wei.
 Note
 :::
 
-\"Contracts\" in Ethereum should not be seen as something that should be
-\"fulfilled\" or \"complied with\"; rather, they are more like
-\"autonomous agents\" that live inside of the Ethereum execution
-environment, always executing a specific piece of code when \"poked\" by
+"Contracts" in Ethereum should not be seen as something that should be
+"fulfilled" or "complied with"; rather, they are more like
+"autonomous agents" that live inside of the Ethereum execution
+environment, always executing a specific piece of code when "poked" by
 a message or transaction, and having direct control over their own ether
 balance and their own key/value store to store their permanent state.
 :::
 
-What is a transaction?
-----------------------
+## 什么是交易
 
-The term \"transaction\" is used in Ethereum to refer to the signed data
+The term "transaction" is used in Ethereum to refer to the signed data
 package that stores a message to be sent from an externally owned
 account to another account on the blockchain.
 
 Transactions contain:
 
-:   -   the recipient of the message,
-    -   a signature identifying the sender and proving their intention
-        to send the message via the blockchain to the recipient,
-    -   `VALUE` field - The amount of wei to transfer from the sender to
-        the recipient,
-    -   an optional data field, which can contain the message sent to a
-        contract,
-    -   a `STARTGAS` value, representing the maximum number of
-        computational steps the transaction execution is allowed to
-        take,
-    -   a `GASPRICE` value, representing \"Wei per gas\". One Wei
-        corresponds to 0.000000000000000001 Ether.
+:   - the recipient of the message,
+    - a signature identifying the sender and proving their intention to send the message via the blockchain to the recipient,
+    - `VALUE` field - The amount of wei to transfer from the sender to the recipient,
+    - an optional data field, which can contain the message sent to a contract,
+    - a `STARTGAS` value, representing the maximum number of computational steps the transaction execution is allowed to take,
+    - a `GASPRICE` value, representing "Wei per gas". One Wei corresponds to 0.000000000000000001 Ether.
 
-What is a message?
-------------------
+## 什么是信息
 
-Contracts have the ability to send \"messages\" to other contracts.
+Contracts have the ability to send "messages" to other contracts.
 Messages are virtual objects that are never serialized and exist only in
 the Ethereum execution environment. They can be conceived of as function
 calls.
 
 A message contains:
 
-:   -   the sender of the message (implicit).
-    -   the recipient of the message
-    -   `VALUE` field - The amount of wei to transfer alongside the
+:   - the sender of the message (implicit).
+    - the recipient of the message
+    - `VALUE` field - The amount of wei to transfer alongside the
         message to the contract address,
-    -   an optional data field, that is the actual input data to the
+    - an optional data field, that is the actual input data to the
         contract
-    -   a `STARTGAS` value, which limits the maximum amount of gas the
+    - a `STARTGAS` value, which limits the maximum amount of gas the
         code execution triggered by the message can incur.
 
 Essentially, a message is like a transaction, except it is produced by a
@@ -112,8 +100,7 @@ message leads to the recipient account running its code. Thus, contracts
 can have relationships with other contracts in exactly the same way that
 external actors can.
 
-What is gas?
-------------
+## 什么是燃料？
 
 Ethereum implements an execution environment on the blockchain called
 the Ethereum Virtual Machine (EVM). Every node participating in the
@@ -170,29 +157,24 @@ not need to worry about overspending, since you are only charged for the
 gas you consume. This means that it is useful as well as safe to send
 transactions with a gas limit well above the estimates.
 
-Estimating transaction costs
-----------------------------
+## 估算交易成本
 
 The total ether cost of a transaction is based on 2 factors:
 
 `gasUsed` is the total gas that is consumed by the transaction
 
-`gasPrice` price (in ether) of one unit of gas specified in the
-transaction
+`gasPrice` price (in ether) of one unit of gas specified in the transaction
 
-**Total cost = gasUsed \* gasPrice**
+**Total cost = gasUsed * gasPrice**
 
 ### gasUsed
 
 Each operation in the EVM was assigned a number of how much gas it
 consumes. `gasUsed` is the sum of all the gas for all the operations
-executed. There is a
-[spreadsheet](http://ethereum.stackexchange.com/q/52/42) which offers a
+executed. There is a [spreadsheet](http://ethereum.stackexchange.com/q/52/42) which offers a
 glimpse to some of the analysis behind this.
 
-For estimating `gasUsed`, there is an [estimateGas
-API](http://ethereum.stackexchange.com/q/266/42) that can be used but
-has some caveats.
+For estimating `gasUsed`, there is an [estimateGas API](http://ethereum.stackexchange.com/q/266/42) that can be used but has some caveats.
 
 ### gasPrice
 
@@ -204,7 +186,7 @@ being submitted with a gasPrice of 0.05e12 wei, it would be difficult to
 convince a miner to accept a transaction that specified a lower, or
 zero, gasPrice.
 
-### Example transaction cost
+### 示例交易公司
 
 Let's take a contract that just adds 2 numbers. The EVM OPCODE `ADD`
 consumes 3 gas.
@@ -212,48 +194,45 @@ consumes 3 gas.
 The approximate cost, using the default gas price (as of January 2016),
 would be:
 
-3 \* 0.05e12 = 1.5e11 wei
+3 * 0.05e12 = 1.5e11 wei
 
 Since 1 ether is 1e18 wei, the total cost would be 0.00000015 Ether.
 
 This is a simplification since it ignores some costs, such as the cost
 of passing the 2 numbers to contract, before they can even be added.
 
--   [question](http://ethereum.stackexchange.com/q/324/42)
--   [gas fees](http://ether.fund/tool/gas-fees)
--   [gas cost calculator](http://ether.fund/tool/calculator)
--   [Ethereum Gas
-    Prices](https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs)
+- [question](http://ethereum.stackexchange.com/q/324/42)
+- [gas fees](http://ether.fund/tool/gas-fees)
+- [gas cost calculator](http://ether.fund/tool/calculator)
+- [Ethereum Gas Prices](https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs)
 
-  Operation Name      Gas Cost   Remark                                         
+  Operation Name      Gas Cost   Remark
   ------------------- ---------- ---------------------------------------------- --
-  step                1          default amount per execution cycle             
-  stop                0          free                                           
-  suicide sha3        0 20       free                                           
-  sload               20         get from permanent storage                     
-  sstore balance      100 20     put into permanent storage                     
-  create              100        contract creation                              
-  call                20         initiating a read-only call                    
-  memory              1          every additional word when expanding memory    
-  txdata              5          every byte of data or code for a transaction   
-  transaction         500        base fee transaction                           
-  contract creation   53000      changed in homestead from 21000                
+  step                1          default amount per execution cycle
+  stop                0          free
+  suicide sha3        0 20       free
+  sload               20         get from permanent storage
+  sstore balance      100 20     put into permanent storage
+  create              100        contract creation
+  call                20         initiating a read-only call
+  memory              1          every additional word when expanding memory
+  txdata              5          every byte of data or code for a transaction
+  transaction         500        base fee transaction
+  contract creation   53000      changed in homestead from 21000
 
-Account interactions example - betting contract
------------------------------------------------
+## 帐户互动示例 - 投注合约
 
 As previously mentioned, there are two types of accounts:
 
--   **Externally owned account (EOAs)**: an account controlled by a
+- **Externally owned account (EOAs)**: an account controlled by a
     private key, and if you own the private key associated with the EOA
     you have the ability to send ether and messages from it.
--   **Contract**: an account that has its own code, and is controlled by
-    code.
+- **Contract**: an account that has its own code, and is controlled by code.
 
 By default, the Ethereum execution environment is lifeless; nothing
 happens and the state of every account remains the same. However, any
 user can trigger an action by sending a transaction from an externally
-owned account, setting Ethereum\'s wheels in motion. If the destination
+owned account, setting Ethereum's wheels in motion. If the destination
 of the transaction is another EOA, then the transaction may transfer
 some ether but otherwise does nothing. However, if the destination is a
 contract, then the contract in turn activates, and automatically runs
@@ -270,12 +249,12 @@ halts once again, until woken by the next transaction.
 
 Contracts generally serve four purposes:
 
--   Maintain a data store representing something which is useful to
+- Maintain a data store representing something which is useful to
     either other contracts or to the outside world; one example of this
     is a contract that simulates a currency, and another is a contract
     that records membership in a particular organization.
--   Serve as a sort of externally-owned account with a more complicated
-    access policy; this is called a \"forwarding contract\" and
+- Serve as a sort of externally-owned account with a more complicated
+    access policy; this is called a "forwarding contract" and
     typically involves simply resending incoming messages to some
     desired destination only if certain conditions are met; for example,
     one can have a forwarding contract that waits until two out of a
@@ -285,7 +264,7 @@ Contracts generally serve four purposes:
     simplest use case for this functionality is a withdrawal limit that
     is overrideable via some more complicated access procedure. A wallet
     contract is a good example of this.
--   Manage an ongoing contract or relationship between multiple users.
+- Manage an ongoing contract or relationship between multiple users.
     Examples of this include a financial contract, an escrow with some
     particular set of mediators, or some kind of insurance. One can also
     have an open contract that one party leaves open for any other party
@@ -293,12 +272,12 @@ Contracts generally serve four purposes:
     automatically pays a bounty to whoever submits a valid solution to
     some mathematical problem, or proves that it is providing some
     computational resource.
--   Provide functions to other contracts, essentially serving as a
+- Provide functions to other contracts, essentially serving as a
     software library.
 
 Contracts interact with each other through an activity that is
-alternately called either \"calling\" or \"sending messages\". A
-\"message\" is an object containing some quantity of ether, a byte-array
+alternately called either "calling" or "sending messages". A
+"message" is an object containing some quantity of ether, a byte-array
 of data of any size, the addresses of a sender and a recipient. When a
 contract receives a message, it has the option of returning some data,
 which the original sender of the message can then immediately use. In
@@ -313,54 +292,40 @@ account uses a forwarding contract which only sends messages with the
 approval of two out of three private keys. Bob is paranoid about quantum
 cryptography, so he uses a forwarding contract which passes along only
 messages that have been signed with Lamport signatures alongside
-traditional ECDSA (but because he\'s old fashioned, he prefers to use a
+traditional ECDSA (but because he's old fashioned, he prefers to use a
 version of Lamport sigs based on SHA256, which is not supported in
 Ethereum directly).
 
 The betting contract itself needs to fetch data about the San Francisco
 weather from some contract, and it also needs to talk to the GavCoin
 contract when it wants to actually send the GavCoin to either Alice or
-Bob (or, more precisely, Alice or Bob\'s forwarding contract). We can
+Bob (or, more precisely, Alice or Bob's forwarding contract). We can
 show the relationships between the accounts thus:
 
 ![image](../img/contract_relationship.png)
 
 When Bob wants to finalize the bet, the following steps happen:
 
-1.  A transaction is sent, triggering a message from Bob\'s EOA to his
-    forwarding contract.
-2.  Bob\'s forwarding contract sends the hash of the message and the
-    Lamport signature to a contract which functions as a Lamport
-    signature verification library.
-3.  The Lamport signature verification library sees that Bob wants a
-    SHA256-based Lamport sig, so it calls the SHA256 library many times
-    as needed to verify the signature.
-4.  Once the Lamport signature verification library returns 1,
-    signifying that the signature has been verified, it sends a message
-    to the contract representing the bet.
-5.  The bet contract checks the contract providing the San Francisco
-    temperature to see what the temperature is.
-6.  The bet contract sees that the response to the messages shows that
-    the temperature is above 35ºC, so it sends a message to the GavCoin
-    contract to move the GavCoin from its account to Bob\'s forwarding
-    contract.
+1. A transaction is sent, triggering a message from Bob's EOA to his forwarding contract.
+2. Bob's forwarding contract sends the hash of the message and the Lamport signature to a contract which functions as a Lamport     signature verification library.
+3. The Lamport signature verification library sees that Bob wants a SHA256-based Lamport sig, so it calls the SHA256 library many times as needed to verify the signature.
+4. Once the Lamport signature verification library returns 1, signifying that the signature has been verified, it sends a message     to the contract representing the bet.
+5. The bet contract checks the contract providing the San Francisco temperature to see what the temperature is.
+6. The bet contract sees that the response to the messages shows that the temperature is above 35ºC, so it sends a message to the GavCoin contract to move the GavCoin from its account to Bob's forwarding contract.
 
-Note that the GavCoin is all \"stored\" as entries in the GavCoin
-contract\'s database; the word \"account\" in the context of step 6
+Note that the GavCoin is all "stored" as entries in the GavCoin
+contract's database; the word "account" in the context of step 6
 simply means that there is a data entry in the GavCoin contract storage
-with a key for the bet contract\'s address and a value for its balance.
+with a key for the bet contract's address and a value for its balance.
 After receiving this message, the GavCoin contract decreases this value
 by some amount and increases the value in the entry corresponding to
-Bob\'s forwarding contract\'s address. We can see these steps in the
+Bob's forwarding contract's address. We can see these steps in the
 following diagram:
 
 ![image](../img/contract_relationship2.png)
 
-Signing transactions offline
-----------------------------
+## 签署交易离线
 
-\[ Maybe add this to the FAQ and point to the ethkey section of
-turboethereum guide? \]
+Maybe add this to the FAQ and point to the ethkey section of turboethereum guide?
 
--   [Resilience Raw Transaction
-    Broadcaster](https://github.com/resilience-me/broadcaster/)
+- [Resilience Raw Transaction Broadcaster](https://github.com/resilience-me/broadcaster/)

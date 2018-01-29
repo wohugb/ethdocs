@@ -1,5 +1,5 @@
-Introduction
-============
+# Introduction
+
 
 ::: {.toctree}
 what-is-ethereum.rst how-to-use-this-guide.rst the-homestead-release.rst

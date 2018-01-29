@@ -6,8 +6,7 @@ Accounts play a central role in Ethereum. There are two types of
 accounts: *externally owned accounts* (EOAs) and *contract accounts*.
 Here we focus on externally owned accounts, which will be referred to
 simply as *accounts*. Contract accounts will be referred to as
-*contracts* and are
-[discussed in detail in Contracts <Contracts>]. This
+*contracts* and are [discussed in detail in Contracts <Contracts>]. This
 generic notion of account subsuming both externally owned accounts and
 contracts is justified in that these entities are so called *state
 objects*. These entities have a state: accounts have balance and
@@ -17,15 +16,9 @@ every block and which the network really needs to reach a consensus
 about. Accounts are essential for users to interact with the Ethereum
 blockchain via transactions.
 
-If we restrict Ethereum to only externally owned accounts and allow only
-transactions between them, we arrive at an altcoin system that is
-less powerful than bitcoin itself and can only be used to transfer
-ether.
+If we restrict Ethereum to only externally owned accounts and allow only transactions between them, we arrive at an altcoin system that is less powerful than bitcoin itself and can only be used to transfer ether.
 
-Accounts represent identities of external agents (e.g., human personas,
-mining nodes or automated agents). Accounts use public key cryptography
-to sign transaction so that the EVM can securely validate the identity
-of a transaction sender.
+Accounts represent identities of external agents (e.g., human personas, mining nodes or automated agents). Accounts use public key cryptography to sign transaction so that the EVM can securely validate the identity of a transaction sender.
 
 ## 密钥文件
 
@@ -40,19 +33,18 @@ found in the `keystore` subdirectory of your Ethereum node's data
 directory. Make sure you backup your keyfiles regularly! See the section
 [backup-and-restore-accounts] for more information.
 
-Creating a key is tantamount to creating an account.
+创建一个密钥等于创建一个帐户:
 
-- You don't need to tell anybody else you're doing it
-- You don't need to synchronize with the blockchain
-- You don't need to run a client
-- You don't even need to be connected to the internet
+- 你不需要告诉其他人你正在做这件事
+- 您不需要与区块链同步
+- 你不需要运行一个客户端
+- 你甚至不需要连接到互联网
 
 Of course your new account will not contain any Ether. But it'll be
 yours and you can be certain that without your key and your password,
 nobody else can ever access it.
 
-It is safe to transfer the entire directory or any individual keyfile
-between Ethereum nodes.
+在以太坊节点之间传输整个目录或任何单独的密钥文件是安全的。
 
 ::: {.warning}
 ::: {.admonition-title}

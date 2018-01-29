@@ -1,14 +1,13 @@
-Transaction Explorer {#sec:transaction-explorer}
-====================
+# 事务管理器
 
 Using the transaction pane
 
 The transaction pane enables you to explore transactions receipts,
 including
 
-> -   Input parameters
-> -   Return parameters
-> -   Event logs
+> - Input parameters
+> - Return parameters
+> - Event logs
 
 To display the transaction explorer, click on the down triangle icon
 which is on the right of each transaction, this will expand transaction

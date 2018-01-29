@@ -1,0 +1,1551 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="以太坊家园版中文文档">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>连接到网络 - 以太坊家园版文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="以太坊家园版文档" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                以太坊家园版文档
+              </span>
+              <span class="md-header-nav__topic">
+                连接到网络
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="前言" class="md-tabs__link">
+        前言
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../introduction/what-is-ethereum/" title="简介" class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../clients/choosing-a-client/" title="客户端" class="md-tabs__link">
+          客户端
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../connecting-to-clients/" title="链接" class="md-tabs__link">
+          链接
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../account-management/" title="账号" class="md-tabs__link">
+          账号
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ether/" title="以太币" class="md-tabs__link">
+          以太币
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="网络" class="md-tabs__link md-tabs__link--active">
+          网络
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mining/" title="挖矿" class="md-tabs__link">
+          挖矿
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../contracts-and-transactions/account-types-gas-and-transactions/" title="合约和交易" class="md-tabs__link">
+          合约和交易
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    以太坊家园版文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/what-is-ethereum/" title="什么是以太坊？" class="md-nav__link">
+      什么是以太坊？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/how-to-use-this-guide/" title="如何使用本指南？" class="md-nav__link">
+      如何使用本指南？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/the-homestead-release/" title="家园版" class="md-nav__link">
+      家园版
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/web3/" title="Web 3" class="md-nav__link">
+      Web 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/history-of-ethereum/" title="以太网的历史" class="md-nav__link">
+      以太网的历史
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/community/" title="社区" class="md-nav__link">
+      社区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/foundation/" title="以太坊基金会" class="md-nav__link">
+      以太坊基金会
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/contributors/" title="贡献者" class="md-nav__link">
+      贡献者
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      客户端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        客户端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/choosing-a-client/" title="选择一个客户端" class="md-nav__link">
+      选择一个客户端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/cpp-ethereum/" title="cpp-ethereum" class="md-nav__link">
+      cpp-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/go-ethereum/" title="go-ethereum" class="md-nav__link">
+      go-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/pyethapp/" title="pyethapp" class="md-nav__link">
+      pyethapp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumjs-lib/" title="ethereumjs-lib" class="md-nav__link">
+      ethereumjs-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumj/" title="ethereum(j)" class="md-nav__link">
+      ethereum(j)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumh/" title="ethereumH" class="md-nav__link">
+      ethereumH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/parity/" title="parity" class="md-nav__link">
+      parity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ruby-ethereum/" title="ruby-ethereum" class="md-nav__link">
+      ruby-ethereum
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      链接
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        链接
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/web3.js/" title="web3.js" class="md-nav__link">
+      web3.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/web3j/" title="web3j" class="md-nav__link">
+      web3j
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/nethereum/" title="Nethereum" class="md-nav__link">
+      Nethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/ethereum-ruby/" title="ethereum-ruby" class="md-nav__link">
+      ethereum-ruby
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      账号
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        账号
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../account-management/" title="账号" class="md-nav__link">
+      账号
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      以太币
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        以太币
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ether/" title="以太币" class="md-nav__link">
+      以太币
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        连接到网络
+      </label>
+    
+    <a href="./" title="连接到网络" class="md-nav__link md-nav__link--active">
+      连接到网络
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-ethereum-network" title="The Ethereum network" class="md-nav__link">
+    The Ethereum network
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethereum-network-stats" title="Ethereum network stats" class="md-nav__link">
+    Ethereum network stats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-private-and-consortium-blockchains" title="Public, private, and consortium blockchains" class="md-nav__link">
+    Public, private, and consortium blockchains
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-connect" title="How to connect" class="md-nav__link">
+    How to connect
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-connectivity-and-enode-ids" title="Checking connectivity and ENODE IDs" class="md-nav__link">
+    Checking connectivity and ENODE IDs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportingimporting-the-blockchain" title="Exporting/Importing the blockchain" class="md-nav__link">
+    Exporting/Importing the blockchain
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-nodes-trusted-nodes-and-boot-nodes" title="Static Nodes, Trusted Nodes, and Boot Nodes" class="md-nav__link">
+    Static Nodes, Trusted Nodes, and Boot Nodes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-problems-with-connectivity" title="Common problems with connectivity" class="md-nav__link">
+    Common problems with connectivity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test-networks/" title="测试网络" class="md-nav__link">
+      测试网络
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      挖矿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        挖矿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/" title="挖矿" class="md-nav__link">
+      挖矿
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      合约和交易
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        合约和交易
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/account-types-gas-and-transactions/" title="帐户类型燃料交易" class="md-nav__link">
+      帐户类型燃料交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/contracts/" title="合同" class="md-nav__link">
+      合同
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/accessing-contracts-and-transactions/" title="访问合约和交易" class="md-nav__link">
+      访问合约和交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/mix/" title="mix" class="md-nav__link">
+      mix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/developer-tools/" title="dapps" class="md-nav__link">
+      dapps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/ethereum-tests/" title="测试" class="md-nav__link">
+      测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../contracts-and-transactions/web3-base-layer-services/" title="WEB3基本层服务" class="md-nav__link">
+      WEB3基本层服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/faq/" title="常见问题" class="md-nav__link">
+      常见问题
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="术语" class="md-nav__link">
+      术语
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="关于" class="md-nav__link">
+      关于
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-ethereum-network" title="The Ethereum network" class="md-nav__link">
+    The Ethereum network
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ethereum-network-stats" title="Ethereum network stats" class="md-nav__link">
+    Ethereum network stats
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#public-private-and-consortium-blockchains" title="Public, private, and consortium blockchains" class="md-nav__link">
+    Public, private, and consortium blockchains
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-connect" title="How to connect" class="md-nav__link">
+    How to connect
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checking-connectivity-and-enode-ids" title="Checking connectivity and ENODE IDs" class="md-nav__link">
+    Checking connectivity and ENODE IDs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportingimporting-the-blockchain" title="Exporting/Importing the blockchain" class="md-nav__link">
+    Exporting/Importing the blockchain
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#static-nodes-trusted-nodes-and-boot-nodes" title="Static Nodes, Trusted Nodes, and Boot Nodes" class="md-nav__link">
+    Static Nodes, Trusted Nodes, and Boot Nodes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-problems-with-connectivity" title="Common problems with connectivity" class="md-nav__link">
+    Common problems with connectivity
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="connecting-to-the-network-secconnecting-to-the-network">Connecting to the Network {#sec:connecting-to-the-network}<a class="headerlink" href="#connecting-to-the-network-secconnecting-to-the-network" title="Permanent link">&para;</a></h1>
+<p>This section</p>
+<h2 id="the-ethereum-network">The Ethereum network<a class="headerlink" href="#the-ethereum-network" title="Permanent link">&para;</a></h2>
+<p>The basis for decentralised consensus is the peer-to-peer network of
+participating nodes which maintain and secure the blockchain. See
+[mining]{role="ref"}.</p>
+<h3 id="ethereum-network-stats">Ethereum network stats<a class="headerlink" href="#ethereum-network-stats" title="Permanent link">&para;</a></h3>
+<p><a href="https://ethstats.net/">EthStats.net</a> is a dashboard of live statistics
+of the Ethereum network. This dashboard displays important information
+such as the current block, hash difficulty, gas price, and gas spending.
+The nodes shown on the page are only a selection of actual nodes on the
+network. Anyone is allowed to add their node to the EthStats dashboard.
+The <a href="https://github.com/cubedro/eth-netstats">Eth-Netstats README on
+Github</a> describes how to
+connect.</p>
+<p><a href="https://www.ethernodes.org/">EtherNodes.com</a> displays current and
+historical data on node count and other information on both the Ethereum
+mainnet and Morden testnet.</p>
+<p><a href="https://etherchain.org/nodes">Distribution of client implementations on the current live
+network</a> - Realtime stats on EtherChain.</p>
+<h3 id="public-private-and-consortium-blockchains">Public, private, and consortium blockchains<a class="headerlink" href="#public-private-and-consortium-blockchains" title="Permanent link">&para;</a></h3>
+<p>Most Ethereum projects today rely on Ethereum as a public blockchain,
+which grants access to a larger audience of users, network nodes,
+currency, and markets. However, there are often reasons to prefer a
+private blockchain or consortium blockchain (among a group of trusted
+participants). For example, a number of companies in verticals, like
+banking, are looking to Ethereum as a platform for their own private
+blockchains.</p>
+<p>Below is an excerpt from the blog post <a href="https://blog.ethereum.org/2015/08/07/on-public-and-private-blockchains/">On Public and Private
+Blockchains</a>
+that explains the difference between the three types of blockchains
+based on permissioning:</p>
+<ul>
+<li><strong>Public blockchains</strong>: a public blockchain is a blockchain that
+    anyone in the world can read, anyone in the world can send
+    transactions to and expect to see them included if they are valid,
+    and anyone in the world can participate in the consensus process --
+    the process for determining what blocks get added to the chain and
+    what the current state is. As a substitute for centralized or
+    quasi-centralized trust, public blockchains are secured by
+    cryptoeconomics -- the combination of economic incentives and
+    cryptographic verification using mechanisms such as proof of work or
+    proof of stake, following a general principle that the degree to
+    which someone can have an influence in the consensus process is
+    proportional to the quantity of economic resources that they can
+    bring to bear. These blockchains are generally considered to be
+    "fully decentralized".</li>
+<li><strong>Consortium blockchains</strong>: a consortium blockchain is a blockchain
+    where the consensus process is controlled by a pre-selected set of
+    nodes; for example, one might imagine a consortium of 15 financial
+    institutions, each of which operates a node and of which 10 must
+    sign every block in order for the block to be valid. The right to
+    read the blockchain may be public, or restricted to the
+    participants, and there are also hybrid routes such as the root
+    hashes of the blocks being public together with an API that allows
+    members of the public to make a limited number of queries and get
+    back cryptographic proofs of some parts of the blockchain state.
+    These blockchains may be considered "partially decentralized".</li>
+<li><strong>Private blockchains</strong>: a fully private blockchain is a blockchain
+    where write permissions are kept centralized to one organization.
+    Read permissions may be public or restricted to an arbitrary extent.
+    Likely applications include database management, auditing, etc
+    internal to a single company, and so public readability may not be
+    necessary in many cases at all, though in other cases public
+    auditability is desired.</li>
+</ul>
+<p>While these private/consortium blockchains may not have any connection
+to the public blockchain, they still contribute to the overall Ethereum
+ecosystem by investing in Ethereum software development. Over time, this
+translates into software improvements, shared knowledge, and job
+opportunities.</p>
+<h2 id="how-to-connect">How to connect<a class="headerlink" href="#how-to-connect" title="Permanent link">&para;</a></h2>
+<p>Geth continuously attempts to connect to other nodes on the network
+until it has peers. If you have UPnP enabled on your router or run
+Ethereum on an Internet-facing server, it will also accept connections
+from other nodes.</p>
+<p>Geth finds peers through something called the <em>discovery protocol</em>. In
+the discovery protocol, nodes are gossipping with each other to find out
+about other nodes on the network. In order to get going initially, geth
+uses a set of bootstrap nodes whose endpoints are recorded in the source
+code.</p>
+<h3 id="checking-connectivity-and-enode-ids">Checking connectivity and ENODE IDs<a class="headerlink" href="#checking-connectivity-and-enode-ids" title="Permanent link">&para;</a></h3>
+<p>To check how many peers the client is connected to in the interactive
+console, the <code>net</code> module has two attributes that give you info about
+the number of peers and whether you are a listening node.</p>
+<p>``` {.sourceCode .Javascript}</p>
+<blockquote>
+<p>net.listening
+true</p>
+<p>net.peerCount
+4
+<div class="codehilite"><pre><span></span>To get more information about the connected peers, such as IP address
+and port number, supported protocols, use the `peers()` function of the
+`admin` object. `admin.peers()` returns the list of currently connected
+peers.
+
+``` {.sourceCode .Javascript}
+&gt; admin.peers
+[{
+  ID: &#39;a4de274d3a159e10c2c9a68c326511236381b84c9ec52e72ad732eb0b2b1a2277938f78593cdbe734e6002bf23114d434a085d260514ab336d4acdc312db671b&#39;,
+  Name: &#39;Geth/v0.9.14/linux/go1.4.2&#39;,
+  Caps: &#39;eth/60&#39;,
+  RemoteAddress: &#39;5.9.150.40:30301&#39;,
+  LocalAddress: &#39;192.168.0.28:39219&#39;
+ }, {
+  ID: &#39;a979fb575495b8d6db44f750317d0f4622bf4c2aa3365d6af7c284339968eef29b69ad0dce72a4d8db5ebb4968de0e3bec910127f134779fbcb0cb6d3331163c&#39;,
+  Name: &#39;Geth/v0.9.15/linux/go1.4.2&#39;,
+  Caps: &#39;eth/60&#39;,
+  RemoteAddress: &#39;52.16.188.185:30303&#39;,
+  LocalAddress: &#39;192.168.0.28:50995&#39;
+ }, {
+  ID: &#39;f6ba1f1d9241d48138136ccf5baa6c2c8b008435a1c2bd009ca52fb8edbbc991eba36376beaee9d45f16d5dcbf2ed0bc23006c505d57ffcf70921bd94aa7a172&#39;,
+  Name: &#39;pyethapp_dd52/v0.9.13/linux2/py2.7.9&#39;,
+  Caps: &#39;eth/60, p2p/3&#39;,
+  RemoteAddress: &#39;144.76.62.101:30303&#39;,
+  LocalAddress: &#39;192.168.0.28:40454&#39;
+ }, {
+  ID: &#39;f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0&#39;,
+  Name: &#39;++eth/Zeppelin/Rascal/v0.9.14/Release/Darwin/clang/int&#39;,
+  Caps: &#39;eth/60, shh/2&#39;,
+  RemoteAddress: &#39;129.16.191.64:30303&#39;,
+  LocalAddress: &#39;192.168.0.28:39705&#39;
+ } ]
+</pre></div></p>
+</blockquote>
+<p>To check the ports used by geth and also find your enode URI run:</p>
+<p>``` {.sourceCode .Javascript}</p>
+<blockquote>
+<p>admin.nodeInfo
+{
+  Name: 'Geth/v0.9.14/darwin/go1.4.2',
+  NodeUrl: 'enode://3414c01c19aa75a34f2dbd2f8d0898dc79d6b219ad77f8155abf1a287ce2ba60f14998a3a98c0cf14915eabfdacf914a92b27a01769de18fa2d049dbf4c17694@[::]:30303',
+  NodeID: '3414c01c19aa75a34f2dbd2f8d0898dc79d6b219ad77f8155abf1a287ce2ba60f14998a3a98c0cf14915eabfdacf914a92b27a01769de18fa2d049dbf4c17694',
+  IP: '::',
+  DiscPort: 30303,
+  TCPPort: 30303,
+  Td: '2044952618444',
+  ListenAddr: '[::]:30303'
+}
+<div class="codehilite"><pre><span></span>Download the blockchain faster
+------------------------------
+
+When you start an Ethereum client, the Ethereum blockchain is
+automatically downloaded. The time it takes to download the Ethereum
+blockchain can vary based on client, client settings, connection speed,
+and number of peers available. Below are some options for more quickly
+obtaining the Ethereum blockchain.
+
+### Using geth
+
+If you are using the geth client, there are some things you can do to
+speed up the time it takes to download the Ethereum blockchain. If you
+choose to use the `--fast` flag to perform an Ethereum fast sync, you
+will not retain past transaction data.
+
+::: {.note}
+::: {.admonition-title}
+Note
+:::
+
+You cannot use this flag after performing all or part of a normal sync
+operation, meaning you should not have any portion of the Ethereum
+blockchain downloaded before using this command. [See this Ethereum
+Stack.Exchange answer for more
+information](http://ethereum.stackexchange.com/questions/1845/why-isnt-fast-sync-the-default).
+:::
+
+Below are some flags to use when you want to sync your client more
+quickly.
+
+`--fast`
+
+This flag enables fast syncing through state downloads rather than
+downloading the full block data. This will also reduce the size of your
+blockchain dramatically. NOTE: `--fast` can only be run if you are
+syncing your blockchain from scratch and only the first time you
+download the blockchain for security reasons. [See this Reddit post for
+more
+information](https://www.reddit.com/r/ethereum/comments/3y9316/geth_fast_option_question/).
+
+`--cache=1024`
+
+Megabytes of memory allocated to internal caching (min 16MB / database
+forced). Default is 16MB, so increasing this to 256, 512, 1024 (1GB), or
+2048 (2GB) depending on how much RAM your computer has should make a
+difference.
+
+`--jitvm`
+
+This flag enables the JIT VM.
+
+Full example command with console:
+
+``` {.sourceCode .Bash}
+geth --fast --cache=1024 --jitvm console
+</pre></div></p>
+</blockquote>
+<p>For more discussion on fast syncing and blockchain download times, <a href="https://www.reddit.com/r/ethereum/comments/46c4ga/lets_benchmark_the_clients/">see
+this Reddit
+post</a>.</p>
+<h3 id="exportingimporting-the-blockchain">Exporting/Importing the blockchain<a class="headerlink" href="#exportingimporting-the-blockchain" title="Permanent link">&para;</a></h3>
+<p>If you already have a full Ethereum node synced, you can export the
+blockchain data from the fully synced node and import it into your new
+node. You can accomplish this in geth by exporting your full node with
+the command <code>geth export filename</code> and importing the blockchain into
+your node using <code>geth import filename</code>. see <a href="../staticnodes">this link</a></p>
+<h2 id="static-nodes-trusted-nodes-and-boot-nodes">Static Nodes, Trusted Nodes, and Boot Nodes<a class="headerlink" href="#static-nodes-trusted-nodes-and-boot-nodes" title="Permanent link">&para;</a></h2>
+<p>Geth supports a feature called static nodes if you have certain peers
+you always want to connect to. Static nodes are re-connected on
+disconnects. You can configure permanent static nodes by putting
+something like the following into <code>&lt;datadir&gt;/static-nodes.json</code> (this
+should be the same folder that your <code>chaindata</code> and <code>keystore</code> folders
+are in)</p>
+<p>``` {.sourceCode .Javascript}
+[
+  "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
+  "enode://pubkey@ip:port"
+]
+<div class="codehilite"><pre><span></span><span class="n">You</span> <span class="n">can</span> <span class="n">also</span> <span class="n">add</span> <span class="k">static</span> <span class="n">nodes</span> <span class="n">at</span> <span class="n">runtime</span> <span class="n">via</span> <span class="n">the</span> <span class="n">Javascript</span> <span class="n">console</span>
+<span class="n">using</span> <span class="err">`</span><span class="n">admin</span><span class="p">.</span><span class="n">addPeer</span><span class="p">()</span><span class="err">`</span>
+
+<span class="err">```</span> <span class="p">{.</span><span class="n">sourceCode</span> <span class="p">.</span><span class="n">Console</span><span class="p">}</span>
+<span class="o">&gt;</span> <span class="n">admin</span><span class="p">.</span><span class="n">addPeer</span><span class="p">(</span><span class="s">&quot;enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303&quot;</span><span class="p">)</span>
+</pre></div></p>
+<h3 id="common-problems-with-connectivity">Common problems with connectivity<a class="headerlink" href="#common-problems-with-connectivity" title="Permanent link">&para;</a></h3>
+<p>Sometimes you just can\'t get connected. The most common reasons are:</p>
+<ul>
+<li>Your local time might be incorrect. An accurate clock is required to
+    participate in the Ethereum network. Check your OS for how to resync
+    your clock (example <code>sudo ntpdate -s time.nist.gov</code>) because even 12
+    seconds too fast can lead to 0 peers.</li>
+<li>Some firewall configurations can prevent UDP traffic from flowing.
+    You can use the static nodes feature or <code>admin.addPeer()</code> on the
+    console to configure connections by hand.</li>
+</ul>
+<p>To start geth without the discovery protocol, you can use the
+<code>--nodiscover</code> parameter. You only want this if you are running a test
+node or an experimental test network with fixed nodes.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../ether/" title="以太币" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                以太币
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../test-networks/" title="测试网络" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                测试网络
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2018 -  wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

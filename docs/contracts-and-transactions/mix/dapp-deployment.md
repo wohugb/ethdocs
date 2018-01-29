@@ -1,5 +1,4 @@
-Dapps deployment {#sec:dapp-deployment}
-================
+# Dapps部署
 
 | This feature allows users to deploy the current project as a Dapp in
   the main blockchain.
@@ -7,24 +6,24 @@ Dapps deployment {#sec:dapp-deployment}
 
 The deployment process includes three steps:
 
--   | **Deploy contract**:
-    | This step will deploy contracts in the main blockchain.
+- | **部署合同**:
+  | This step will deploy contracts in the main blockchain.
 
--   | **Package dapp**:
-    | This step is used to package and upload frontend resources.
+- | **打包dapp**:
+  | This step is used to package and upload frontend resources.
 
--   | **Register**:
-    | To render the Dapp, the Ethereum browser (Mist or AlethZero) needs
-      to access this package. This step will register the URL where the
-      resources are stored.
+- | **注册**:
+  | To render the Dapp, the Ethereum browser (Mist or AlethZero) needs
+    to access this package. This step will register the URL where the
+    resources are stored.
 
 To Deploy your Dapp, Please follow these instructions:
 
 | Click on `Deploy`, `Deploy to Network`.
 | This modal dialog displays three parts (see above):
 
--   **Deploy contract**
--   *Select Scenario*
+- **部署合同**
+- *选择方案*
 
 "Ethereum node URL" is the location where a node is running, there must
 be a node running in order to initiate deployment.
@@ -38,7 +37,7 @@ associated input parameters.
 "Gas Used": depending on the selected scenario, Mix will display the
 total gas used.
 
--   *Deploy Scenario*
+- *部署场景*
 
 "Deployment account" allow selecting the account that Mix will use to
 execute transactions.
@@ -59,7 +58,7 @@ blocks generated on top of the last block which contains the last
 deployed transactions). Mix keep track of all the transactions. If one
 is missing (unvalidated) it will be displayed in this panel.
 
--   *Package dapp*
+- *打包dapp*
 
 The action "Generate Package" will create a new folder named \'www\',
 this folder will contain all the resources and scripts will be mapped to

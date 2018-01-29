@@ -1,5 +1,5 @@
-Test Networks
-=============
+# Test Networks
+
 
 Morden testnet
 --------------
@@ -77,8 +77,8 @@ All parameters are the same as the main Ethereum network except:
 Because of decreased mining difficulty on the testnet, ether can easily
 mined using your CPU/GPU (see [mining]{role="ref"}).
 
-Setting up a local private testnet
-==================================
+# Setting up a local private testnet
+
 
 eth (C++ client) {#custom-networks-eth}
 ----------------

@@ -1,15 +1,11 @@
-How to use this guide?
-======================
+# 如何使用本指南？
 
-Using Ethereum: The Basics
---------------------------
+本部分介绍了用户希望参加以太坊项目的基本方式。
 
-This section captures the basic ways in which a user would want to
-participate in the Ethereum project. First of all, to become a node in
-the network, you need to run an Ethereum client. Multiple
-implementations are listed in the section [sec:clients]{role="ref"}
-which also gives you advice as to which clients to choose in various
-setups. [sec:connecting-to-the-network]{role="ref"} gives you basic
-information about networks, connectivity troubleshooting and blockchain
-synchronization. Advanced network topics like setting up private chains
-is found in [test-networks]{role="ref"}.
+首先，要成为网络中的一个节点，你需要运行一个以太坊客户端。
+
+在[sec：clients]部分列出了多个实现，这些实现也为您提供有关在各种设置中选择哪个客户端的建议。
+
+[sec：连接到网络]为您提供有关网络，连通性故障排除和区块链同步的基本信息。
+
+高级网络主题，如设置专用链可在[test-networks]中找到。

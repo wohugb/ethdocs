@@ -51,48 +51,62 @@ markdown_extensions:
 pages:
   - 前言: index.md
   - 简介:
-    -  什么是以太坊？: introduction/what-is-ethereum.md
-    -  如何使用本指南？: introduction/how-to-use-this-guide.md
-    -  家园版: introduction/the-homestead-release.md
-    -  Web 3: introduction/web3.md
-    -  以太网的历史: introduction/history-of-ethereum.md
-    -  社区: introduction/community.md
-    -  以太坊基金会: introduction/foundation.md
-    -  贡献者: introduction/contributors.md
+    - 什么是以太坊？: introduction/what-is-ethereum.md
+    - 如何使用本指南？: introduction/how-to-use-this-guide.md
+    - 家园版: introduction/the-homestead-release.md
+    - Web 3: introduction/web3.md
+    - 以太网的历史: introduction/history-of-ethereum.md
+    - 社区: introduction/community.md
+    - 以太坊基金会: introduction/foundation.md
+    - 贡献者: introduction/contributors.md
   - 客户端:
-    -  选择一个客户端: clients/choosing-a-client.md
-    -  cpp-ethereum: clients/cpp-ethereum/index.md
-    -  go-ethereum: clients/go-ethereum/index.md
-    -  pyethapp: clients/pyethapp/index.md
-    -  ethereumjs-lib: clients/ethereumjs-lib/index.md
-    -  ethereum(j): clients/ethereumj/index.md
-    -  ethereumH: clients/ethereumh/index.md
-    -  parity: clients/parity/index.md
-    -  ruby-ethereum: clients/ruby-ethereum/index.md
-  - 链接:
-    -  简介: connecting-to-clients/index.md
-    -  web3.js: connecting-to-clients/web3.js/index.md
-    -  web3j: connecting-to-clients/web3j/index.md
-    -  Nethereum: connecting-to-clients/nethereum/index.md
-    -  ethereum-ruby: connecting-to-clients/ethereum-ruby/index.md
-  - 账号:
+    - 选择一个客户端: clients/choosing-a-client.md
+    - cpp-ethereum: clients/cpp-ethereum/index.md
+    - go-ethereum: clients/go-ethereum/index.md
+    - pyethapp: clients/pyethapp/index.md
+    - ethereumjs-lib: clients/ethereumjs-lib/index.md
+    - ethereum(j): clients/ethereumj/index.md
+    - ethereumH: clients/ethereumh/index.md
+    - parity: clients/parity/index.md
+    - ruby-ethereum: clients/ruby-ethereum/index.md
+  - 链接客户端:
+    - 简介: connecting-to-clients/index.md
+    - web3.js: connecting-to-clients/web3.js/index.md
+    - web3j: connecting-to-clients/web3j/index.md
+    - Nethereum: connecting-to-clients/nethereum/index.md
+    - ethereum-ruby: connecting-to-clients/ethereum-ruby/index.md
+  - 账号管理:
     - 账号: account-management.md
   - 以太币:
     - 以太币: ether.md
   - 网络:
-    -  连接到网络: network/connecting-to-the-network.md
-    -  测试网络: network/test-networks.md
+    - 连接到网络: network/connecting-to-the-network.md
+    - 测试网络: network/test-networks.md
   - 挖矿:
-    - 挖矿: mining.md
+    - 简介: mining/index.md
+    - 算法: mining/algorithm.md
+    - CPU挖矿: mining/cpu.md
+    - GPU挖矿: mining/gpu.md
+    - 矿池: mining/pools.md
+    - 资源: mining/resources.md
   - 合约和交易:
-    -  帐户类型燃料交易: contracts-and-transactions/account-types-gas-and-transactions.md
-    -  合同: contracts-and-transactions/contracts.md
-    -  访问合约和交易: contracts-and-transactions/accessing-contracts-and-transactions.md
-    -  mix: contracts-and-transactions/mix.md
-    -  dapps: contracts-and-transactions/developer-tools.md
-    -  测试: contracts-and-transactions/ethereum-tests/index.md
-    -  WEB3基本层服务: contracts-and-transactions/web3-base-layer-services.md
-  - 常见问题: faq/faq.md
+    - 帐户类型燃料交易: contracts-and-transactions/account-types-gas-and-transactions.md
+    - 合约: contracts-and-transactions/contracts.md
+    - 访问合约和交易: contracts-and-transactions/accessing-contracts-and-transactions.md
+    - Mix IDE:
+      - 概述: contracts-and-transactions/mix/index.md
+      - 项目编辑器: contracts-and-transactions/mix/project-editor.md
+      - 场景编辑器: contracts-and-transactions/mix/scenario-editor.md
+      - 状态查看器: contracts-and-transactions/mix/state-viewer.md
+      - 事务管理器: contracts-and-transactions/mix/transaction-explorer.md
+      - JavaScript控制台: contracts-and-transactions/mix/javaScript-console.md
+      - 事务调试器: contracts-and-transactions/mix/transaction-debugger.md
+      - Dapps部署: contracts-and-transactions/mix/dapp-deployment.md
+      - 代码编辑器: contracts-and-transactions/mix/code-editor.md
+    - dapps: contracts-and-transactions/developer-tools.md
+    - 测试: contracts-and-transactions/ethereum-tests/index.md
+    - WEB3基础层服务: contracts-and-transactions/web3-base-layer-services.md
+  - 常见问题: faq/index.md
   - 术语: glossary.md
   - 关于: about.md
 

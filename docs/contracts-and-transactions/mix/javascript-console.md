@@ -1,5 +1,4 @@
-JavaScript console {#sec:javascript-console}
-==================
+# JavaScript控制台
 
 Mix exposes the following objects into the global window context
 
@@ -8,15 +7,14 @@ web3 - Ethereum JavaScript API
 contracts: A collection of contract objects. keys represents contracts
 name. values are is an objects containing the following properties:
 
-> -   contract: contract object instance (created as in
->     web3.eth.contract)
-> -   address: contract address from the last deployed state (see below)
-> -   interface: contract ABI
+> - contract: contract object instance (created as in
+>   web3.eth.contract)
+> - address: contract address from the last deployed state (see below)
+> - interface: contract ABI
 
 Check the JavaScript API Reference for further information.
 
-Using the JS console to add transactions and local calls
---------------------------------------------------------
+## 使用JS控制台添加事务和本地调用
 
 In case the name of the contract is "Sample" with a function named
 "set", it is possible to make a transaction to call "set" by writing:

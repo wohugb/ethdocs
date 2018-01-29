@@ -1,84 +1,49 @@
-Web 3: A platform for decentralized apps
-========================================
+# Web 3: 分散式应用程序的平台
 
-Many have come to believe that an open, trustless blockchain platform
-like Ethereum is perfectly suited to serve as the shared \"back end\" to
-a decentralized, secure internet - Web 3.0. An internet where core
-services like DNS and digital identity are decentralized, and where
-individuals can engage in economic interactions with each other.
+许多人开始相信像以太坊这样的开放，不可靠的区块链平台非常适合作为分散，安全的互联网 - 网络3.0的共享“后端”。
+一个互联网，像DNS和数字身份这样的核心服务是分散的，个人之间可以进行经济互动。
 
-As intended by the Ethereum developers, Ethereum is a blank canvas and
-you have the freedom to build whatever you want with it. The Ethereum
-protocol is meant to be generalized so that the core features can be
-combined in arbitrary ways. Ideally, dapp projects on Ethereum will
-leverage the Ethereum blockchain to build solutions that rely on
-decentralized consensus to provide new products and services that were
-not previously possible.
+按照以太坊开发者的意图，以太坊是一个空白的画布，您可以自由地随意创建任何你想要的东西。
+以太坊协议旨在进行推广，以便核心功能可以任意方式进行组合。
+理想情况下，以太坊的dapp项目将利用以太坊区块链构建依靠分散化共识的解决方案来提供先前无法实现的新产品和服务。
 
-Ethereum is perhaps best described as an ecosystem: the core protocol is
-supported by various pieces of infrastructure, code, and community that
-together make up the Ethereum project. Ethereum can also be understood
-by looking at the projects that use Ethereum. Already, there are a
-number of high-profile projects built on Ethereum such as Augur, Digix,
-Maker, and many more (see [dapps]{role="ref"}). In addition, there are
-development teams that build open source components that anyone can use.
-While each of these organizations are separate from the Ethereum
-Foundation and have their own goals, they undoubtedly benefit the
-overall Ethereum ecosystem.
+以太坊可能是最好的描述为一个生态系统：核心协议是由各种支持
+以太坊可能是最好的描述为一个生态系统：核心协议是由各种支持
+已经在以太坊建立了一些高调的项目，如Augur，Digix，Maker等等（见[dapps]）。
+另外，还有开发团队构建任何人都可以使用的开源组件。
+虽然这些组织与以太坊基金会是分开的，并有自己的目标，但这无疑有利于整个以太坊生态系统。
 
-Further Watching/Reading:
+进一步观看/阅读：
 
--   Vitalik Buterin - TNABC 2015:
-    <https://www.youtube.com/watch?v=Fjhe0MVRHO4>
--   Gavin Wood - DEVCON 1 - Ethereum for Dummies:
-    <https://www.youtube.com/watch?v=U_LK0t_qaPo>
--   Ethereum London Meetup (best detailed here):
-    <https://www.youtube.com/watch?v=GJGIeSCgskc>
+- Vitalik Buterin  -  TNABC 2015：<https://www.youtube.com/watch?v=Fjhe0MVRHO4>
+- 加文木材 -  DEVCON 1  - 以太坊傻瓜：<https://www.youtube.com/watch?v=U_LK0t_qaPo>
+- 以太坊伦敦聚会（最好在这里详细）:<https://www.youtube.com/watch?v=GJGIeSCgskc>
 
-Smart contracts
----------------
+## 智能合约
 
-by Alex:
+Alex：
 
-Would you enter in a contract with someone you\'ve never met? Would you
-agree to lend money to some farmer in Ethiopia? Would you become an
-investor in a minority-run newspaper in a war zone? Would you go to the
-hassle of writing up a legal binding contract for a \$5 dollar purchase
-over the internet?
+你会和一个你从未见过的人签订合同吗？
+你同意把钱借给埃塞俄比亚的一些农民吗？
+你会成为战区少数民族报纸的投资人吗？
+你会为在网上购买价值5美元的合法合同签订一份麻烦吗？
 
-The answer is no for most of these questions, the reason being that a
-contract requires a large infrastructure: sometimes you need a working
-trust relationship between the two parties, sometimes you rely on a
-working legal system, police force and lawyer costs.
+大多数问题的答案是否定的，原因是合同需要大量的基础设施：有时候您需要双方建立起有效的信任关系，有时您依靠有效的法律制度，警察和律师费用。
 
-In Ethereum you don\'t need any of that: if all the requisites to the
-contract can be put in the blockchain then they will, in a trustless
-environment for almost no cost.
+在以太坊你不需要任何这样的东西：如果合同的所有必要条件都可以放在区块链中，那么它们将在几乎没有代价的信任环境中进行。
 
-Instead of thinking of moving your current contracts to the blockchain,
-think of all the thousand little contracts that you would never agree to
-simply because they weren\'t economically feasible or there was not
-enough legal protection..
+与其考虑将当前的合同移动到区块链，不如考虑所有那些你永远不会同意的小合同，因为它们在经济上不可行，或者没有足够的法律保护。
 
-DAO
----
+## DAO
 
-Here is just one example: imagine you own a small business with your
-friends. Lawyers and accountants are expensive, and trusting a single
-partner to oversee the books can be a source of tension (even an
-opportunity for fraud). Complying strictly with a system in which more
-than one partner oversees the books can be trying and is subject to
-fraud whenever the protocol isn\'t followed exactly.
+这只是一个例子：假设你和你的朋友有一个小生意。
+律师和会计师是昂贵的，信任一个单一的合作伙伴来监督书籍可能是一个紧张的根源（甚至是一个欺诈的机会）。
+严格遵守不止一个合伙人监督书籍的制度，只要协议没有严格遵守，就可能会受到欺诈。
 
-Using a smart contract, ownership in your company and terms for the
-disbursal of funds can be specified at the outset. The smart contract
-can be written such that it is only changeable given the approval of a
-majority of owners. Smart contracts like these will likely be available
-as open source software, so you won\'t even need to hire your own
-programmer instead of an accountant/lawyer.
+使用一个智能合约，你公司的所有权和资金的分配条款可以在一开始就指定。
+智能合约可以这样写，只有经过大多数所有者的同意才能改变。
+像这样的智能合同可能会作为开源软件提供，所以你甚至不需要雇用自己的程序员而不是会计师/律师。
 
-A smart contract like this scales instantly. A couple of teenagers can
-split revenue from a lemonade stand just as transparently as a sovereign
-wealth fund can disburse funds to the hundred million citizens who are
-entitled to it. In both cases the price of this transparency is likely
-to be fractions of a penny per dollar.
+像这样的智能合约即刻缩放。
+一些青少年可以像柠檬水一样透明分配收入，而主权财富基金可以向有资格获得这些资金的亿万公民分配资金。
+在这两种情况下，这种透明度的价格可能是一美元的一分钱。

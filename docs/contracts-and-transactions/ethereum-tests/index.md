@@ -1,5 +1,3 @@
-Ethereum Tests {#Ethereum Tests}
-==============
+# 以太坊测试
 
-Ethereum Testing Docs have been moved to
-<http://ethereum-tests.readthedocs.io/>.
+以太坊测试文档已被移至[ethereum-tests](http://ethereum-tests.readthedocs.io).

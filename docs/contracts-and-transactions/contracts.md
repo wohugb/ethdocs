@@ -1,8 +1,7 @@
-Contracts {#Contracts}
-=========
+# 合约
 
-What is a contract?
--------------------
+
+## 什么是合约？
 
 A contract is a collection of code (its functions) and data (its state)
 that resides at a specific address on the Ethereum blockchain. Contract
@@ -26,8 +25,7 @@ development environments, developer tools that help you develop in these
 languages, offering testing, and deployment support among other
 features.
 
-Ethereum high level languages
------------------------------
+## 以太坊高级语言
 
 Contracts live on the blockchain in an Ethereum-specific binary format
 (EVM bytecode) that is executed by the Ethereum Virtual Machine (EVM).
@@ -44,17 +42,11 @@ Solidity is a language similar to JavaScript which allows you to develop
 contracts and compile to EVM bytecode. It is currently the flagship
 language of Ethereum and the most popular.
 
--   [Solidity
-    Documentation](http://solidity.readthedocs.org/en/latest/) -
-    Solidity is the flagship Ethereum high level language that is used
-    to write contracts.
--   [Solidity online realtime
-    compiler](http://ethereum.github.io/browser-solidity/)
--   [Standardized Contract
-    APIs](https://github.com/ethereum/wiki/wiki/Standardized_Contract_APIs)
--   [Useful Ðapp
-    Patterns](https://github.com/ethereum/wiki/wiki/Useful-Ðapp-Patterns) -
-    Code snippets which are useful for Ðapp development.
+- [Solidity Documentation](http://solidity.readthedocs.org/en/latest/) -
+    Solidity is the flagship Ethereum high level language that is used to write contracts.
+- [Solidity online realtime compiler](http://ethereum.github.io/browser-solidity/)
+- [Standardized Contract APIs](https://github.com/ethereum/wiki/wiki/Standardized_Contract_APIs)
+- [Useful Ðapp Patterns](https://github.com/ethereum/wiki/wiki/Useful-Ðapp-Patterns) - Code snippets which are useful for Ðapp development.
 
 ### Serpent
 
@@ -63,11 +55,10 @@ contracts and compile to EVM bytecode. It is intended to be maximally
 clean and simple, combining many of the efficiency benefits of a
 low-level language with ease-of-use in programming style, and at the
 same time adding special domain-specific features for contract
-programming. Serpent is compiled using \_LLL.
+programming. Serpent is compiled using _LLL.
 
--   [Serpent on the ethereum
-    wiki](https://github.com/ethereum/wiki/wiki/Serpent)
--   [Serpent EVM compiler](https://github.com/ethereum/serpent)
+- [Serpent on the ethereum wiki](https://github.com/ethereum/wiki/wiki/Serpent)
+- [Serpent EVM compiler](https://github.com/ethereum/serpent)
 
 ### LLL
 
@@ -77,26 +68,22 @@ low level language similar to Assembly. It is meant to be very simple
 and minimalistic; essentially just a tiny wrapper over coding in EVM
 directly.
 
--   [LIBLLL in
-    GitHub](https://github.com/ethereum/libethereum/tree/develop/liblll)
--   [Examples of
-    LLL](https://www.reddit.com/r/ethereum/comments/3secu1/anyone_have_a_copy_of_the_old_lll_tutorials/)
+- [LIBLLL in GitHub](https://github.com/ethereum/libethereum/tree/develop/liblll)
+- [Examples of LLL](https://www.reddit.com/r/ethereum/comments/3secu1/anyone_have_a_copy_of_the_old_lll_tutorials/)
 
 ### Mutan (deprecated)
 
 [Mutan](https://github.com/obscuren/mutan) is a statically typed, C-like
-language designed and developed by Jeffrey Wilcke. It is no longer
-maintained.
+language designed and developed by Jeffrey Wilcke. It is no longer maintained.
 
-Writing a contract
-------------------
+## Writing a contract
 
 No language would be complete without a Hello World program. Operating
 within the Ethereum environment, Solidity has no obvious way of
-\"outputting\" a string. The closest we can do is to use a *log event*
+"outputting" a string. The closest we can do is to use a *log event*
 to place a string into the blockchain:
 
-``` {.sourceCode .js}
+```js
 contract HelloWorld {
     event Print(string out);
     function() { Print("Hello, World!"); }
@@ -104,47 +91,38 @@ contract HelloWorld {
 ```
 
 This contract will create a log entry on the blockchain of type Print
-with a parameter \"Hello, World!\" each time it is executed.
+with a parameter "Hello, World!" each time it is executed.
 
 ::: {.seealso}
 [Solidity docs](https://solidity.readthedocs.org/en/latest/) has more
 examples and guidelines to writing Solidity code.
 :::
 
-Compiling a contract
---------------------
+## 编制合约
 
 Compilation of solidity contracts can be accomplished via a number of
 mechanisms.
 
--   Using the `solc` compiler via the command line.
--   Using `web3.eth.compile.solidity` in the javascript console provided
-    by `geth` or `eth` (This still requires the `solc` compiler to be
-    installed).
--   The [online Solidity realtime
-    compiler](https://ethereum.github.io/browser-solidity/).
--   The [Meteor dapp Cosmo for building solidity
-    contracts](https://github.com/SilentCicero/meteor-dapp-cosmo).
--   The [Mix
-    IDE](https://github.com/ethereum/wiki/wiki/Mix:-The-DApp-IDE).
--   The [Ethereum Wallet](https://github.com/ethereum/mist/releases).
+- Using the `solc` compiler via the command line.
+- Using `web3.eth.compile.solidity` in the javascript console provided by `geth` or `eth` (This still requires the `solc` compiler to be installed).
+- The [online Solidity realtime compiler](https://ethereum.github.io/browser-solidity/).
+- The [Meteor dapp Cosmo for building solidity contracts](https://github.com/SilentCicero/meteor-dapp-cosmo).
+- The [Mix IDE](https://github.com/ethereum/wiki/wiki/Mix:-The-DApp-IDE).
+- The [Ethereum Wallet](https://github.com/ethereum/mist/releases).
 
 ::: {.note}
 ::: {.admonition-title}
 Note
 :::
 
-More information on solc and compiling Solidity contract code can be
-found
-[here](https://solidity.readthedocs.org/en/latest/frequently-asked-questions.html#how-do-i-compile-contracts).
+More information on solc and compiling Solidity contract code can be found [here](https://solidity.readthedocs.org/en/latest/frequently-asked-questions.html#how-do-i-compile-contracts).
 :::
 
 ### Setting up the solidity compiler in geth
 
-If you start up your `geth` node, you can check which compilers are
-available.
+If you start up your `geth` node, you can check which compilers are available.
 
-``` {.sourceCode .bash}
+```bash
 > web3.eth.getCompilers();
 ["lll", "solidity", "serpent"]
 ```
@@ -165,24 +143,24 @@ yourself](https://github.com/ethereum/go-ethereum/wiki/Building-Ethereum).
 If your `solc` executable is in a non-standard location you can specify
 a custom path to the `solc` executable using th `--solc` flag.
 
-``` {.sourceCode .bash}
+```bash
 $ geth --solc /usr/local/bin/solc
 ```
 
 Alternatively, you can set this option at runtime via the console:
 
-``` {.sourceCode .bash}
+```bash
 > admin.setSolc("/usr/local/bin/solc")
 solc, the solidity compiler commandline interface
 Version: 0.2.2-02bb315d/.-Darwin/appleclang/JIT linked to libethereum-1.2.0-8007cef0/.-Darwin/appleclang/JIT
 path: /usr/local/bin/solc
 ```
 
-### Compiling a simple contract {#compile_a_simple_contract}
+### 编写一个简单的合约
 
-Let\'s compile a simple contract source:
+我们来编一个简单的合约:
 
-``` {.sourceCode .bash}
+```bash
 > source = "contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"
 ```
 
@@ -192,7 +170,7 @@ positive integer `a` and returns `a * 7`.
 You are ready to compile solidity code in the `geth` JS console using
 [eth.compile.solidity()](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcompilesolidity):
 
-``` {.sourceCode .bash}
+```bash
 > contract = eth.compile.solidity(source).test
 {
   code: '605280600c6000396000f3006000357c010000000000000000000000000000000000000000000000000000000090048063c6888fa114602e57005b60376004356041565b8060005260206000f35b6000600782029050604d565b91905056',
@@ -234,14 +212,14 @@ Note
 The compiler is also available via
 [RPC](https://github.com/ethereum/wiki/wiki/JSON-RPC) and therefore via
 web3\\.js \<https://github.com/ethereum/wiki/wiki/JavaScript
- API\#web3ethcompilesolidity\>\_\_ to any in-browser Ðapp connecting to
+ API\#web3ethcompilesolidity>__ to any in-browser Ðapp connecting to
 `geth` via RPC/IPC.
 :::
 
 The following example shows how you interface `geth` via JSON-RPC to use
 the compiler.
 
-``` {.sourceCode .bash}
+```bash
 $ geth --datadir ~/eth/ --loglevel 6 --logtostderr=true --rpc --rpcport 8100 --rpccorsdomain '*' --mine console  2>> ~/eth/eth.log
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSolidity","params":["contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"],"id":1}' http://127.0.0.1:8100
 ```
@@ -249,7 +227,7 @@ $ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSolidity","params":
 The compiler output for one source will give you contract objects each
 representing a single contract. The actual return value of
 `eth.compile.solidity` is a map of contract name to contract object
-pairs. Since our contract\'s name is `test`,
+pairs. Since our contract's name is `test`,
 `eth.compile.solidity(source).test` will give you the contract object
 for the test contract containing the following fields:
 
@@ -310,12 +288,11 @@ entry for each contract, the corresponding contract info object can be
 retrieved with the name of the contract as attribute name. You can try
 this by inspecting the most current GlobalRegistrar code:
 
-``` {.sourceCode .js}
+```js
 contracts = eth.compile.solidity(globalRegistrarSrc)
 ```
 
-Create and deploy a contract
-----------------------------
+## 创建和部署一个合约
 
 Before you begin this section, make sure you have both an unlocked
 account as well as some funds.
@@ -335,7 +312,7 @@ compiler](https://ethereum.github.io/browser-solidity/) or the [Mix
 IDE](https://github.com/ethereum/wiki/wiki/Mix:-The-DApp-IDE) program.
 :::
 
-``` {.sourceCode .js}
+```js
 var primaryAddress = eth.accounts[0]
 var abi = [{ constant: false, inputs: { name: 'a', type: 'uint256' } }]
 var MyContract = eth.contract(abi)
@@ -365,15 +342,14 @@ blockchain.
 
 The asynchronous way of doing the same looks like this:
 
-``` {.sourceCode .js}
+```js
 MyContract.new([arg1, arg2, ...,]{from: primaryAccount, data: evmCode}, function(err, contract) {
   if (!err && contract.address)
     console.log(contract.address);
 });
 ```
 
-Interacting with a contract {#interacting_with_a_contract}
----------------------------
+## 与一个合约交流
 
 Interaction with a contract is typically done using an abstraction layer
 such as the
@@ -387,7 +363,7 @@ definition](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI).
 This object is an array which describles the call signature and return
 values for each available contract function.
 
-``` {.sourceCode .js}
+```js
 var Multiply7 = eth.contract(contract.info.abiDefinition);
 var myMultiply7 = Multiply7.at(address);
 ```
@@ -396,7 +372,7 @@ Now all the function calls specified in the ABI are made available on
 the contract instance. You can just call those methods on the contract
 instance in one of two ways.
 
-``` {.sourceCode .js}
+```js
 > myMultiply7.multiply.sendTransaction(3, {from: address})
 "0x12345"
 > myMultiply7.multiply.call(3)
@@ -423,8 +399,7 @@ In the example above, there are no side effects, therefore
 `sendTransaction` only burns gas and increases the entropy of the
 universe.
 
-Contract metadata
------------------
+## 元数据合约
 
 In the previous sections we explained how you create a contract on the
 blockchain. Now we will deal with the rest of the compiler output, the
@@ -438,7 +413,7 @@ blockchain or through a third party service, such as
 provides convenience methods to fetch this bundle for any contract that
 chose to register.
 
-``` {.sourceCode .js}
+```js
 // get the contract info for contract address to do manual verification
 var info = admin.getContractInfo(address) // lookup, fetch, decode
 var source = info.source;
@@ -447,9 +422,9 @@ var abiDef = info.abiDefinition
 
 The underlying mechanism that makes this work is is that:
 
--   contract info is uploaded somewhere identifiable by a *URI* which is
+- contract info is uploaded somewhere identifiable by a *URI* which is
     publicly accessible
--   anyone can find out what the *URI* is only knowing the contracts
+- anyone can find out what the *URI* is only knowing the contracts
     address
 
 These requirements are achieved using a 2 step blockchain registry. The
@@ -459,27 +434,27 @@ content hash in the `UrlHint` contract. These [registry
 contracts](https://github.com/ethereum/go-ethereum/blob/develop/common/registrar/contracts.go)
 were part of the Frontier release and have carried on into Homestead.
 
-By using this scheme, it is sufficient to know a contract\'s address to
+By using this scheme, it is sufficient to know a contract's address to
 look up the url and fetch the actual contract metadata info bundle.
 
 So if you are a conscientious contract creator, the steps are the
 following:
 
-1.  Deploy the contract itself to the blockchain
-2.  Get the contract info json file.
-3.  Deploy contract info json file to any url of your choice
-4.  Register codehash -\>content hash -\> url
+1. Deploy the contract itself to the blockchain
+2. Get the contract info json file.
+3. Deploy contract info json file to any url of your choice
+4. Register codehash ->content hash -> url
 
 The JS API makes this process very easy by providing helpers. Call
 `admin.register` to extract info from the contract, write out its json
 serialisation in the given file, calculates the content hash of the file
-and finally registers this content hash to the contract\'s code hash.
+and finally registers this content hash to the contract's code hash.
 Once you deployed that file to any url, you can use `admin.registerUrl`
 to register the url with your content hash on the blockchain as well.
 (Note that in case a fixed content addressed model is used as document
 store, the url-hint is no longer necessary.)
 
-``` {.sourceCode .js}
+```js
 source = "contract test { function multiply(uint a) returns(uint d) { return a * 7; } }"
 // compile with solc
 contract = eth.compile.solidity(source).test
@@ -500,8 +475,7 @@ MyContract.new({from: primaryAccount, data: contract.code}, function(error, cont
 });
 ```
 
-Testing contracts and transactions
-----------------------------------
+## 测试合约和交易
 
 Often you need to resort to a low level strategy of testing and
 debugging contracts and transactions. This section introduces some debug
@@ -515,14 +489,13 @@ live running node (assuming that runs using the defaults. Starting your
 `geth` with in VM debug mode with profiling and highest logging
 verbosity level is recommended:
 
-``` {.sourceCode .bash}
+```bash
 geth --datadir ~/dapps/testing/00/ --port 30310 --rpcport 8110 --networkid 4567890 --nodiscover --maxpeers 0 --vmdebug --verbosity 6 --pprof --pprofport 6110 console 2>> ~/dapp/testint/00/00.log
 ```
 
-Before you can submit any transactions, you need set up your private
-test chain. See [test-networks]{role="ref"}.
+在您提交任何交易之前，您需要设置您的私人测试链。 参见[测试的网络].
 
-``` {.sourceCode .js}
+```js
 // create account. will prompt for password
 personal.newAccount();
 // name your primary account, will often use it
@@ -531,7 +504,7 @@ primary = eth.accounts[0];
 balance = web3.fromWei(eth.getBalance(primary), "ether");
 ```
 
-``` {.sourceCode .js}
+```js
 // assume an existing unlocked primary account
 primary = eth.accounts[0];
 
@@ -546,30 +519,28 @@ miner.stop();
 balance = web3.fromWei(eth.getBalance(primary), "ether");
 ```
 
-After you create transactions, you can force process them with the
-following lines:
+创建交易后，您可以使用以下几行强制处理它们：
 
-``` {.sourceCode .js}
+```js
 miner.start(1);
 admin.sleepBlocks(1);
 miner.stop();
 ```
 
-You can check your pending transactions with:
+你可以检查你的未决交易:
 
-``` {.sourceCode .js}
-// shows transaction pool
+```js
+// 显示交易池
 txpool.status
-// number of pending txs
+// 待处理的数量
 eth.getBlockTransactionCount("pending");
-// print all pending txs
+// 打印所有待处理的TX
 eth.getBlock("pending", true).transactions
 ```
 
-If you submitted contract creation transaction, you can check if the
-desired code actually got inserted in the current blockchain:
+如果您提交了合约创建交易，您可以检查所需的代码是否实际插入到当前区块链中：
 
-``` {.sourceCode .js}
+```js
 txhash = eth.sendTansaction({from:primary, data: code})
 //... mining
 contractaddress = eth.getTransactionReceipt(txhash);

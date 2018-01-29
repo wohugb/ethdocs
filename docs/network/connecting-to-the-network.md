@@ -1,16 +1,14 @@
-Connecting to the Network {#sec:connecting-to-the-network}
-=========================
+# 连接到网络
 
 This section
 
-The Ethereum network
---------------------
+## 以太坊网络
 
 The basis for decentralised consensus is the peer-to-peer network of
 participating nodes which maintain and secure the blockchain. See
 [mining]{role="ref"}.
 
-### Ethereum network stats
+### 以太坊网络统计
 
 [EthStats.net](https://ethstats.net/) is a dashboard of live statistics
 of the Ethereum network. This dashboard displays important information
@@ -28,7 +26,7 @@ mainnet and Morden testnet.
 [Distribution of client implementations on the current live
 network](https://etherchain.org/nodes) - Realtime stats on EtherChain.
 
-### Public, private, and consortium blockchains
+### 公共，私人和联盟区块链
 
 Most Ethereum projects today rely on Ethereum as a public blockchain,
 which grants access to a larger audience of users, network nodes,
@@ -43,7 +41,7 @@ Blockchains](https://blog.ethereum.org/2015/08/07/on-public-and-private-blockcha
 that explains the difference between the three types of blockchains
 based on permissioning:
 
--   **Public blockchains**: a public blockchain is a blockchain that
+- **Public blockchains**: a public blockchain is a blockchain that
     anyone in the world can read, anyone in the world can send
     transactions to and expect to see them included if they are valid,
     and anyone in the world can participate in the consensus process --
@@ -57,7 +55,7 @@ based on permissioning:
     proportional to the quantity of economic resources that they can
     bring to bear. These blockchains are generally considered to be
     "fully decentralized".
--   **Consortium blockchains**: a consortium blockchain is a blockchain
+- **Consortium blockchains**: a consortium blockchain is a blockchain
     where the consensus process is controlled by a pre-selected set of
     nodes; for example, one might imagine a consortium of 15 financial
     institutions, each of which operates a node and of which 10 must
@@ -68,7 +66,7 @@ based on permissioning:
     members of the public to make a limited number of queries and get
     back cryptographic proofs of some parts of the blockchain state.
     These blockchains may be considered "partially decentralized".
--   **Private blockchains**: a fully private blockchain is a blockchain
+- **Private blockchains**: a fully private blockchain is a blockchain
     where write permissions are kept centralized to one organization.
     Read permissions may be public or restricted to an arbitrary extent.
     Likely applications include database management, auditing, etc
@@ -82,8 +80,7 @@ ecosystem by investing in Ethereum software development. Over time, this
 translates into software improvements, shared knowledge, and job
 opportunities.
 
-How to connect
---------------
+## 如何连接
 
 Geth continuously attempts to connect to other nodes on the network
 until it has peers. If you have UPnP enabled on your router or run
@@ -96,13 +93,13 @@ about other nodes on the network. In order to get going initially, geth
 uses a set of bootstrap nodes whose endpoints are recorded in the source
 code.
 
-### Checking connectivity and ENODE IDs
+### 检查连通性和ENODE ID
 
 To check how many peers the client is connected to in the interactive
 console, the `net` module has two attributes that give you info about
 the number of peers and whether you are a listening node.
 
-``` {.sourceCode .Javascript}
+```js
 > net.listening
 true
 
@@ -115,7 +112,7 @@ and port number, supported protocols, use the `peers()` function of the
 `admin` object. `admin.peers()` returns the list of currently connected
 peers.
 
-``` {.sourceCode .Javascript}
+```js
 > admin.peers
 [{
   ID: 'a4de274d3a159e10c2c9a68c326511236381b84c9ec52e72ad732eb0b2b1a2277938f78593cdbe734e6002bf23114d434a085d260514ab336d4acdc312db671b',
@@ -146,7 +143,7 @@ peers.
 
 To check the ports used by geth and also find your enode URI run:
 
-``` {.sourceCode .Javascript}
+```js
 > admin.nodeInfo
 {
   Name: 'Geth/v0.9.14/darwin/go1.4.2',
@@ -160,8 +157,7 @@ To check the ports used by geth and also find your enode URI run:
 }
 ```
 
-Download the blockchain faster
-------------------------------
+## 下载区块链紧固件
 
 When you start an Ethereum client, the Ethereum blockchain is
 automatically downloaded. The time it takes to download the Ethereum
@@ -169,7 +165,7 @@ blockchain can vary based on client, client settings, connection speed,
 and number of peers available. Below are some options for more quickly
 obtaining the Ethereum blockchain.
 
-### Using geth
+### 使用geth
 
 If you are using the geth client, there are some things you can do to
 speed up the time it takes to download the Ethereum blockchain. If you
@@ -188,8 +184,7 @@ Stack.Exchange answer for more
 information](http://ethereum.stackexchange.com/questions/1845/why-isnt-fast-sync-the-default).
 :::
 
-Below are some flags to use when you want to sync your client more
-quickly.
+Below are some flags to use when you want to sync your client more quickly.
 
 `--fast`
 
@@ -197,9 +192,7 @@ This flag enables fast syncing through state downloads rather than
 downloading the full block data. This will also reduce the size of your
 blockchain dramatically. NOTE: `--fast` can only be run if you are
 syncing your blockchain from scratch and only the first time you
-download the blockchain for security reasons. [See this Reddit post for
-more
-information](https://www.reddit.com/r/ethereum/comments/3y9316/geth_fast_option_question/).
+download the blockchain for security reasons. [See this Reddit post for more information](https://www.reddit.com/r/ethereum/comments/3y9316/geth_fast_option_question/).
 
 `--cache=1024`
 
@@ -214,7 +207,7 @@ This flag enables the JIT VM.
 
 Full example command with console:
 
-``` {.sourceCode .Bash}
+```bash
 geth --fast --cache=1024 --jitvm console
 ```
 
@@ -222,7 +215,7 @@ For more discussion on fast syncing and blockchain download times, [see
 this Reddit
 post](https://www.reddit.com/r/ethereum/comments/46c4ga/lets_benchmark_the_clients/).
 
-### Exporting/Importing the blockchain
+### 导出/导入区块链
 
 If you already have a full Ethereum node synced, you can export the
 blockchain data from the fully synced node and import it into your new
@@ -230,8 +223,7 @@ node. You can accomplish this in geth by exporting your full node with
 the command `geth export filename` and importing the blockchain into
 your node using `geth import filename`. see [this link](staticnodes)
 
-Static Nodes, Trusted Nodes, and Boot Nodes
--------------------------------------------
+## 静态节点，可信节点和引导节点
 
 Geth supports a feature called static nodes if you have certain peers
 you always want to connect to. Static nodes are re-connected on
@@ -240,32 +232,29 @@ something like the following into `<datadir>/static-nodes.json` (this
 should be the same folder that your `chaindata` and `keystore` folders
 are in)
 
-``` {.sourceCode .Javascript}
+```js
 [
   "enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303",
   "enode://pubkey@ip:port"
 ]
 ```
 
-You can also add static nodes at runtime via the Javascript console
-using `admin.addPeer()`
+You can also add static nodes at runtime via the Javascript console using `admin.addPeer()`
 
-``` {.sourceCode .Console}
+```console
 > admin.addPeer("enode://f4642fa65af50cfdea8fa7414a5def7bb7991478b768e296f5e4a54e8b995de102e0ceae2e826f293c481b5325f89be6d207b003382e18a8ecba66fbaf6416c0@33.4.2.1:30303")
 ```
 
-### Common problems with connectivity
+### 连接的常见问题
 
 Sometimes you just can\'t get connected. The most common reasons are:
 
--   Your local time might be incorrect. An accurate clock is required to
+- Your local time might be incorrect. An accurate clock is required to
     participate in the Ethereum network. Check your OS for how to resync
     your clock (example `sudo ntpdate -s time.nist.gov`) because even 12
     seconds too fast can lead to 0 peers.
--   Some firewall configurations can prevent UDP traffic from flowing.
+- Some firewall configurations can prevent UDP traffic from flowing.
     You can use the static nodes feature or `admin.addPeer()` on the
     console to configure connections by hand.
 
-To start geth without the discovery protocol, you can use the
-`--nodiscover` parameter. You only want this if you are running a test
-node or an experimental test network with fixed nodes.
+To start geth without the discovery protocol, you can use the `--nodiscover` parameter. You only want this if you are running a test node or an experimental test network with fixed nodes.

@@ -1,5 +1,4 @@
-State Viewer {#sec:state-viewer}
-============
+# 状态查看器
 
 This panel is located below the block chain panel, in the scenario view.
 Once the blockchain has been run, this panel shows the state of the

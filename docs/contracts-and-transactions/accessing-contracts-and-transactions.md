@@ -1,55 +1,47 @@
-Accessing Contracts and Transactions {#Accessing Contracts and Transactions}
-====================================
+# 访问合同和交易
 
-RPC
----
+## RPC
 
 In previous sections we have seen how contracts can be written, deployed
-and interacted with. Now it\'s time to dive in the details of
+and interacted with. Now it's time to dive in the details of
 communicating with the Ethereum network and smart contracts.
 
-An Ethereum node offers a
-[RPC](https://wikipedia.org/wiki/Remote_procedure_call) interface. This
-interface gives Ðapp\'s access to the Ethereum blockchain and
+An Ethereum node offers a [RPC](https://wikipedia.org/wiki/Remote_procedure_call) interface. This
+interface gives Ðapp's access to the Ethereum blockchain and
 functionality that the node provides, such as compiling smart contract
-code. It uses a subset of the [JSON-RPC
-2.0](http://www.jsonrpc.org/specification) specification (no support for
-notifications or named parameters) as serialisation protocol and is
-available over HTTP and IPC (unix domain sockets on linux/OSX and named
-pipe\'s on Windows).
+code. It uses a subset of the [JSON-RPC 2.0](http://www.jsonrpc.org/specification) specification (no support for
+notifications or named parameters) as serialisation protocol and is available over HTTP and IPC (unix domain sockets on linux/OSX and named pipe's on Windows).
 
 If you are not interested in the details but are looking for an easy to
 use javascript library you can skip the following sections and continue
-with [Using Web3 \<using\_web3.js\>]{role="ref"}.
+with [Using Web3 <using_web3.js>]{role="ref"}.
 
-Conventions
------------
+## 约定
 
 The RPC interface uses a couple of conventions that are not part of the
 JSON-RPC 2.0 specification:
 
--   Numbers are hex encoded. This decision was made because some
+- Numbers are hex encoded. This decision was made because some
     languages have no or limited support for working with extremly large
     numbers. To prevent these type of errors numbers are hex encoded and
     it is up to the developer to parse these numbers and handle them
     appropriately. See the [hex encoding
     section](https://github.com/ethereum/wiki/wiki/JSON-RPC#output-hex-values)
     on the wiki for examples.
--   Default block number, several RPC methods accept a block number. In
-    some cases it\'s not possible to give a block number or not very
+- Default block number, several RPC methods accept a block number. In
+    some cases it's not possible to give a block number or not very
     convenient. For these cases the default block number can be one of
     these strings \[\"earliest\", \"latest\", \"pending\"\]. See the
     [wiki
     page](https://github.com/ethereum/wiki/wiki/JSON-RPC#the-default-block-parameter)
     for a list of RPC methods that use the default block parameters.
 
-Deploy contract
----------------
+## 部署合同
 
 We will go through the different steps to deploy the following contract
 using only the RPC interface.
 
-``` {.sourceCode .js}
+```js
 contract Multiply7 {
    event Print(uint);
    function multiply(uint input) returns (uint) {
@@ -62,10 +54,10 @@ contract Multiply7 {
 The first thing to do is make sure the HTTP RPC interface is enabled.
 This means for geth we supply the `--rpc` flag on startup and for eth
 the `-j` flag. In this example we use the geth node on a private
-development chain. Using this approach we don\'t need ether on the real
+development chain. Using this approach we don't need ether on the real
 network.
 
-``` {.sourceCode .bash}
+```bash
 > geth --rpc --dev --mine --minerthreads 1 --unlock 0 console 2>>geth.log
 ```
 
@@ -76,9 +68,7 @@ This will start the HTTP RPC interface on `http://localhost:8545`.
 Note
 :::
 
-geth supports
-[CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), see
-the `--rpccorsdomain` flag for more information.
+geth supports [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing), see the `--rpccorsdomain` flag for more information.
 :::
 
 We can verify that the interface is running by retrieving the coinbase
@@ -86,7 +76,7 @@ address and balance using [curl](https://curl.haxx.se/download.html).
 Please note that data in these examples will differ on your local node.
 If you want to try these command replace the request params accordingly.
 
-``` {.sourceCode .bash}
+```bash
 > curl --data '{"jsonrpc":"2.0","method":"eth_coinbase", "id":1}' -H "Content-Type: application/json" localhost:8545
 {"id":1,"jsonrpc":"2.0","result":["0x9b1d35635cc34752ca54713bb99d38614f63c955"]}
 
@@ -98,7 +88,7 @@ Remember when we said that numbers are hex encoded? In this case the
 balance is returned in wei as a hex string. If we want to have the
 balance in ether as a number we can use web3 from the geth console.
 
-``` {.sourceCode .js}
+```js
 > web3.fromWei("0x1639e49bba16280000", "ether")
 "410"
 ```
@@ -109,34 +99,30 @@ to byte code that can be sent to the EVM. Follow these
 [these](http://solidity.readthedocs.org/en/latest/installing-solidity.html)
 instructions to install solc, the solidity compiler.
 
-The next step is to compile the Multiply7 contract to byte code that can
-be send to the EVM.
+The next step is to compile the Multiply7 contract to byte code that can be send to the EVM.
 
-``` {.sourceCode .bash}
-> echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
-======= <stdin>:Multiply7 =======
-Binary: 
+```bash
+# > echo 'pragma solidity ^0.4.16; contract Multiply7 { event Print(uint); function multiply(uint input) public returns (uint) { Print(input * 7); return input * 7; } }' | solc --bin
+ <stdin>:Multiply7 =======
+Binary:
 6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029
 ```
 
-Now that we have the compiled code we need to determine how much gas it
-costs to deploy it. The RPC interface has an `eth_estimateGas` method
-that will give us an estimate.
+Now that we have the compiled code we need to determine how much gas it costs to deploy it. The RPC interface has an `eth_estimateGas` method that will give us an estimate.
 
-``` {.sourceCode .bash}
+```bash
 > curl --data '{"jsonrpc":"2.0","method": "eth_estimateGas", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 5}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":5,"result":"0x1c31e"}
 ```
 
 And finally deploy the contract.
 
-``` {.sourceCode .bash}
+```bash
 > curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "gas": "0x1c31e", "data": "0x6060604052341561000f57600080fd5b60eb8061001d6000396000f300606060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c6888fa1146044575b600080fd5b3415604e57600080fd5b606260048080359060200190919050506078565b6040518082815260200191505060405180910390f35b60007f24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da600783026040518082815260200191505060405180910390a16007820290509190505600a165627a7a7230582040383f19d9f65246752244189b02f56e8d0980ed44e7a56c0b200458caad20bb0029"}], "id": 6}' -H "Content-Type: application/json" localhost:8545
 {"id":6,"jsonrpc":"2.0","result":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"}
 ```
 
-The transaction is accepted by the node and a transaction hash is
-returned. We can use this hash to track the transaction.
+The transaction is accepted by the node and a transaction hash is returned. We can use this hash to track the transaction.
 
 The next step is to determine the address where our contract is
 deployed. Each executed transaction will create a receipt. This receipt
@@ -146,27 +132,19 @@ If a transaction creates a contract it will also contain the contract
 address. We can retrieve the receipt with the
 `eth_getTransactionReceipt` RPC method.
 
-``` {.sourceCode .bash}
+```bash
 > curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": ["0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf"], "id": 7}' -H "Content-Type: application/json" localhost:8545
 {"jsonrpc":"2.0","id":7,"result":{"blockHash":"0x77b1a4f6872b9066312de3744f60020cbd8102af68b1f6512a05b7619d527a4f","blockNumber":"0x1","contractAddress":"0x4d03d617d700cf81935d7f797f4e2ae719648262","cumulativeGasUsed":"0x1c31e","from":"0x9b1d35635cc34752ca54713bb99d38614f63c955","gasUsed":"0x1c31e","logs":[],"logsBloom":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","status":"0x1","to":null,"transactionHash":"0xe1f3095770633ab2b18081658bad475439f6a08c902d0915903bafff06e6febf","transactionIndex":"0x0"}}
 ```
 
-We can see that our contract was created on
-`0x4d03d617d700cf81935d7f797f4e2ae719648262`. If you got null instead of
-a receipt the transaction has not been included in a block yet. Wait for
-a moment and check if your miner is running and retry it.
+We can see that our contract was created on `0x4d03d617d700cf81935d7f797f4e2ae719648262`. If you got null instead of a receipt the transaction has not been included in a block yet. Wait for a moment and check if your miner is running and retry it.
 
-Interacting with smart contracts
---------------------------------
+## 与智能合约交互
 
-Now that our contract is deployed we can interact with it. There are 2
-methods for this, sending a transaction or
-[using call as previously explained \<interacting\_with\_a\_contract\>]{role="ref"}.
-In this example we will be sending a transaction to the multiply method
-of the contract.
+Now that our contract is deployed we can interact with it. There are 2 methods for this, sending a transaction or [using call as previously explained <interacting_with_a_contract>]{role="ref"}.
+In this example we will be sending a transaction to the multiply method of the contract.
 
-If we look at the documentation for the
-[eth\_sendTransaction](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendtransaction)
+If we look at the documentation for the [eth_sendTransaction](https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sendtransaction)
 we can see that we need to supply several arguments. In our case we need
 to specify the `from`, `to` and `data` arguments. `From` is the public
 address of our account and `to` the contract address. The `data`
@@ -183,20 +161,17 @@ it. The multiply function accepts an uint which is an
 [alias](http://solidity.readthedocs.org/en/latest/types.html#integers)
 for uint256. This leaves us with:
 
-``` {.sourceCode .js}
+```js
 > web3.sha3("multiply(uint256)").substring(0, 10)
 "0xc6888fa1"
 ```
 
-See for details [this
-page](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI#function-selector).
+See for details [this page](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI#function-selector).
 
-The next step is to encode the arguments. We only have one uint256, lets
-assume we supply the value 6. The ABI has a
-[section](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI#argument-encoding)
+The next step is to encode the arguments. We only have one uint256, lets assume we supply the value 6. The ABI has a [section](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI#argument-encoding)
 which specifies how to encode uint256 types.
 
-> int\<M\>: enc(X) is the big-endian two\'s complement encoding of X, padded on the higher-oder (left) side with 0xff for negative X and with zero bytes
+> int<M>: enc(X) is the big-endian two's complement encoding of X, padded on the higher-oder (left) side with 0xff for negative X and with zero bytes
 > for positive X such that the length is a multiple of 32 bytes.
 
 This encodes to
@@ -208,7 +183,7 @@ be
 
 Lets try it:
 
-``` {.sourceCode .bash}
+```bash
 > curl --data '{"jsonrpc":"2.0","method": "eth_sendTransaction", "params": [{"from": "0x9b1d35635cc34752ca54713bb99d38614f63c955", "to": "0x4d03d617d700cf81935d7f797f4e2ae719648262", "data": "0xc6888fa10000000000000000000000000000000000000000000000000000000000000006"}], "id": 8}' -H "Content-Type: application/json" localhost:8545
 {"id":8,"jsonrpc":"2.0","result":"0x50905bea8043e1166703a2a72390f6e6eb4f23150c8e7d13094a6d82ce89a054"}
 ```
@@ -216,7 +191,7 @@ Lets try it:
 Since we sent a transaction we got the transaction hash returned. If we
 retrieve the receipt we can see something new:
 
-``` {.sourceCode .js}
+```js
 {
   blockHash: "0x55262092dc46db5c7d3595decd4317780896c765c4db69cf2d5f650e46249b13",
   blockNumber: 6,
@@ -250,7 +225,7 @@ input times 7. Since the argument for the Print event was a uint256 we
 can decode it according to the ABI rules which will leave us with the
 expected decimal 42.
 
-``` {.sourceCode .bash}
+```bash
 > echo $((0x000000000000000000000000000000000000000000000000000000000000002a))
 42
 ```
@@ -258,7 +233,7 @@ expected decimal 42.
 Apart from the data it is worth noting that topics can be used to
 determine which event created the log:
 
-``` {.sourceCode .js}
+```js
 > web3.sha3("Print(uint256)")
 "24abdb5865df5079dcc5ac590ff6f01d5c16edbc5fab4e195d9febd1114503da"
 ```
@@ -270,8 +245,7 @@ This was just a brief introduction into some of the most common tasks.
 See for a full list of available RPC methods the [RPC wiki
 page](https://github.com/ethereum/wiki/wiki/JSON-RPC#json-rpc-methods).
 
-Web3.js {#using_web3.js}
--------
+## Web3.js {#using_web3.js}
 
 As we have seen in the previous example using the JSON-RPC interface can
 be quite tedious and error-prone, especially when we have to deal with
@@ -281,7 +255,7 @@ interface and reducing the chance for errors.
 
 Deploying the Multiply7 contract using web3 would look like:
 
-``` {.sourceCode .js}
+```js
 var source = 'contract Multiply7 { event Print(uint); function multiply(uint input) returns (uint) { Print(input * 7); return input * 7; } }';
 var compiled = web3.eth.compile.solidity(source);
 var code = compiled.Multiply7.code;
@@ -298,7 +272,7 @@ deployed on: 0x0ab60714033847ad7f0677cc7514db48313976e2
 
 Load a deployed contract and send a transaction:
 
-``` {.sourceCode .js}
+```js
 var source = 'contract Multiply7 { event Print(uint); function multiply(uint input) returns (uint) { Print(input * 7); return input * 7; } }';
 var compiled = web3.eth.compile.solidity(source);
 var Multiply7 = web3.eth.contract(compiled.Multiply7.info.abiDefinition);
@@ -309,7 +283,7 @@ multi.multiply.sendTransaction(6, {from: "0xeb85a5557e5bdc18ee1934a89d8bb402398e
 Register a callback which is called when the `Print` event created a
 log.
 
-``` {.sourceCode .js}
+```js
 multi.Print(function(err, data) { console.log(JSON.stringify(data)) })
 {"address":"0x0ab60714033847ad7f0677cc7514db48313976e2","args": {"":"21"},"blockHash":"0x259c7dc07c99eed9dd884dcaf3e00a81b2a1c83df2d9855ce14c464b59f0c8b3","blockNumber":539,"event":"Print","logIndex":0, "transactionHash":"0x5c115aaa5418118457e96d3c44a3b66fe9f2bead630d79455d0ecd832dc88d48","transactionIndex":0}
 ```
@@ -318,35 +292,29 @@ See for more information the
 [web3.js](https://github.com/ethereum/wiki/wiki/JavaScript-API) wiki
 page.
 
-Console
--------
+## Console
 
-The geth
-[console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console)
+The geth [console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console)
 offers a command line interface with a javascript runtime. It can
 connect to a local or remote geth or eth node. It will load the web3.js
 library that users can use. This allows users to deploy and interact
 with smart contract from the console using web3.js. In fact the examples
-in the [Web3.js \<using\_web3.js\>]{role="ref"} section can by copied
+in the [Web3.js <using_web3.js>]{role="ref"} section can by copied
 into the console.
 
-Viewing Contracts and Transactions
-----------------------------------
+## 查看合同和交易
 
 There are several online blockchain explorers available that will allow
 you to inspect the Ethereum blockchain. See for a list:
-[Blockchain explorers \<blockchain\_explorers\>]{role="ref"}.
+[Blockchain explorers <blockchain_explorers>]{role="ref"}.
 
-### Hosted blockchain explorers {#blockchain_explorers}
+### 托管区块链探索者 {#blockchain_explorers}
 
--   [EtherChain](https://www.etherchain.org/)
--   [EtherCamp](https://live.ether.camp/)
--   [EtherScan](http://etherscan.io/) (and for
-    [Testnet](http://testnet.etherscan.io))
+- [EtherChain](https://www.etherchain.org/)
+- [EtherCamp](https://live.ether.camp/)
+- [EtherScan](http://etherscan.io/) (and for [Testnet](http://testnet.etherscan.io))
 
-### Other Resources
+### 其他资源
 
--   [EtherNodes](http://ethernodes.org/) - Geographic distribution of
-    nodes and split by client
--   [EtherListen](http://www.etherlisten.com) - Realtime Ethereum
-    transaction visualizer and audializer
+- [EtherNodes](http://ethernodes.org/) - Geographic distribution of nodes and split by client
+- [EtherListen](http://www.etherlisten.com) - Realtime Ethereum transaction visualizer and audializer

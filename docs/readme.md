@@ -1,5 +1,4 @@
-Homestead-Guide
-===============
+# Homestead-Guide
 
 [![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Gitter](https://badges.gitter.im/ethereum/homestead-guide.svg)](https://gitter.im/ethereum/homestead-guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)

@@ -1,0 +1,1936 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="以太坊家园版中文文档">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>挖矿 - 以太坊家园版文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="以太坊家园版文档" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                以太坊家园版文档
+              </span>
+              <span class="md-header-nav__topic">
+                挖矿
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="前言" class="md-tabs__link">
+        前言
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../introduction/what-is-ethereum/" title="简介" class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../clients/choosing-a-client/" title="客户端" class="md-tabs__link">
+          客户端
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../connecting-to-clients/" title="链接" class="md-tabs__link">
+          链接
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../account-management/" title="账号" class="md-tabs__link">
+          账号
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../ether/" title="以太币" class="md-tabs__link">
+          以太币
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../network/connecting-to-the-network/" title="网络" class="md-tabs__link">
+          网络
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="挖矿" class="md-tabs__link md-tabs__link--active">
+          挖矿
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../contracts-and-transactions/account-types-gas-and-transactions/" title="合约和交易" class="md-tabs__link">
+          合约和交易
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    以太坊家园版文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/what-is-ethereum/" title="什么是以太坊？" class="md-nav__link">
+      什么是以太坊？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/how-to-use-this-guide/" title="如何使用本指南？" class="md-nav__link">
+      如何使用本指南？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/the-homestead-release/" title="家园版" class="md-nav__link">
+      家园版
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/web3/" title="Web 3" class="md-nav__link">
+      Web 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/history-of-ethereum/" title="以太网的历史" class="md-nav__link">
+      以太网的历史
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/community/" title="社区" class="md-nav__link">
+      社区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/foundation/" title="以太坊基金会" class="md-nav__link">
+      以太坊基金会
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/contributors/" title="贡献者" class="md-nav__link">
+      贡献者
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      客户端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        客户端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/choosing-a-client/" title="选择一个客户端" class="md-nav__link">
+      选择一个客户端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/cpp-ethereum/" title="cpp-ethereum" class="md-nav__link">
+      cpp-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/go-ethereum/" title="go-ethereum" class="md-nav__link">
+      go-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/pyethapp/" title="pyethapp" class="md-nav__link">
+      pyethapp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/ethereumjs-lib/" title="ethereumjs-lib" class="md-nav__link">
+      ethereumjs-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/ethereumj/" title="ethereum(j)" class="md-nav__link">
+      ethereum(j)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/ethereumh/" title="ethereumH" class="md-nav__link">
+      ethereumH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/parity/" title="parity" class="md-nav__link">
+      parity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../clients/ruby-ethereum/" title="ruby-ethereum" class="md-nav__link">
+      ruby-ethereum
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      链接
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        链接
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/web3.js/" title="web3.js" class="md-nav__link">
+      web3.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/web3j/" title="web3j" class="md-nav__link">
+      web3j
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/nethereum/" title="Nethereum" class="md-nav__link">
+      Nethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/ethereum-ruby/" title="ethereum-ruby" class="md-nav__link">
+      ethereum-ruby
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      账号
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        账号
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../account-management/" title="账号" class="md-nav__link">
+      账号
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      以太币
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        以太币
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ether/" title="以太币" class="md-nav__link">
+      以太币
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/connecting-to-the-network/" title="连接到网络" class="md-nav__link">
+      连接到网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/test-networks/" title="测试网络" class="md-nav__link">
+      测试网络
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    
+    <label class="md-nav__link" for="nav-8">
+      挖矿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        挖矿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        挖矿
+      </label>
+    
+    <a href="./" title="挖矿" class="md-nav__link md-nav__link--active">
+      挖矿
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-mining" title="What is mining?" class="md-nav__link">
+    What is mining?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mining-rewards" title="Mining rewards" class="md-nav__link">
+    Mining rewards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethash-dag" title="Ethash DAG" class="md-nav__link">
+    Ethash DAG
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mining-on-a-multiple-gpus" title="Mining on a multiple GPUs" class="md-nav__link">
+    Mining on a multiple GPUs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-mining-" title="Pool mining-" class="md-nav__link">
+    Pool mining-
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mining-pools" title="Mining pools" class="md-nav__link">
+    Mining pools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mining-resources-" title="Mining resources----" class="md-nav__link">
+    Mining resources----
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pos-vs-pow-pos-vs-pow" title="POS vs POW {#POS vs POW}" class="md-nav__link">
+    POS vs POW {#POS vs POW}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      合约和交易
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        合约和交易
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/account-types-gas-and-transactions/" title="帐户类型燃料交易" class="md-nav__link">
+      帐户类型燃料交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/contracts/" title="合同" class="md-nav__link">
+      合同
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/accessing-contracts-and-transactions/" title="访问合约和交易" class="md-nav__link">
+      访问合约和交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/" title="mix" class="md-nav__link">
+      mix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/developer-tools/" title="dapps" class="md-nav__link">
+      dapps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/ethereum-tests/" title="测试" class="md-nav__link">
+      测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/web3-base-layer-services/" title="WEB3基本层服务" class="md-nav__link">
+      WEB3基本层服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/faq/" title="常见问题" class="md-nav__link">
+      常见问题
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="术语" class="md-nav__link">
+      术语
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="关于" class="md-nav__link">
+      关于
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-mining" title="What is mining?" class="md-nav__link">
+    What is mining?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mining-rewards" title="Mining rewards" class="md-nav__link">
+    Mining rewards
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethash-dag" title="Ethash DAG" class="md-nav__link">
+    Ethash DAG
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mining-on-a-multiple-gpus" title="Mining on a multiple GPUs" class="md-nav__link">
+    Mining on a multiple GPUs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pool-mining-" title="Pool mining-" class="md-nav__link">
+    Pool mining-
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mining-pools" title="Mining pools" class="md-nav__link">
+    Mining pools
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mining-resources-" title="Mining resources----" class="md-nav__link">
+    Mining resources----
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pos-vs-pow-pos-vs-pow" title="POS vs POW {#POS vs POW}" class="md-nav__link">
+    POS vs POW {#POS vs POW}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="mining">Mining<a class="headerlink" href="#mining" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The word mining originates in the context of the gold analogy for crypto
+currencies. Gold or precious metals are scarce, so are digital tokens,
+and the only way to increase the total volume is through mining. This is
+appropriate to the extent that in Ethereum too, the only mode of
+issuance post launch is via mining. Unlike these examples however,
+mining is also the way to secure the network by creating, verifying,
+publishing and propagating blocks in the blockchain.</p>
+<ul>
+<li>Mining ether = Securing the Network = Verifying Computation</li>
+</ul>
+<h3 id="what-is-mining">What is mining?<a class="headerlink" href="#what-is-mining" title="Permanent link">&para;</a></h3>
+<p>Ethereum, like all blockchain technologies, uses an incentive-driven
+model of security. Consensus is based on choosing the block with the
+highest total difficulty. Miners produce blocks which the others check
+for validity. Among other well-formedness criteria, a block is only
+valid if it contains <em>proof of work</em> (PoW) of a given <em>difficulty</em>. Note
+that in the Ethereum Serenity milestone, this is likely going to be
+replaced by a (see [proof of stake model \&lt;POS vs POW>]{role="ref"} ).</p>
+<p>The Ethereum blockchain is in many ways similar to the Bitcoin
+blockchain, although it does have some differences. The main difference
+between Ethereum and Bitcoin with regard to the blockchain architecture
+is that, unlike Bitcoin, Ethereum blocks contain a copy of both the
+transaction list and the most recent state (the root hash of the merkle
+patricia trie encoding the state to be more precise). Aside from that,
+two other values, the block number and the difficulty, are also stored
+in the block.</p>
+<p>The proof of work algorithm used is called
+<a href="https://github.com/ethereum/wiki/wiki/Ethash">Ethash</a> (a modified
+version of <a href="https://github.com/ethereum/wiki/wiki/Dagger-Hashimoto">the Dagger-Hashimoto
+algorithm</a>) and
+involves finding a <em>nonce</em> input to the algorithm so that the result is
+below a certain difficulty threshold. The point in PoW algorithms is
+that there is no better strategy to find such a nonce than enumerating
+the possibilities, while verification of a solution is trivial and
+cheap. Since outputs have a uniform distribution (as they are the result
+of the application of a hash function), we can guarantee that, on
+average, the time needed to find such a nonce depends on the difficulty
+threshold. This makes it possible to control the time of finding a new
+block just by manipulating the difficulty.</p>
+<p>As dictated by the protocol, the difficulty dynamically adjusts in such
+a way that on average one block is produced by the entire network every
+15 seconds. We say that the network produces a blockchain with a <em>15
+second block time</em>. This \"heartbeat\" basically punctuates the
+synchronisation of system state and guarantees that maintaining a fork
+(to allow double spend) or rewriting history by malicious actors are
+impossible unless the attacker possesses more than half of the network
+mining power (this is the so called <em>51% attack</em>).</p>
+<p>Any node participating in the network can be a miner and their expected
+revenue from mining will be directly proportional to their (relative)
+mining power or <em>hashrate</em>, i.e., the number of nonces tried per second
+normalised by the total hashrate of the network.</p>
+<p>Ethash PoW is <em>memory hard</em>, making it <em>ASIC resistant</em>. Memory hardness
+is achieved with a proof of work algorithm that requires choosing
+subsets of a fixed resource dependent on the nonce and block header.
+This resource (a few gigabyte size data) is called a <strong>DAG</strong>. The
+<a href="https://github.com/ethereum/wiki/wiki/Ethash-DAG">DAG</a> is totally
+different every 30000 blocks, a 125-hour window called <em>epoch</em> (roughly
+5.2 days) and takes a while to generate. Since the DAG only depends on
+block height, it can be pregenerated but if its not, the client needs to
+wait until the end of this process to produce a block. If clients do not
+pregenerate and cache DAGs ahead of time the network may experience
+massive block delay on each epoch transition. Note that the DAG does not
+need to be generated for verifying the PoW essentially allowing for
+verification with both low CPU and small memory.</p>
+<p>As a special case, when you start up your node from scratch, mining will
+only start once the DAG is built for the current epoch.</p>
+<h3 id="mining-rewards">Mining rewards<a class="headerlink" href="#mining-rewards" title="Permanent link">&para;</a></h3>
+<p>The successful PoW miner of the winning block receives:</p>
+<ul>
+<li>a <em>static block reward</em> for the \'winning\' block, consisting of
+    exactly 5.0 Ether</li>
+<li>cost of the gas expended within the block -- an amount of ether that
+    depends on the current gas price</li>
+<li>an extra reward for including uncles as part of the block, in the
+    form of an extra 1/32 per uncle included</li>
+</ul>
+<p>All the gas consumed by the execution of all the transactions in the
+block submitted by the winning miner is paid by the senders of each
+transaction. The gas cost incurred is credited to the miner\'s account
+as part of the consensus protocol. Over time, it is expected these will
+dwarf the static block reward.</p>
+<p><em>Uncles</em> are stale blocks i.e. with parents that are ancestors (max 6
+blocks back) of the including block. Valid uncles are rewarded in order
+to neutralise the effect of network lag on the dispersion of mining
+rewards, thereby increasing security (this is called the GHOST
+protocol). Uncles included in a block formed by the successful PoW miner
+receive 7/8 of the static block reward (=4.375 ether). A maximum of 2
+uncles are allowed per block.</p>
+<blockquote>
+<ul>
+<li><a href="https://www.reddit.com/r/ethereum/comments/3c9jbf/wtf_are_uncles_and_why_do_they_matter/">Uncles ELI5 on
+    reddit</a></li>
+<li><a href="https://forum.ethereum.org/discussion/2262/eli5-whats-an-uncle-in-ethereum-mining">Forum thread explaining
+    uncles</a></li>
+</ul>
+</blockquote>
+<p>Mining success depends on the set block difficulty. Block difficulty
+dynamically adjusts each block in order to regulate the network hashing
+power to produce a 12 second blocktime. Your chances of finding a block
+therefore follows from your hashrate relative to difficulty.</p>
+<h3 id="ethash-dag">Ethash DAG<a class="headerlink" href="#ethash-dag" title="Permanent link">&para;</a></h3>
+<p>Ethash uses a <em>DAG</em> (directed acyclic graph) for the proof of work
+algorithm, this is generated for each <em>epoch</em>, i.e., every 30000 blocks
+(125 hours, ca. 5.2 days). The DAG takes a long time to generate. If
+clients only generate it on demand, you may see a long wait at each
+epoch transition before the first block of the new epoch is found.
+However, the DAG only depends on the block number, so it can and should
+be calculated in advance to avoid long wait times at each epoch
+transition. Both <code>geth</code> and <code>ethminer</code> implement automatic DAG
+generation and maintains two DAGs at a time for smooth epoch
+transitions. Automatic DAG generation is turned on and off when mining
+is controlled from the console. It is also turned on by default if
+<code>geth</code> is launched with the <code>--mine</code> option. Note that clients share a
+DAG resource, so if you are running multiple instances of any client,
+make sure automatic dag generation is switched off in all but one
+instance.</p>
+<p>To generate the DAG for an arbitrary epoch:</p>
+<p>``` {.sourceCode .bash}
+geth makedag <block number> <outputdir>
+<div class="codehilite"><pre><span></span>For instance `geth makedag 360000 ~/.ethash`. Note that ethash uses
+`~/.ethash` (Mac/Linux) or `~/AppData/Ethash` (Windows) for the DAG so
+that it can shared between different client implementations as well as
+multiple running instances.
+
+## The algorithm-
+
+Our algorithm, [Ethash](https://github.com/ethereum/wiki/wiki/Ethash)
+(previously known as Dagger-Hashimoto), is based around the provision of
+a large, transient, randomly generated dataset which forms a DAG (the
+Dagger-part), and attempting to solve a particular constraint on it,
+partly determined through a block\&#39;s header-hash.
+
+It is designed to hash a fast verifiability time within a slow CPU-only
+environment, yet provide vast speed-ups for mining when provided with a
+large amount of memory with high-bandwidth. The large memory
+requirements mean that large-scale miners get comparatively little
+super-linear benefit. The high bandwidth requirement means that a
+speed-up from piling on many super-fast processing units sharing the
+same memory gives little benefit over a single unit. This is important
+in that pool mining have no benefit for nodes doing verification, thus
+discourageing centralisation.
+
+Communication between the external mining application and the Ethereum
+daemon for work provision and submission happens through the JSON-RPC
+API. Two RPC functions are provided; `eth_getWork` and `eth_submitWork`.
+
+These are formally documented on the [JSON-RPC
+API](https://github.com/ethereum/wiki/wiki/JSON-RPC) wiki article under
+[miner](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#miner).
+
+In order to mine you need a fully synced Ethereum client that is enabled
+for mining and at least one ethereum account. This account is used to
+send the mining rewards to and is often referred to as *coinbase* or
+*etherbase*. Visit the \&quot;[creating\_an\_account]{role=&quot;ref&quot;}\&quot; section
+of this guide to learn how to create an account.
+
+::: {.warning}
+::: {.admonition-title}
+Warning
+:::
+
+Ensure your blockchain is fully synchronised with the main chain before
+starting to mine, otherwise you will not be mining on the main chain.
+:::
+
+## CPU mining
+
+You can use your computer\&#39;s central processing unit (CPU) to mine
+ether. This is no longer profitable, since GPU miners are roughly two
+orders of magnitude more efficient. However, you can use CPU mining to
+mine on the Morden testnet or a private chain for the purposes of
+creating the ether you need to test contracts and transactions without
+spending your real ether on the live network.
+
+::: {.note}
+::: {.admonition-title}
+Note
+:::
+
+The testnet ether has no value other than using it for testing purposes
+(see [test-networks]{role=&quot;ref&quot;}).
+:::
+
+### Using geth
+
+When you start up your ethereum node with `geth` it is not mining by
+default. To start it in CPU mining mode, you use the `--mine` [command
+line
+option](https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options).
+The `-minerthreads` parameter can be used to set the number parallel
+mining threads (defaulting to the total number of processor cores).
+
+`geth --mine --minerthreads=4`
+
+You can also start and stop CPU mining at runtime using the
+[console](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#adminminerstart).
+`miner.start` takes an optional parameter for the number of miner
+threads.
+
+``` {.sourceCode .Javascript}
+&gt; miner.start(8)
+true
+&gt; miner.stop()
+true
+</pre></div></p>
+<p>Note that mining for real ether only makes sense if you are in sync with
+the network (since you mine on top of the consensus block). Therefore
+the eth blockchain downloader/synchroniser will delay mining until
+syncing is complete, and after that mining automatically starts unless
+you cancel your intention with <code>miner.stop()</code>.</p>
+<p>In order to earn ether you must have your <strong>etherbase</strong> (or
+<strong>coinbase</strong>) address set. This etherbase defaults to your primary
+account. If you don\'t have an etherbase address, then <code>geth --mine</code>
+will not start up.</p>
+<p>You can set your etherbase on the command line:</p>
+<p>``` {.sourceCode .bash}
+geth --etherbase 1 --mine  2&gt;&gt; geth.log // 1 is index: second account by creation order OR
+geth --etherbase '0xa4d8e9cae4d04b093aac82e6cd355b6b963fb7ff' --mine 2&gt;&gt; geth.log
+<div class="codehilite"><pre><span></span>You can reset your etherbase on the console too:
+
+``` {.sourceCode .javascript}
+miner.setEtherbase(eth.accounts[2])
+</pre></div></p>
+<p>Note that your etherbase does not need to be an address of a local
+account, just an existing one.</p>
+<p>There is an option <a href="https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#minersetextra">to add extra
+Data</a>
+(32 bytes only) to your mined blocks. By convention this is interpreted
+as a unicode string, so you can set your short vanity tag.</p>
+<p>``` {.sourceCode .javascript}
+miner.setExtra("ΞTHΞЯSPHΞЯΞ")
+...
+debug.printBlock(131805)
+BLOCK(be465b020fdbedc4063756f0912b5a89bbb4735bd1d1df84363e05ade0195cb1): Size: 531.00 B TD: 643485290485 {
+NoNonce: ee48752c3a0bfe3d85339451a5f3f411c21c8170353e450985e1faab0a9ac4cc
+Header:
+[
+...
+        Coinbase:           a4d8e9cae4d04b093aac82e6cd355b6b963fb7ff
+        Number:             131805
+        Extra:              ΞTHΞЯSPHΞЯΞ
+...
+}
+<div class="codehilite"><pre><span></span>You can check your hashrate with
+[miner.hashrate](https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console#adminminerhashrate),
+the result is in H/s (Hash operations per second).
+
+``` {.sourceCode .javascript}
+&gt; miner.hashrate
+712000
+</pre></div></p>
+<p>After you successfully mined some blocks, you can check the ether
+balance of your etherbase account. Now assuming your etherbase is a
+local account:</p>
+<p>``` {.sourceCode .javascript}</p>
+<blockquote>
+<p>eth.getBalance(eth.coinbase).toNumber();
+'34698870000000'
+<div class="codehilite"><pre><span></span>In order to spend your earnings on gas to transact, you will need to
+have this account unlocked.
+
+``` {.sourceCode .javascript}
+&gt; personal.unlockAccount(eth.coinbase)
+Password
+true
+</pre></div></p>
+</blockquote>
+<p>You can check which blocks are mined by a particular miner (address)
+with the following code snippet on the console:</p>
+<p>``` {.sourceCode .javascript}
+function minedBlocks(lastn, addr) {
+  addrs = [];
+  if (!addr) {
+    addr = eth.coinbase
+  }
+  limit = eth.blockNumber - lastn
+  for (i = eth.blockNumber; i &gt;= limit; i--) {
+    if (eth.getBlock(i).miner == addr) {
+      addrs.push(i)
+    }
+  }
+  return addrs
+}
+// scans the last 1000 blocks and returns the blocknumbers of blocks mined by your coinbase
+// (more precisely blocks the mining reward for which is sent to your coinbase).
+minedBlocks(1000, eth.coinbase);
+//[352708, 352655, 352559]
+<div class="codehilite"><pre><span></span>Note that it will happen often that you find a block yet it never makes
+it to the canonical chain. This means when you locally include your
+mined block, the current state will show the mining reward credited to
+your account, however, after a while, the better chain is discovered and
+we switch to a chain in which your block is not included and therefore
+no mining reward is credited. Therefore it is quite possible that as a
+miner monitoring their coinbase balance will find that it may fluctuate
+quite a bit.
+
+## GPU mining
+
+### Hardware
+
+The algorithm is memory hard and in order to fit the DAG into memory, it
+needs 1-2GB of RAM on each GPU. If you get
+`Error GPU mining. GPU memory fragmentation?` you do not have enough
+memory. The GPU miner is implemented in OpenCL, so AMD GPUs will be
+\&#39;faster\&#39; than same-category NVIDIA GPUs. ASICs and FPGAs are
+relatively inefficient and therefore discouraged. To get openCL for your
+chipset and platform, try:
+
+-   [AMD SDK
+    openCL](http://developer.amd.com/tools-and-sdks/opencl-zone/amd-accelerated-parallel-processing-app-sdk)
+-   [NVIDIA CUDA openCL](https://developer.nvidia.com/cuda-downloads)
+
+### Ubuntu Linux set-up
+
+For this quick guide, you\&#39;ll need Ubuntu 14.04 or 15.04 and the fglrx
+graphics drivers. You can use NVidia drivers and other platforms, too,
+but you\&#39;ll have to find your own way to getting a working OpenCL
+install with them, such as [Genoil\&#39;s ethminer
+fork](http://cryptomining-blog.com/tag/ethminer/).
+
+If you\&#39;re on 15.04, Go to \&quot;Software and Updates \&gt; Additional
+Drivers\&quot; and set it to \&quot;Using video drivers for the AMD graphics
+accelerator from fglrx\&quot;.
+
+If you\&#39;re on 14.04, go to \&quot;Software and Updates \&gt; Additional
+Drivers\&quot; and set it to \&quot;Using video drivers for the AMD graphics
+accelerator from fglrx\&quot;. Unfortunately, for some of you this will not
+work due to a known bug in Ubuntu 14.04.02 preventing you from switching
+to the proprietary graphics drivers required to GPU mine.
+
+So, if you encounter this bug, and before you do anything else, go to
+\&quot;Software and updates \&gt; Updates\&quot; and select \&quot;Pre-released updates
+trusty proposed\&quot;. Then, go back to \&quot;Software and Updates \&gt; Additional
+Drivers\&quot; and set it to \&quot;Using video drivers for the AMD graphics
+accelerator from fglrx\&quot;). After rebooting, it\&#39;s well worth having a
+check that the drivers have now indeed been installed correctly (For
+example by going to \&quot;Additional Drivers\&quot; again).
+
+Whatever you do, if you are on 14.04.02 do not alter the drivers or the
+drivers configuration once set. For example, the usage of aticonfig
+\--initial (especially with the -f, \--force option) can \&#39;break\&#39; your
+setup. If you accidentally alter their configuration, you\&#39;ll need to
+de-install the drivers, reboot, reinstall the drivers and reboot.
+
+### Mac set-up
+
+``` {.sourceCode .bash}
+wget http://developer.download.nvidia.com/compute/cuda/7_0/Prod/local_installers/cuda_7.0.29_mac.pkg
+sudo installer -pkg ~/Desktop/cuda_7.0.29_mac.pkg -target /
+brew update
+brew tap ethereum/ethereum
+brew reinstall cpp-ethereum --with-gpu-mining --devel --headless --build-from-source
+</pre></div></p>
+<p>You check your cooling status:</p>
+<p>``` {.sourceCode .bash}
+aticonfig --adapter=0 --od-gettemperature
+<div class="codehilite"><pre><span></span>### Windows set-up
+
+[Download the latest Eth++
+installation](https://github.com/ethereum-mining/ethminer/releases) and
+choose ethminer at the \&quot;Choose Components\&quot; screen of the installation
+screen.
+
+![image](img/eth_miner_setup.png)
+
+### Using ethminer with geth
+
+``` {.sourceCode .bash}
+geth account new // Set-up ethereum account if you do not have one
+geth --rpc --rpccorsdomain localhost 2&gt;&gt; geth.log &amp;
+ethminer -G  // -G for GPU, -M for benchmark
+tail -f geth.log
+</pre></div></p>
+<p><code>ethminer</code> communicates with geth on port 8545 (the default RPC port in
+geth). You can change this by giving the <code>--rpcport</code> option to <code>geth</code>.
+Ethminer will find geth on any port. Note that you need to set the CORS
+header with <code>--rpccorsdomain localhost</code>. You can also set port on
+<code>ethminer</code> with <code>-F http://127.0.0.1:3301</code>. Setting the ports is
+necessary if you want several instances mining on the same computer,
+although this is somewhat pointless. If you are testing on a private
+chain, we recommend you use CPU mining instead.</p>
+<p>::: {.note}
+::: {.admonition-title}
+Note
+:::</p>
+<p>You do <strong>not</strong> need to give <code>geth</code> the <code>--mine</code> option or start the
+miner in the console unless you want to do CPU mining on TOP of GPU
+mining.
+:::</p>
+<p>If the default for <code>ethminer</code> does not work try to specify the OpenCL
+device with: <code>--opencl-device X</code> where X is {0, 1, 2,...}. When running
+<code>ethminer</code> with <code>-M</code> (benchmark), you should see something like:</p>
+<p>``` {.sourceCode .bash}
+Benchmarking on platform: { "platform": "NVIDIA CUDA", "device": "GeForce GTX 750 Ti", "version": "OpenCL 1.1 CUDA" }</p>
+<p>Benchmarking on platform: { "platform": "Apple", "device": "Intel(R) Xeon(R) CPU E5-1620 v2 @ 3.70GHz", "version": "OpenCL 1.2 " }
+<div class="codehilite"><pre><span></span>To debug `geth`:
+
+``` {.sourceCode .bash}
+geth  --rpccorsdomain &quot;localhost&quot; --verbosity 6 2&gt;&gt; geth.log
+</pre></div></p>
+<p>To debug the miner:</p>
+<p>``` {.sourceCode .bash}
+make -DCMAKE_BUILD_TYPE=Debug -DETHASHCL=1 -DGUI=0
+gdb --args ethminer -G -M
+<div class="codehilite"><pre><span></span>::: {.note}
+::: {.admonition-title}
+Note
+:::
+
+hashrate info is not available in `geth` when GPU mining.
+:::
+
+Check your hashrate with `ethminer`, `miner.hashrate` will always report
+0.
+
+### Using ethminer with eth
+
+#### Mining on a single GPU
+
+In order to mine on a single GPU all that needs to be done is to run eth
+with the following arguments:
+
+``` {.sourceCode .bash}
+eth -v 1 -a 0xcadb3223d4eebcaa7b40ec5722967ced01cfc8f2 --client-name &quot;OPTIONALNAMEHERE&quot; -x 50 -m on -G
+</pre></div></p>
+<ul>
+<li><code>-v 1</code> Set verbosity to 1. Let\'s not get spammed by messages.</li>
+<li><code>-a YOURWALLETADDRESS</code> Set the coinbase, where the mining rewards
+    will go to. The above address is just an example. This argument is
+    really important, make sure to not make a mistake in your wallet
+    address or you will receive no ether payout.</li>
+<li><code>--client-name "OPTIONAL"</code> Set an optional client name to identify
+    you on the network</li>
+<li><code>-x 50</code> Request a high amount of peers. Helps with finding peers in
+    the beginning.</li>
+<li><code>-m on</code> Actually launch with mining on.</li>
+<li><code>-G</code> set GPU mining on.</li>
+</ul>
+<p>While the client is running you can interact with it using either geth
+attach` or
+[ethconsole](<a href="https://github.com/ethereum/ethereum-console">https://github.com/ethereum/ethereum-console</a>).</p>
+<h4 id="mining-on-a-multiple-gpus">Mining on a multiple GPUs<a class="headerlink" href="#mining-on-a-multiple-gpus" title="Permanent link">&para;</a></h4>
+<p>Mining with multiple GPUs and eth is very similar to mining with geth
+and multiple GPUs. Ensure that an eth node is running with your coinbase
+address properly set:</p>
+<p>``` {.sourceCode .bash}
+eth -v 1 -a 0xcadb3223d4eebcaa7b40ec5722967ced01cfc8f2 --client-name "OPTIONALNAMEHERE" -x 50 -j
+<div class="codehilite"><pre><span></span>Notice that we also added the -j argument so that the client can have
+the JSON-RPC server enabled to communicate with the ethminer instances.
+Additionally we removed the mining related arguments since ethminer will
+now do the mining for us. For each of your GPUs execute a different
+ethminer instance:
+
+``` {.sourceCode .bash}
+ethminer --no-precompute -G --opencl-device X
+</pre></div></p>
+<p>Where X is the index number corresponding to the openCL device you want
+the ethminer to use {0, 1, 2,...}. In order to easily get a list of
+OpenCL devices you can execute <code>ethminer --list-devices</code> which will
+provide a list of all devices OpenCL can detect, with also some
+additional information per device.</p>
+<p>Below is a sample output:</p>
+<p>``` {.sourceCode .console}
+[0] GeForce GTX 770
+    CL_DEVICE_TYPE: GPU
+    CL_DEVICE_GLOBAL_MEM_SIZE: 4286345216
+    CL_DEVICE_MAX_MEM_ALLOC_SIZE: 1071586304
+    CL_DEVICE_MAX_WORK_GROUP_SIZE: 1024
+<div class="codehilite"><pre><span></span>Finally the `--no-precompute` argument requests that the ethminers
+don\&#39;t create the DAG of the next epoch ahead of time. Although this is
+not recommended since you\&#39;ll have a mining interruption every time when
+there\&#39;s an epoch transition.
+
+#### Benchmarking
+
+Mining power tends to scale with memory bandwidth. Our implementation is
+written in OpenCL, which is typically supported better by AMD GPUs over
+NVidia. Empirical evidence confirms that AMD GPUs offer a better mining
+performance in terms of price than their NVidia counterparts.
+
+To benchmark a single-device setup you can use ethminer in benchmarking
+mode through the -M option:
+
+``` {.sourceCode .bash}
+ethminer -G -M
+</pre></div></p>
+<p>If you have many devices and you\'ll like to benchmark each
+individually, you can use the --opencl-device option similarly to the
+previous section:</p>
+<p><code>{.sourceCode .bash}
+ethminer -G -M --opencl-device X</code></p>
+<p>Use ethminer <code>--list-devices</code> to list possible numbers to substitute for
+the X {0, 1, 2,...}.</p>
+<p>To start mining on Windows, first <a href="https://build.ethereum.org/builds/Windows%20Go%20master%20branch/">download the geth windows
+binary</a>.</p>
+<ul>
+<li>Unzip Geth (right-click and select unpack) and launch Command
+    Prompt. Use cd to navigate to the location of the Geth data folder.
+    (e.g. <code>cd /</code> to go to the <code>C:</code> drive)</li>
+<li>Start geth by typing <code>geth --rpc</code>.</li>
+</ul>
+<p>As soon as you enter this, the Ethereum blockchain will start
+downloading. Sometimes your firewall may block the synchronisation
+process (it will prompt you when doing so). If this is the case, click
+\"Allow access\".</p>
+<ul>
+<li>First <a href="http://cryptomining-blog.com/tag/ethminer-cuda-download/">download and install
+    ethminer</a>,
+    the C++ mining software (your firewall or Windows itself may act up,
+    allow access)</li>
+<li>Open up another Command Prompt (leave the first one running!),
+    change directory by typing <code>cd /Program\ Files/Ethereum(++)/release</code></li>
+<li>Now make sure geth has finished syncing the blockchain. If it is not
+    syncing any longer, you can start the mining process by typing
+    <code>ethminer -G</code> at the command prompt</li>
+</ul>
+<p>At this point some problems may appear. If you get an error, you can
+abort the miner by pressing <code>Ctrl+C</code>. If the error says \"Insufficient
+Memory\", your GPU does not have enough memory to mine ether.</p>
+<h2 id="pool-mining-">Pool mining-<a class="headerlink" href="#pool-mining-" title="Permanent link">&para;</a></h2>
+<p>Mining pools are cooperatives that aim to smooth out expected revenue by
+pooling the mining power of participating miners. In return, they
+usually charge you 0-5% of your mining rewards. The mining pool submits
+blocks with proof of work from a central account and redistributes the
+reward to participants in proportion to their contributed mining power.</p>
+<p>::: {.warning}
+::: {.admonition-title}
+Warning
+:::</p>
+<p>Most mining pools involve third party, central components which means
+they are not trustless. In other words, pool operators can run away with
+your earnings. Act with caution. There are a number of trustless,
+decentralised pools with open source codebase.
+:::</p>
+<p>::: {.warning}
+::: {.admonition-title}
+Warning
+:::</p>
+<p>Mining pools only outsource proof of work calculation, they do not
+validate blocks or run the VM to check state transitions brought about
+by executing the transactions. This effectively make pools behave like
+single nodes in terms of security, so their growth poses a
+centralisation risk of a <a href="https://learncryptography.com/cryptocurrency/51-attack">51%
+attack</a>. Make
+sure you follow the network capacity distribution and do not allow pools
+to grow too large.
+:::</p>
+<h3 id="mining-pools">Mining pools<a class="headerlink" href="#mining-pools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.coinotron.com/">coinotron</a></li>
+<li><a href="http://eth.nanopool.org/">nanopool</a></li>
+<li><a href="https://github.com/etherchain-org/ethpool-core">ethpool</a> -
+    Predictable solo mining, unconventional payout scheme, affiliated
+    with <a href="">etherchain\.org</a>.</li>
+<li><a href="https://eth.suprnova.cc/">supernova</a></li>
+<li><a href="https://www2.coinmine.pl/eth/">coinmine.pl</a></li>
+<li><a href="https://eth.pp.ua/">eth.pp.ua</a></li>
+<li><a href="http://talkether.org/">talkether</a> - Unconventional payout scheme,
+    partially decentralized</li>
+<li><a href="http://weipool.org/">weipool</a></li>
+<li><a href="https://ethereumpool.co/">ethereumpool</a></li>
+<li><a href="http://www.pooleum.com">pooleum</a></li>
+<li><a href="http://www.alphapool.xyz/">alphapool</a></li>
+<li><a href="http://ethereum.cryptopool.online/">cryptopool</a></li>
+<li><a href="http://eth.unitedminers.cloud/">unitedminers</a></li>
+<li><a href="https://2miners.com/">2miners</a></li>
+<li><a href="http://dwarfpool.com/eth">dwarfpool</a> - Try to avoid this (currently
+    over 50% of the network)</li>
+<li><a href="http://pool.laintimes.com/">laintimes</a> - Discontinued</li>
+</ul>
+<h2 id="mining-resources-">Mining resources----<a class="headerlink" href="#mining-resources-" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://etherchain.org/statistics/miners">Top miners of last 24h on
+    etherchain</a></li>
+<li><a href="http://cryptomining-blog.com/5607-the-current-state-of-ethereum-mining-pools/">pool hashrate distribution for august
+    2015</a></li>
+<li><a href="https://forum.ethereum.org/discussion/3659/list-of-pools">Unmaintained list of pools on
+    Forum</a></li>
+<li><a href="https://www.cryptocompare.com/mining/calculator/eth">Mining profitability calculator on
+    cryptocompare</a></li>
+<li><a href="http://cryptowizzard.github.io/eth-mining-calculator/">Mining profitability calculator on
+    cryptowizzard</a></li>
+<li><a href="http://etherscan.io/ether-mining-calculator/">Mining profitability calculator on
+    etherscan</a></li>
+<li><a href="http://ethereum-mining-calculator.com/">Mining profitability calculator on In The
+    Ether</a></li>
+<li><a href="http://etherscan.io/charts/difficulty">Mining difficulty chart on
+    etherscan</a></li>
+</ul>
+<h3 id="pos-vs-pow-pos-vs-pow">POS vs POW {#POS vs POW}<a class="headerlink" href="#pos-vs-pow-pos-vs-pow" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.reddit.com/r/ethereum/comments/38db1z/eli5_the_difference_between_pos_and_pow/">https://www.reddit.com/r/ethereum/comments/38db1z/eli5_the_difference_between_pos_and_pow/</a></li>
+<li><a href="https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/">https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/</a></li>
+<li><a href="https://www.reddit.com/r/ethereum/comments/42o8oy/can_someone_explain_the_switch_to_pos_how_and_when/">https://www.reddit.com/r/ethereum/comments/42o8oy/can_someone_explain_the_switch_to_pos_how_and_when/</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../network/test-networks/" title="测试网络" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                测试网络
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../contracts-and-transactions/account-types-gas-and-transactions/" title="帐户类型燃料交易" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                帐户类型燃料交易
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2018 -  wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

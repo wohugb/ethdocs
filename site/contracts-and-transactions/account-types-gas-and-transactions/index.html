@@ -1,0 +1,1665 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="以太坊家园版中文文档">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>帐户类型燃料交易 - 以太坊家园版文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="以太坊家园版文档" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                以太坊家园版文档
+              </span>
+              <span class="md-header-nav__topic">
+                帐户类型燃料交易
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="前言" class="md-tabs__link">
+        前言
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../introduction/what-is-ethereum/" title="简介" class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../clients/choosing-a-client/" title="客户端" class="md-tabs__link">
+          客户端
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../connecting-to-clients/" title="链接" class="md-tabs__link">
+          链接
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../account-management/" title="账号" class="md-tabs__link">
+          账号
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ether/" title="以太币" class="md-tabs__link">
+          以太币
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../network/connecting-to-the-network/" title="网络" class="md-tabs__link">
+          网络
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mining/" title="挖矿" class="md-tabs__link">
+          挖矿
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="合约和交易" class="md-tabs__link md-tabs__link--active">
+          合约和交易
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    以太坊家园版文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/what-is-ethereum/" title="什么是以太坊？" class="md-nav__link">
+      什么是以太坊？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/how-to-use-this-guide/" title="如何使用本指南？" class="md-nav__link">
+      如何使用本指南？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/the-homestead-release/" title="家园版" class="md-nav__link">
+      家园版
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/web3/" title="Web 3" class="md-nav__link">
+      Web 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/history-of-ethereum/" title="以太网的历史" class="md-nav__link">
+      以太网的历史
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/community/" title="社区" class="md-nav__link">
+      社区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/foundation/" title="以太坊基金会" class="md-nav__link">
+      以太坊基金会
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../introduction/contributors/" title="贡献者" class="md-nav__link">
+      贡献者
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      客户端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        客户端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/choosing-a-client/" title="选择一个客户端" class="md-nav__link">
+      选择一个客户端
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/cpp-ethereum/" title="cpp-ethereum" class="md-nav__link">
+      cpp-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/go-ethereum/" title="go-ethereum" class="md-nav__link">
+      go-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/pyethapp/" title="pyethapp" class="md-nav__link">
+      pyethapp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumjs-lib/" title="ethereumjs-lib" class="md-nav__link">
+      ethereumjs-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumj/" title="ethereum(j)" class="md-nav__link">
+      ethereum(j)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ethereumh/" title="ethereumH" class="md-nav__link">
+      ethereumH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/parity/" title="parity" class="md-nav__link">
+      parity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../clients/ruby-ethereum/" title="ruby-ethereum" class="md-nav__link">
+      ruby-ethereum
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      链接
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        链接
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/web3.js/" title="web3.js" class="md-nav__link">
+      web3.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/web3j/" title="web3j" class="md-nav__link">
+      web3j
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/nethereum/" title="Nethereum" class="md-nav__link">
+      Nethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../connecting-to-clients/ethereum-ruby/" title="ethereum-ruby" class="md-nav__link">
+      ethereum-ruby
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      账号
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        账号
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../account-management/" title="账号" class="md-nav__link">
+      账号
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      以太币
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        以太币
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ether/" title="以太币" class="md-nav__link">
+      以太币
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../network/connecting-to-the-network/" title="连接到网络" class="md-nav__link">
+      连接到网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../network/test-networks/" title="测试网络" class="md-nav__link">
+      测试网络
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      挖矿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        挖矿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mining/" title="挖矿" class="md-nav__link">
+      挖矿
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
+    
+    <label class="md-nav__link" for="nav-9">
+      合约和交易
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        合约和交易
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        帐户类型燃料交易
+      </label>
+    
+    <a href="./" title="帐户类型燃料交易" class="md-nav__link md-nav__link--active">
+      帐户类型燃料交易
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eoa-vs-contract-accounts" title="EOA vs contract accounts" class="md-nav__link">
+    EOA vs contract accounts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#externally-owned-accounts-eoas" title="Externally owned accounts (EOAs)" class="md-nav__link">
+    Externally owned accounts (EOAs)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contract-accounts" title="Contract accounts" class="md-nav__link">
+    Contract accounts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-transaction" title="What is a transaction?" class="md-nav__link">
+    What is a transaction?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-message" title="What is a message?" class="md-nav__link">
+    What is a message?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-gas" title="What is gas?" class="md-nav__link">
+    What is gas?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimating-transaction-costs" title="Estimating transaction costs" class="md-nav__link">
+    Estimating transaction costs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gasused" title="gasUsed" class="md-nav__link">
+    gasUsed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gasprice" title="gasPrice" class="md-nav__link">
+    gasPrice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-transaction-cost" title="Example transaction cost" class="md-nav__link">
+    Example transaction cost
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-interactions-example-betting-contract" title="Account interactions example - betting contract" class="md-nav__link">
+    Account interactions example - betting contract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-transactions-offline" title="Signing transactions offline" class="md-nav__link">
+    Signing transactions offline
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts/" title="合同" class="md-nav__link">
+      合同
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../accessing-contracts-and-transactions/" title="访问合约和交易" class="md-nav__link">
+      访问合约和交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mix/" title="mix" class="md-nav__link">
+      mix
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developer-tools/" title="dapps" class="md-nav__link">
+      dapps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ethereum-tests/" title="测试" class="md-nav__link">
+      测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web3-base-layer-services/" title="WEB3基本层服务" class="md-nav__link">
+      WEB3基本层服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../faq/faq/" title="常见问题" class="md-nav__link">
+      常见问题
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../glossary/" title="术语" class="md-nav__link">
+      术语
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="关于" class="md-nav__link">
+      关于
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#eoa-vs-contract-accounts" title="EOA vs contract accounts" class="md-nav__link">
+    EOA vs contract accounts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#externally-owned-accounts-eoas" title="Externally owned accounts (EOAs)" class="md-nav__link">
+    Externally owned accounts (EOAs)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contract-accounts" title="Contract accounts" class="md-nav__link">
+    Contract accounts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-transaction" title="What is a transaction?" class="md-nav__link">
+    What is a transaction?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-message" title="What is a message?" class="md-nav__link">
+    What is a message?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-gas" title="What is gas?" class="md-nav__link">
+    What is gas?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estimating-transaction-costs" title="Estimating transaction costs" class="md-nav__link">
+    Estimating transaction costs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gasused" title="gasUsed" class="md-nav__link">
+    gasUsed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gasprice" title="gasPrice" class="md-nav__link">
+    gasPrice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-transaction-cost" title="Example transaction cost" class="md-nav__link">
+    Example transaction cost
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#account-interactions-example-betting-contract" title="Account interactions example - betting contract" class="md-nav__link">
+    Account interactions example - betting contract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#signing-transactions-offline" title="Signing transactions offline" class="md-nav__link">
+    Signing transactions offline
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="account-types-gas-and-transactions">Account Types, Gas, and Transactions<a class="headerlink" href="#account-types-gas-and-transactions" title="Permanent link">&para;</a></h1>
+<h2 id="eoa-vs-contract-accounts">EOA vs contract accounts<a class="headerlink" href="#eoa-vs-contract-accounts" title="Permanent link">&para;</a></h2>
+<p>There are two types of accounts in Ethereum</p>
+<p>:   -   Externally Owned Accounts
+    -   Contracts Accounts</p>
+<p>This distinction might be eliminated in Serenity.</p>
+<h3 id="externally-owned-accounts-eoas">Externally owned accounts (EOAs)<a class="headerlink" href="#externally-owned-accounts-eoas" title="Permanent link">&para;</a></h3>
+<p>An externally controlled account</p>
+<ul>
+<li>has an ether balance,</li>
+<li>can send transactions (ether transfer or trigger contract code),</li>
+<li>is controlled by private keys,</li>
+<li>has no associated code.</li>
+</ul>
+<h3 id="contract-accounts">Contract accounts<a class="headerlink" href="#contract-accounts" title="Permanent link">&para;</a></h3>
+<p>A contract</p>
+<ul>
+<li>has an ether balance,</li>
+<li>has associated code,</li>
+<li>code execution is triggered by transactions or messages (calls)
+    received from other contracts.</li>
+<li>when executed<ul>
+<li>perform operations of arbitrary complexity (Turing completeness)</li>
+<li>manipulate its own persistent storage, i.e., can have its own
+    permanent state</li>
+<li>can call other contracts</li>
+</ul>
+</li>
+</ul>
+<p>All action on the Ethereum block chain is set in motion by transactions
+fired from externally owned accounts. Every time a contract account
+receives a transaction, its code is executed as instructed by the input
+parameters sent as part of the transaction. The contract code is
+executed by the Ethereum Virtual Machine on each node participating in
+the network as part of their verification of new blocks.</p>
+<p>This execution needs to be completely deterministic, its only context is
+the position of the block on the blockchain and all data available. The
+blocks on the blockchain represent units of time, the blockchain itself
+is a temporal dimension and represents the entire history of states at
+the discrete time points designated by the blocks on the chain.</p>
+<p>All ether balances and values are denominated in units of wei: 1 ether
+is 1e18 wei.</p>
+<p>::: {.note}
+::: {.admonition-title}
+Note
+:::</p>
+<p>\"Contracts\" in Ethereum should not be seen as something that should be
+\"fulfilled\" or \"complied with\"; rather, they are more like
+\"autonomous agents\" that live inside of the Ethereum execution
+environment, always executing a specific piece of code when \"poked\" by
+a message or transaction, and having direct control over their own ether
+balance and their own key/value store to store their permanent state.
+:::</p>
+<h2 id="what-is-a-transaction">What is a transaction?<a class="headerlink" href="#what-is-a-transaction" title="Permanent link">&para;</a></h2>
+<p>The term \"transaction\" is used in Ethereum to refer to the signed data
+package that stores a message to be sent from an externally owned
+account to another account on the blockchain.</p>
+<p>Transactions contain:</p>
+<p>:   -   the recipient of the message,
+    -   a signature identifying the sender and proving their intention
+        to send the message via the blockchain to the recipient,
+    -   <code>VALUE</code> field - The amount of wei to transfer from the sender to
+        the recipient,
+    -   an optional data field, which can contain the message sent to a
+        contract,
+    -   a <code>STARTGAS</code> value, representing the maximum number of
+        computational steps the transaction execution is allowed to
+        take,
+    -   a <code>GASPRICE</code> value, representing \"Wei per gas\". One Wei
+        corresponds to 0.000000000000000001 Ether.</p>
+<h2 id="what-is-a-message">What is a message?<a class="headerlink" href="#what-is-a-message" title="Permanent link">&para;</a></h2>
+<p>Contracts have the ability to send \"messages\" to other contracts.
+Messages are virtual objects that are never serialized and exist only in
+the Ethereum execution environment. They can be conceived of as function
+calls.</p>
+<p>A message contains:</p>
+<p>:   -   the sender of the message (implicit).
+    -   the recipient of the message
+    -   <code>VALUE</code> field - The amount of wei to transfer alongside the
+        message to the contract address,
+    -   an optional data field, that is the actual input data to the
+        contract
+    -   a <code>STARTGAS</code> value, which limits the maximum amount of gas the
+        code execution triggered by the message can incur.</p>
+<p>Essentially, a message is like a transaction, except it is produced by a
+contract and not an external actor. A message is produced when a
+contract currently executing code executes the <code>CALL</code> or <code>DELEGATECALL</code>
+opcodes, which produces and executes a message. Like a transaction, a
+message leads to the recipient account running its code. Thus, contracts
+can have relationships with other contracts in exactly the same way that
+external actors can.</p>
+<h2 id="what-is-gas">What is gas?<a class="headerlink" href="#what-is-gas" title="Permanent link">&para;</a></h2>
+<p>Ethereum implements an execution environment on the blockchain called
+the Ethereum Virtual Machine (EVM). Every node participating in the
+network runs the EVM as part of the block verification protocol. They go
+through the transactions listed in the block they are verifying and run
+the code as triggered by the transaction within the EVM. Each and every
+full node in the network does the same calculations and stores the same
+values. Clearly Ethereum is not about optimising efficiency of
+computation. Its parallel processing is redundantly parallel. This is to
+offer an efficient way to reach consensus on the system state without
+needing trusted third parties, oracles or violence monopolies. But
+importantly they are not there for optimal computation. The fact that
+contract executions are redundantly replicated across nodes, naturally
+makes them expensive, which generally creates an incentive not to use
+the blockchain for computation that can be done offchain.</p>
+<p>When you are running a decentralized application (dapp), it interacts
+with the blockchain to read and modify its state, but dapps will
+typically only put the business logic and state that are crucial for
+consensus on the blockchain.</p>
+<p>When a contract is executed as a result of being triggered by a message
+or transaction, every instruction is executed on every node of the
+network. This has a cost: for every executed operation there is a
+specified cost, expressed in a number of gas units.</p>
+<p>Gas is the name for the execution fee that senders of transactions need
+to pay for every operation made on an Ethereum blockchain. The name gas
+is inspired by the view that this fee acts as cryptofuel, driving the
+motion of smart contracts. Gas is purchased for ether from the miners
+that execute the code. Gas and ether are decoupled deliberately since
+units of gas align with computation units having a natural cost, while
+the price of ether generally fluctuates as a result of market forces.
+The two are mediated by a free market: the price of gas is actually
+decided by the miners, who can refuse to process a transaction with a
+lower gas price than their minimum limit. To get gas you simply need to
+add ether to your account. The Ethereum clients automatically purchase
+gas for your ether in the amount you specify as your maximum expenditure
+for the transaction.</p>
+<p>The Ethereum protocol charges a fee per computational step that is
+executed in a contract or transaction to prevent deliberate attacks and
+abuse on the Ethereum network. Every transaction is required to include
+a gas limit and a fee that it is willing to pay per gas. Miners have the
+choice of including the transaction and collecting the fee or not. If
+the total amount of gas used by the computational steps spawned by the
+transaction, including the original message and any sub-messages that
+may be triggered, is less than or equal to the gas limit, then the
+transaction is processed. If the total gas exceeds the gas limit, then
+all changes are reverted, except that the transaction is still valid and
+the fee can still be collected by the miner. All excess gas not used by
+the transaction execution is reimbursed to the sender as Ether. You do
+not need to worry about overspending, since you are only charged for the
+gas you consume. This means that it is useful as well as safe to send
+transactions with a gas limit well above the estimates.</p>
+<h2 id="estimating-transaction-costs">Estimating transaction costs<a class="headerlink" href="#estimating-transaction-costs" title="Permanent link">&para;</a></h2>
+<p>The total ether cost of a transaction is based on 2 factors:</p>
+<p><code>gasUsed</code> is the total gas that is consumed by the transaction</p>
+<p><code>gasPrice</code> price (in ether) of one unit of gas specified in the
+transaction</p>
+<p><strong>Total cost = gasUsed * gasPrice</strong></p>
+<h3 id="gasused">gasUsed<a class="headerlink" href="#gasused" title="Permanent link">&para;</a></h3>
+<p>Each operation in the EVM was assigned a number of how much gas it
+consumes. <code>gasUsed</code> is the sum of all the gas for all the operations
+executed. There is a
+<a href="http://ethereum.stackexchange.com/q/52/42">spreadsheet</a> which offers a
+glimpse to some of the analysis behind this.</p>
+<p>For estimating <code>gasUsed</code>, there is an <a href="http://ethereum.stackexchange.com/q/266/42">estimateGas
+API</a> that can be used but
+has some caveats.</p>
+<h3 id="gasprice">gasPrice<a class="headerlink" href="#gasprice" title="Permanent link">&para;</a></h3>
+<p>A user constructs and signs a transaction, and each user may specify
+whatever <code>gasPrice</code> they desire, which can be zero. However, the
+Ethereum clients launched at Frontier had a default gasPrice of 0.05e12
+wei. As miners optimize for their revenue, if most transactions are
+being submitted with a gasPrice of 0.05e12 wei, it would be difficult to
+convince a miner to accept a transaction that specified a lower, or
+zero, gasPrice.</p>
+<h3 id="example-transaction-cost">Example transaction cost<a class="headerlink" href="#example-transaction-cost" title="Permanent link">&para;</a></h3>
+<p>Let's take a contract that just adds 2 numbers. The EVM OPCODE <code>ADD</code>
+consumes 3 gas.</p>
+<p>The approximate cost, using the default gas price (as of January 2016),
+would be:</p>
+<p>3 * 0.05e12 = 1.5e11 wei</p>
+<p>Since 1 ether is 1e18 wei, the total cost would be 0.00000015 Ether.</p>
+<p>This is a simplification since it ignores some costs, such as the cost
+of passing the 2 numbers to contract, before they can even be added.</p>
+<ul>
+<li><a href="http://ethereum.stackexchange.com/q/324/42">question</a></li>
+<li><a href="http://ether.fund/tool/gas-fees">gas fees</a></li>
+<li><a href="http://ether.fund/tool/calculator">gas cost calculator</a></li>
+<li><a href="https://docs.google.com/spreadsheets/d/1m89CVujrQe5LAFJ8-YAUCcNK950dUzMQPMJBxRtGCqs">Ethereum Gas
+    Prices</a></li>
+</ul>
+<p>Operation Name      Gas Cost   Remark                                         </p>
+<hr />
+<p>step                1          default amount per execution cycle           <br />
+  stop                0          free                                         <br />
+  suicide sha3        0 20       free                                         <br />
+  sload               20         get from permanent storage                   <br />
+  sstore balance      100 20     put into permanent storage                   <br />
+  create              100        contract creation                            <br />
+  call                20         initiating a read-only call                  <br />
+  memory              1          every additional word when expanding memory  <br />
+  txdata              5          every byte of data or code for a transaction <br />
+  transaction         500        base fee transaction                         <br />
+  contract creation   53000      changed in homestead from 21000                </p>
+<h2 id="account-interactions-example-betting-contract">Account interactions example - betting contract<a class="headerlink" href="#account-interactions-example-betting-contract" title="Permanent link">&para;</a></h2>
+<p>As previously mentioned, there are two types of accounts:</p>
+<ul>
+<li><strong>Externally owned account (EOAs)</strong>: an account controlled by a
+    private key, and if you own the private key associated with the EOA
+    you have the ability to send ether and messages from it.</li>
+<li><strong>Contract</strong>: an account that has its own code, and is controlled by
+    code.</li>
+</ul>
+<p>By default, the Ethereum execution environment is lifeless; nothing
+happens and the state of every account remains the same. However, any
+user can trigger an action by sending a transaction from an externally
+owned account, setting Ethereum\'s wheels in motion. If the destination
+of the transaction is another EOA, then the transaction may transfer
+some ether but otherwise does nothing. However, if the destination is a
+contract, then the contract in turn activates, and automatically runs
+its code.</p>
+<p>The code has the ability to read/write to its own internal storage (a
+database mapping 32-byte keys to 32-byte values), read the storage of
+the received message, and send messages to other contracts, triggering
+their execution in turn. Once execution stops, and all sub-executions
+triggered by a message sent by a contract stop (this all happens in a
+deterministic and synchronous order, ie. a sub-call completes fully
+before the parent call goes any further), the execution environment
+halts once again, until woken by the next transaction.</p>
+<p>Contracts generally serve four purposes:</p>
+<ul>
+<li>Maintain a data store representing something which is useful to
+    either other contracts or to the outside world; one example of this
+    is a contract that simulates a currency, and another is a contract
+    that records membership in a particular organization.</li>
+<li>Serve as a sort of externally-owned account with a more complicated
+    access policy; this is called a \"forwarding contract\" and
+    typically involves simply resending incoming messages to some
+    desired destination only if certain conditions are met; for example,
+    one can have a forwarding contract that waits until two out of a
+    given three private keys have confirmed a particular message before
+    resending it (ie. multisig). More complex forwarding contracts have
+    different conditions based on the nature of the message sent. The
+    simplest use case for this functionality is a withdrawal limit that
+    is overrideable via some more complicated access procedure. A wallet
+    contract is a good example of this.</li>
+<li>Manage an ongoing contract or relationship between multiple users.
+    Examples of this include a financial contract, an escrow with some
+    particular set of mediators, or some kind of insurance. One can also
+    have an open contract that one party leaves open for any other party
+    to engage with at any time; one example of this is a contract that
+    automatically pays a bounty to whoever submits a valid solution to
+    some mathematical problem, or proves that it is providing some
+    computational resource.</li>
+<li>Provide functions to other contracts, essentially serving as a
+    software library.</li>
+</ul>
+<p>Contracts interact with each other through an activity that is
+alternately called either \"calling\" or \"sending messages\". A
+\"message\" is an object containing some quantity of ether, a byte-array
+of data of any size, the addresses of a sender and a recipient. When a
+contract receives a message, it has the option of returning some data,
+which the original sender of the message can then immediately use. In
+this way, sending a message is exactly like calling a function.</p>
+<p>Because contracts can play such different roles, we expect that
+contracts will be interacting with each other. As an example, consider a
+situation where Alice and Bob are betting 100 GavCoin that the
+temperature in San Francisco will not exceed 35ºC at any point in the
+next year. However, Alice is very security-conscious, and as her primary
+account uses a forwarding contract which only sends messages with the
+approval of two out of three private keys. Bob is paranoid about quantum
+cryptography, so he uses a forwarding contract which passes along only
+messages that have been signed with Lamport signatures alongside
+traditional ECDSA (but because he\'s old fashioned, he prefers to use a
+version of Lamport sigs based on SHA256, which is not supported in
+Ethereum directly).</p>
+<p>The betting contract itself needs to fetch data about the San Francisco
+weather from some contract, and it also needs to talk to the GavCoin
+contract when it wants to actually send the GavCoin to either Alice or
+Bob (or, more precisely, Alice or Bob\'s forwarding contract). We can
+show the relationships between the accounts thus:</p>
+<p><img alt="image" src="../../img/contract_relationship.png" /></p>
+<p>When Bob wants to finalize the bet, the following steps happen:</p>
+<ol>
+<li>A transaction is sent, triggering a message from Bob\'s EOA to his
+    forwarding contract.</li>
+<li>Bob\'s forwarding contract sends the hash of the message and the
+    Lamport signature to a contract which functions as a Lamport
+    signature verification library.</li>
+<li>The Lamport signature verification library sees that Bob wants a
+    SHA256-based Lamport sig, so it calls the SHA256 library many times
+    as needed to verify the signature.</li>
+<li>Once the Lamport signature verification library returns 1,
+    signifying that the signature has been verified, it sends a message
+    to the contract representing the bet.</li>
+<li>The bet contract checks the contract providing the San Francisco
+    temperature to see what the temperature is.</li>
+<li>The bet contract sees that the response to the messages shows that
+    the temperature is above 35ºC, so it sends a message to the GavCoin
+    contract to move the GavCoin from its account to Bob\'s forwarding
+    contract.</li>
+</ol>
+<p>Note that the GavCoin is all \"stored\" as entries in the GavCoin
+contract\'s database; the word \"account\" in the context of step 6
+simply means that there is a data entry in the GavCoin contract storage
+with a key for the bet contract\'s address and a value for its balance.
+After receiving this message, the GavCoin contract decreases this value
+by some amount and increases the value in the entry corresponding to
+Bob\'s forwarding contract\'s address. We can see these steps in the
+following diagram:</p>
+<p><img alt="image" src="../../img/contract_relationship2.png" /></p>
+<h2 id="signing-transactions-offline">Signing transactions offline<a class="headerlink" href="#signing-transactions-offline" title="Permanent link">&para;</a></h2>
+<p>[ Maybe add this to the FAQ and point to the ethkey section of
+turboethereum guide? ]</p>
+<ul>
+<li><a href="https://github.com/resilience-me/broadcaster/">Resilience Raw Transaction
+    Broadcaster</a></li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../mining/" title="挖矿" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                挖矿
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../contracts/" title="合同" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                合同
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2018 -  wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

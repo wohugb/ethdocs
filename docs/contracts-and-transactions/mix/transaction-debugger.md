@@ -1,5 +1,4 @@
-Transaction debugger {#sec:transaction-debugger}
-====================
+# 事务调试器
 
 Mix supports both Solidity and assembly level contract code debugging.
 You can toggle between the two modes to retrieve the relevant
@@ -18,14 +17,12 @@ Memory -- Machine memory allocated up to this execution point
 
 Call data -- Transaction or call parameters
 
-Accessing the debug mode
-------------------------
+## 访问调试
 
 When transaction details are expanded, you can switch to the debugger
 view by clicking on the "Debug Transaction" button
 
-Toggling between debug modes and stepping through transactions
---------------------------------------------------------------
+## 在调试模式之间切换并逐步执行事务
 
 This opens the Solidity debugging mode. Switch between Solidity and EVM
 debugging mode using the Menu button (Debug -\> Show VM code)

@@ -1,5 +1,4 @@
-Nethereum {#Nethereum}
-=========
+# Nethereum
 
 **Nethereum**
 

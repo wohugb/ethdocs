@@ -6,17 +6,17 @@
 
 ## 内容
 
-- [introduction/index](introduction/index.md)
-- [ethereum-clients/index](ethereum-clients/index.md)
-- [connecting-to-clients/index](connecting-to-clients/index.md)
-- [account-management](account-management.md)
-- [ether](ether.md)
-- [network/index](network/index.md)
-- [mining](mining.md)
-- [contracts-and-transactions/index](contracts-and-transactions/index.md)
-- [frequently-asked-questions/frequently-asked-questions](frequently-asked-questions/frequently-asked-questions.md)
-- [glossary](glossary.md)
-- [about](about.md)
+- [介绍](introduction/index.md)
+- [复仇客户端](ethereum-clients/index.md)
+- [连接到客户端](connecting-to-clients/index.md)
+- [帐户管理](account-management.md)
+- [以太币](ether.md)
+- [网络](network/index.md)
+- [挖矿](mining.md)
+- [合同和交易](contracts-and-transactions/index.md)
+- [常见问题](frequently-asked-questions/frequently-asked-questions.md)
+- [词汇表](glossary.md)
+- [关于](about.md)
 
 ## 改善文件
 

@@ -1,7 +1,6 @@
-Scenarios Editor {#sec:scenario-editor}
-================
+# 方案编辑
 
-Scenarios can be used to test and debug contracts.
+方案可以用来测试和调试合同。
 
 A scenario is effectively a local blockchain where blocks can be mined
 without PoW -- otherwise testing would be quite slow ;).
@@ -17,38 +16,33 @@ In case it's not open, access the scenario and debugger pane by pressing
 F7 or Windows \> Show right or the debug button in the upper right
 corner of the main window.
 
-Creating and setting up a new scenario
---------------------------------------
+## 创建和设置一个新的方案
 
 When you launch Mix for the first time, an empty scenario, i.e. not
 containing any transactions, will be created. Add an account named
 "MyAccount" and set it's initial balance to 1 ether. Click OK. Rename
 the scenario to "Deploy".
 
-Modifying initial ether balance of an account
----------------------------------------------
+## 修改帐户的初始以太平衡
 
 Actually, we want to do a lot of tests Edit the Genesis block parameters
 and set your initial account balance to 1000 ether. Rebuild the scenario
 for the change to become effective.
 
-Rebuilding a scenario
----------------------
+## 重建场景
 
 Each time a transaction is modified or an account added, the scenario
 has to be rebuilt for modifications to become effective. Note that if a
 scenario is rebuilt the web frontend (local storage) may also need to be
 reset (this is not done automatically be Mix).
 
-Creating a transaction
-----------------------
+## 创建一个事务
 
 Let's get some ether sent to Bob. Create another account named "Bob"
 with zero ether balance. Create a new transaction in the scenario pane.
 Click "Add Tx..." and send 300 ether to Bob. Add a block.
 
-Altering and reusing scenarios
-------------------------------
+## 改变和重复使用场景
 
 Create a new scenario or start from a scenario with several transactions
 that you duplicate first
@@ -59,8 +53,7 @@ Modify scenario by specifying transactions that shall be removed
 
 Rebuild the scenario
 
-Display calls
--------------
+## 显示呼叫
 
 A contract call is a function invokation. This is not a transaction as a
 contract call cannot change the state. A contract call is not part of

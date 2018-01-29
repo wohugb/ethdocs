@@ -1,5 +1,5 @@
-Contracts and Transactions
-==========================
+# Contracts and Transactions
+
 
 ::: {.toctree}
 account-types-gas-and-transactions.rst contracts.rst
