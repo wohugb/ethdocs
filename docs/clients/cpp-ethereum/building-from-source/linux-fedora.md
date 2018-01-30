@@ -12,8 +12,4 @@ Steps: :
             mesa-dri-drivers snappy-devel ncurses-devel readline-devel curl-devel \
             python-devel jsoncpp-devel argtable-devel libmicrohttpd-devel
 
-Make sure you have cloned the repository recursively. If not please
-clone the submodules of the respository as well. It may happen that
-after \# make install, you might not be able to run eth because of
-linking errors. In that case you have to add the shared objects of eth
-into your load path for shared objects.
+Make sure you have cloned the repository recursively. If not please clone the submodules of the respository as well. It may happen that after \# make install, you might not be able to run eth because of linking errors. In that case you have to add the shared objects of eth into your load path for shared objects.

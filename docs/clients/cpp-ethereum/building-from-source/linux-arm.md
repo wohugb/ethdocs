@@ -1,13 +1,9 @@
 Building for Linux for ARM (cross builds)
 =========================================
 
-[doublethinkco](http://doublethink.co) maintain a Docker-based
-cross-build infrastructure which is hosted on Github in the
-[cpp-ethereum-cross](http://github.com/doublethinkco/cpp-ethereum-cross)
-repository.
+[doublethinkco](http://doublethink.co) maintain a Docker-based cross-build infrastructure which is hosted on Github in the [cpp-ethereum-cross](http://github.com/doublethinkco/cpp-ethereum-cross) repository.
 
-At the time of writing, these cross-built binaries have been
-successfully used on the following devices:
+At the time of writing, these cross-built binaries have been successfully used on the following devices:
 
 -   Jolla Phone (Sailfish OS)
 -   Nexus 5 (Sailfish OS)

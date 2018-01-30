@@ -1,17 +1,14 @@
 Portability {#cpp-ethereum-portability}
 ===========
 
-The Ethereum C++ client code is exceedingly portable, and is being
-successfully used on a huge range of different operating systems and
-devices.
+The Ethereum C++ client code is exceedingly portable, and is being successfully used on a huge range of different operating systems and devices.
 
-We continue to expand our range and are very open to pull-requests which
-add support for additional operating systems, compilers or devices.
+We continue to expand our range and are very open to pull-requests which add support for additional operating systems, compilers or devices.
 
 Operating systems verified as working
 -------------------------------------
 
--   
+-
 
     Linux
 
@@ -33,13 +30,13 @@ Operating systems verified as working
         -   Ubuntu Touch
         -   Ubuntu 15.04 MATE
 
--   
+-
 
     BSD
 
     :   -   FreeBSD
 
--   
+-
 
     OS X
 
@@ -49,7 +46,7 @@ Operating systems verified as working
         -   OS X 10.11 (Yosemite Server 5.0)
         -   OS X 10.11 (Yosemite Server 5.1)
 
--   
+-
 
     Windows
 
@@ -62,7 +59,7 @@ Operating systems verified as working
 Operating systems - work in progress
 ------------------------------------
 
--   
+-
 
     Linux
 
@@ -70,7 +67,7 @@ Operating systems - work in progress
         -   MeeGo
         -   Tizen
 
--   
+-
 
     BSD
 
@@ -83,18 +80,18 @@ Operating systems - work in progress
 Devices verified as working
 ---------------------------
 
--   
+-
 
     All varieties of desktop and laptop devices (Windows, OS X, Desktop Linux)
 
     :   -   64-bit (with rebuilt binaries)
         -   32-bit (not official supported, but they work)
 
--   
+-
 
     Smartphones
 
-    :   -   
+    :   -
 
             Linux
 
@@ -102,11 +99,11 @@ Devices verified as working
                 -   Meizu MX4 Ubuntu Edition
                 -   Nexus 5 (SailfishOS 2.0)
 
--   
+-
 
     SBCs
 
-    :   -   
+    :   -
 
             Linux
 
@@ -123,27 +120,27 @@ Devices verified as working
 Devices - work in progress
 --------------------------
 
--   
+-
 
     Smartwatches
 
-    :   -   
+    :   -
 
             Linux
 
             :   -   Samsung Gear S2
 
-        -   
+        -
 
             BSD
 
             :   -   Apple Watch
 
--   
+-
 
     Smartphones
 
-    :   -   
+    :   -
 
             Linux
 
@@ -152,25 +149,25 @@ Devices - work in progress
                 -   Samsung Z1
                 -   Samsung Z3
 
-        -   
+        -
 
             Android
 
             :   -   Samsung Galaxy S3
                 -   Samsung Galaxy S4
 
-        -   
+        -
 
             BSD
 
             :   -   iPhone 3GS
                 -   iPhone 5
 
--   
+-
 
     Developer phones
 
-    :   -   
+    :   -
 
             Linux
 
@@ -178,28 +175,28 @@ Devices - work in progress
                 -   Samsung RD-PQ
                 -   Samsung TM1
 
--   
+-
 
     Tablets
 
-    :   -   
+    :   -
 
             Android
 
             :   -   Samsung Galaxy Tab S 10.5
                 -   Nexus 7
 
-        -   
+        -
 
             BSD
 
             :   -   iPad Air 2
 
--   
+-
 
     SBCs
 
-    :   -   
+    :   -
 
             Linux
 

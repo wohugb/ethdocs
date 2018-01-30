@@ -1,16 +1,7 @@
 Installing dependencies for Arch Linux
 ======================================
 
-Compiling webthree-umbrella on Arch Linux requires dependencies from
-both the [official
-repositories](https://wiki.archlinux.org/index.php/Official_repositories)
-and the [Arch User Repository
-(AUR)](https://wiki.archlinux.org/index.php/Arch_User_Repository). To
-install packages from the official repositories
-[pacman](https://wiki.archlinux.org/index.php/Pacman) is used. For
-installation of packages from the AUR, a number of AUR helpers is
-[available](https://wiki.archlinux.org/index.php/AUR_helpers). For this
-guide, [yaourt](http://archlinux.fr/yaourt-en) AUR helper is used.
+Compiling webthree-umbrella on Arch Linux requires dependencies from both the [official repositories](https://wiki.archlinux.org/index.php/Official_repositories) and the [Arch User Repository (AUR)](https://wiki.archlinux.org/index.php/Arch_User_Repository). To install packages from the official repositories [pacman](https://wiki.archlinux.org/index.php/Pacman) is used. For installation of packages from the AUR, a number of AUR helpers is [available](https://wiki.archlinux.org/index.php/AUR_helpers). For this guide, [yaourt](http://archlinux.fr/yaourt-en) AUR helper is used.
 
 Installing dependencies
 -----------------------
@@ -24,15 +15,7 @@ Installing dependencies
 Compiling the source code
 -------------------------
 
-During this step, an installation folder for the Ethereum can be
-specified. Specification of the folder is optional though. If not given,
-the binary files will be located in the build folder. However, for this
-guide, it is assumed that the Ethereum files will be installed under
-/opt/eth. The reason for using /opt is that it makes much easier to
-delete the Ethereum files later on, as compared to having them installed
-under, e.g., /usr. Also /opt is commonly used to install software that
-is not managed by packaging systems, such as manually compiled programs.
-:
+During this step, an installation folder for the Ethereum can be specified. Specification of the folder is optional though. If not given, the binary files will be located in the build folder. However, for this guide, it is assumed that the Ethereum files will be installed under /opt/eth. The reason for using /opt is that it makes much easier to delete the Ethereum files later on, as compared to having them installed under, e.g., /usr. Also /opt is commonly used to install software that is not managed by packaging systems, such as manually compiled programs. :
 
     # enter webthree-umbrella folder after cloning its github repository
     cd webthree-umbrella

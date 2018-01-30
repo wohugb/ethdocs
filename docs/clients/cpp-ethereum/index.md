@@ -1,37 +1,13 @@
-cpp-ethereum
-============
+# cpp-ethereum
 
-![image](../../img/cpp_35k9.png){width="200px" height="200px"}
+![image](../../img/cpp_35k9.png) ![image](../../img/ETHEREUM-ICON_Black.png)
 
-![image](../../img/ETHEREUM-ICON_Black.png){width="200px"
-height="200px"}
+## 快速开始
 
-Quick Start
------------
-
--   Welcome to the Ethereum C++ project :-)
--   The GitHub repository for this project is
-    [ethereum/cpp-ethereum](https://github.com/ethereum/cpp-ethereum/)
--   Automation runs on
-    [Appveyor](https://ci.appveyor.com/project/ethereum/cpp-ethereum)
-    and
-    [TravisCI](https://travis-ci.org/ethereum/cpp-ethereum/branches).
--   We have instructions for [Installing binaries]{role="ref"} and
-    [Building from source]{role="ref"}.
--   Most project communication happens in our
-    [User](https://gitter.im/ethereum/cpp-ethereum) and
-    [Developer](https://gitter.im/ethereum/cpp-ethereum-development)
-    Gitter channels.
--   Issues are tracked in our [Github issue
-    tracker](http://github.com/ethereum/cpp-ethereum/issues).
--   cpp-ethereum is extremely portable and is used on a
-    [very broad range of platforms \<cpp-ethereum-portability\>]{role="ref"}.
-
-Details
--------
-
-::: {.toctree}
-current-status.rst building-from-source/index.rst
-installing-binaries/index.rst contributing.rst architecture.rst
-portability.rst running.rst
-:::
+- 欢迎来到以太坊C ++项目:-)
+- 这个项目的GitHub仓库是[ethereum/cpp-ethereum](https://github.com/ethereum/cpp-ethereum/)
+- 自动化在[Appveyor](https://ci.appveyor.com/project/ethereum/cpp-ethereum)和[TravisCI](https://travis-ci.org/ethereum/cpp-ethereum/branches)上运行。
+- 我们有[安装二进制文件]和[从源代码构建]的指令。
+- 大多数项目交流发生在我们的[用户](https://gitter.im/ethereum/cpp-ethereum)和[Developer](https://gitter.im/ethereum/cpp-ethereum-development)Gitter渠道。
+- 问题在我们的[Github问题跟踪器](http://github.com/ethereum/cpp-ethereum/issues)中进行跟踪。
+- cpp-ethereum是非常便携的，用于[非常广泛的平台](cpp-ethereum-portability).

@@ -4,27 +4,16 @@
 
 ## 目的和听众
 
-This guide should serve to be an entry level for all Ethereum users and
-developers. The goal is to create documentation with information, short
-tutorials, and examples that will cover all of the basic and
-intermediate functionality of using Ethereum to interact with dapps or
-develop a dapp.
+本指南应该成为所有以太坊用户和开发人员的入门级手册。
+我们的目标是创建包含简短的教程和范例信息的文档，这些范例将涵盖使用以太坊与dapps交互或开发dapp的所有基本和中间功能。
 
-Any information that is overly specific, technical, or not necessary to
-accomplish the documentation\'s goal will remain on the Ethereum Github
-Wiki. It may be referenced in this guide if necessary.
+任何过于具体，技术性或者不是完成本文档目的所需的信息都将留在以太坊Github维基页上。
+如有必要，可能会在本指南中引用。
 
-Although much of the information will be similar between the Frontier
-Guide and the Homestead Guide, efforts need to be made to make sure the
-information ported over is still accurate. This document is client
-agnostic, and examples and tutorials may be based on any client that the
-author decides to write on, as long as a distinction is made as to what
-client is being used in the examples/tutorials.
+尽管“边疆指南”和“家园指南”中的许多信息都是相似的，但仍需要努力确保移交的信息仍然准确无误。
+本文档是客户端不可知论者，只要区分示例/教程中使用的客户端，示例和教程可以基于作者决定写入的任何客户端。
 
-Although overly specific and technical documentation will not be
-included in the first iterations of this guide, community use and
-popularity of this guide will dictate future decisions to move Github
-wiki documentation to this format.
+虽然本指南的第一个版本中不包含过于具体的技术文档，但本指南的社区使用和普及将决定将Github维基文档转换为此格式的未来决策。
 
 过于具体和技术文件的例子包括：
 

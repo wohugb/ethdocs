@@ -60,8 +60,28 @@ pages:
     - 以太坊基金会: introduction/foundation.md
     - 贡献者: introduction/contributors.md
   - 客户端:
-    - 选择一个客户端: clients/choosing-a-client.md
-    - cpp-ethereum: clients/cpp-ethereum/index.md
+    - 简介: clients/index.md
+    - cpp-ethereum:
+      - 概述: clients/cpp-ethereum/index.md
+      - 当前状态: clients/cpp-ethereum/current-status.md
+      - 源码构建:
+        - 概述: clients/cpp-ethereum/building-from-source/index.md
+        - Linux: clients/cpp-ethereum/building-from-source/linux.md
+        - Windows: clients/cpp-ethereum/building-from-source/windows.md
+        - Macos: clients/cpp-ethereum/building-from-source/macos.md
+        - FreeBSD: clients/cpp-ethereum/building-from-source/freebsd.md
+        - Android: clients/cpp-ethereum/building-from-source/android.md
+        - IOS: clients/cpp-ethereum/building-from-source/ios.md
+        - 树莓派-嵌: clients/cpp-ethereum/building-from-source/rpi.md
+        - Odroid-嵌: clients/cpp-ethereum/building-from-source/odroid.md
+        - BeagleBone-嵌: clients/cpp-ethereum/building-from-source/beaglebone.md
+        - WandBoard-嵌: clients/cpp-ethereum/building-from-source/wandboard.md
+        - Linux-ARM: clients/cpp-ethereum/building-from-source/linux-arm.md
+      - 安装二进制: clients/cpp-ethereum/installing-binaries/index.md
+      - 贡献: clients/cpp-ethereum/contributing.md
+      - 构架: clients/cpp-ethereum/architecture.md
+      - 可抑制性: clients/cpp-ethereum/portability.md
+      - 运行: clients/cpp-ethereum/running.md
     - go-ethereum: clients/go-ethereum/index.md
     - pyethapp: clients/pyethapp/index.md
     - ethereumjs-lib: clients/ethereumjs-lib/index.md
