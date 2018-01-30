@@ -1,0 +1,1778 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="以太坊家园版中文文档">
+      
+      
+      
+        <meta name="author" content="Nosy">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="zh">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-0.17.2, mkdocs-material-2.2.5">
+    
+    
+      
+        <title>简介 - 以太坊家园版文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.bcabdff3.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.792431c1.css">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+    
+    
+    
+      <body data-md-color-primary="indigo" data-md-color-accent="indigo">
+    
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="以太坊家园版文档" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                以太坊家园版文档
+              </span>
+              <span class="md-header-nav__topic">
+                简介
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="前言" class="md-tabs__link">
+        前言
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../introduction/what-is-ethereum/" title="简介" class="md-tabs__link">
+          简介
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" title="客户端" class="md-tabs__link md-tabs__link--active">
+          客户端
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../connecting-to-clients/" title="链接客户端" class="md-tabs__link">
+          链接客户端
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../account-management/" title="账号管理" class="md-tabs__link">
+          账号管理
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../ether/" title="以太币" class="md-tabs__link">
+          以太币
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../network/connecting-to-the-network/" title="网络" class="md-tabs__link">
+          网络
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../mining/" title="挖矿" class="md-tabs__link">
+          挖矿
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../contracts-and-transactions/account-types-gas-and-transactions/" title="合约和交易" class="md-tabs__link">
+          合约和交易
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <span class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </span>
+    以太坊家园版文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/wohugb/ethdocs" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      wohugb/ethdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="前言" class="md-nav__link">
+      前言
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      简介
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        简介
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/what-is-ethereum/" title="什么是以太坊？" class="md-nav__link">
+      什么是以太坊？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/how-to-use-this-guide/" title="如何使用本指南？" class="md-nav__link">
+      如何使用本指南？
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/the-homestead-release/" title="家园版" class="md-nav__link">
+      家园版
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/web3/" title="Web 3" class="md-nav__link">
+      Web 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/history-of-ethereum/" title="以太网的历史" class="md-nav__link">
+      以太网的历史
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/community/" title="社区" class="md-nav__link">
+      社区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/foundation/" title="以太坊基金会" class="md-nav__link">
+      以太坊基金会
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/contributors/" title="贡献者" class="md-nav__link">
+      贡献者
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      客户端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        客户端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        简介
+      </label>
+    
+    <a href="./" title="简介" class="md-nav__link md-nav__link--active">
+      简介
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="为什么有多个以太坊客户？" class="md-nav__link">
+    为什么有多个以太坊客户？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="我应该在桌面/笔记本电脑上安装什么？" class="md-nav__link">
+    我应该在桌面/笔记本电脑上安装什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="我应该在手机/平板电脑上安装什么？" class="md-nav__link">
+    我应该在手机/平板电脑上安装什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sbc" title="我应该在我的SBC上安装什么？" class="md-nav__link">
+    我应该在我的SBC上安装什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="与客户互动" class="md-nav__link">
+    与客户互动
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      cpp-ethereum
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        cpp-ethereum
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/current-status/" title="当前状态" class="md-nav__link">
+      当前状态
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2-3" type="checkbox" id="nav-3-2-3">
+    
+    <label class="md-nav__link" for="nav-3-2-3">
+      源码构建
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-3">
+        源码构建
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/linux/" title="Linux" class="md-nav__link">
+      Linux
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/windows/" title="Windows" class="md-nav__link">
+      Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/macos/" title="Macos" class="md-nav__link">
+      Macos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/freebsd/" title="FreeBSD" class="md-nav__link">
+      FreeBSD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/android/" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/ios/" title="IOS" class="md-nav__link">
+      IOS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/rpi/" title="树莓派-嵌" class="md-nav__link">
+      树莓派-嵌
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/odroid/" title="Odroid-嵌" class="md-nav__link">
+      Odroid-嵌
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/beaglebone/" title="BeagleBone-嵌" class="md-nav__link">
+      BeagleBone-嵌
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/wandboard/" title="WandBoard-嵌" class="md-nav__link">
+      WandBoard-嵌
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/building-from-source/linux-arm/" title="Linux-ARM" class="md-nav__link">
+      Linux-ARM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/installing-binaries/" title="安装二进制" class="md-nav__link">
+      安装二进制
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/contributing/" title="贡献" class="md-nav__link">
+      贡献
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/architecture/" title="构架" class="md-nav__link">
+      构架
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/portability/" title="可抑制性" class="md-nav__link">
+      可抑制性
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cpp-ethereum/running/" title="运行" class="md-nav__link">
+      运行
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="go-ethereum/" title="go-ethereum" class="md-nav__link">
+      go-ethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pyethapp/" title="pyethapp" class="md-nav__link">
+      pyethapp
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ethereumjs-lib/" title="ethereumjs-lib" class="md-nav__link">
+      ethereumjs-lib
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ethereumj/" title="ethereum(j)" class="md-nav__link">
+      ethereum(j)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ethereumh/" title="ethereumH" class="md-nav__link">
+      ethereumH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="parity/" title="parity" class="md-nav__link">
+      parity
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ruby-ethereum/" title="ruby-ethereum" class="md-nav__link">
+      ruby-ethereum
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      链接客户端
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        链接客户端
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/web3.js/" title="web3.js" class="md-nav__link">
+      web3.js
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/web3j/" title="web3j" class="md-nav__link">
+      web3j
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/nethereum/" title="Nethereum" class="md-nav__link">
+      Nethereum
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../connecting-to-clients/ethereum-ruby/" title="ethereum-ruby" class="md-nav__link">
+      ethereum-ruby
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      账号管理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        账号管理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../account-management/" title="账号" class="md-nav__link">
+      账号
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      以太币
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        以太币
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ether/" title="以太币" class="md-nav__link">
+      以太币
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      网络
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        网络
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/connecting-to-the-network/" title="连接到网络" class="md-nav__link">
+      连接到网络
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../network/test-networks/" title="测试网络" class="md-nav__link">
+      测试网络
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      挖矿
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        挖矿
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining/" title="简介" class="md-nav__link">
+      简介
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining/algorithm/" title="算法" class="md-nav__link">
+      算法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining/cpu/" title="CPU挖矿" class="md-nav__link">
+      CPU挖矿
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining/gpu/" title="GPU挖矿" class="md-nav__link">
+      GPU挖矿
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining/pools/" title="矿池" class="md-nav__link">
+      矿池
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mining/resources/" title="资源" class="md-nav__link">
+      资源
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      合约和交易
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        合约和交易
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/account-types-gas-and-transactions/" title="帐户类型燃料交易" class="md-nav__link">
+      帐户类型燃料交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/contracts/" title="合约" class="md-nav__link">
+      合约
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/accessing-contracts-and-transactions/" title="访问合约和交易" class="md-nav__link">
+      访问合约和交易
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9-4" type="checkbox" id="nav-9-4">
+    
+    <label class="md-nav__link" for="nav-9-4">
+      Mix IDE
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-4">
+        Mix IDE
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/" title="概述" class="md-nav__link">
+      概述
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/project-editor/" title="项目编辑器" class="md-nav__link">
+      项目编辑器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/scenario-editor/" title="场景编辑器" class="md-nav__link">
+      场景编辑器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/state-viewer/" title="状态查看器" class="md-nav__link">
+      状态查看器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/transaction-explorer/" title="事务管理器" class="md-nav__link">
+      事务管理器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/javaScript-console/" title="JavaScript控制台" class="md-nav__link">
+      JavaScript控制台
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/transaction-debugger/" title="事务调试器" class="md-nav__link">
+      事务调试器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/dapp-deployment/" title="Dapps部署" class="md-nav__link">
+      Dapps部署
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/mix/code-editor/" title="代码编辑器" class="md-nav__link">
+      代码编辑器
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/developer-tools/" title="dapps" class="md-nav__link">
+      dapps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/ethereum-tests/" title="测试" class="md-nav__link">
+      测试
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contracts-and-transactions/web3-base-layer-services/" title="WEB3基础层服务" class="md-nav__link">
+      WEB3基础层服务
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="常见问题" class="md-nav__link">
+      常见问题
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="术语" class="md-nav__link">
+      术语
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="关于" class="md-nav__link">
+      关于
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="为什么有多个以太坊客户？" class="md-nav__link">
+    为什么有多个以太坊客户？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="我应该在桌面/笔记本电脑上安装什么？" class="md-nav__link">
+    我应该在桌面/笔记本电脑上安装什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="我应该在手机/平板电脑上安装什么？" class="md-nav__link">
+    我应该在手机/平板电脑上安装什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sbc" title="我应该在我的SBC上安装什么？" class="md-nav__link">
+    我应该在我的SBC上安装什么？
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="与客户互动" class="md-nav__link">
+    与客户互动
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">选择客户端<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">为什么有多个以太坊客户？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>从项目早期开始，就有多种不同操作系统的客户端实现。
+客户的多样性是整个生态系统的巨大胜利。
+它让我们验证协议(在<a href="https://github.com/ethereum/yellowpaper">黄皮书</a>中指定)是明确的。
+它为新的创新敞开了大门。
+这使我们都诚实。
+然而，最终用户可能会感到困惑，因为没有通用的“以太坊安装者”供他们使用。</p>
+<p>截至2016年9月，领先的实施是[go-ethereum]和[Parity]。</p>
+<table>
+<thead>
+<tr>
+<th>客户端</th>
+<th>语言</th>
+<th>开发商</th>
+<th>最新版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[go-ethereum]</td>
+<td>Go</td>
+<td><a href="https://ethereum.org/foundation">Ethereum Foundation</a></td>
+<td><a href="">go-ethereum-v1.4.18</a></td>
+</tr>
+<tr>
+<td>[Parity]</td>
+<td>Rust</td>
+<td><a href="https://ethcore.io/">Ethcore</a></td>
+<td><a href="https://github.com/ethereum-thereum/releases/tag/v1.4.18">Parity-v1.4.0</a></td>
+</tr>
+<tr>
+<td>[cpp-ethereum]</td>
+<td>C++</td>
+<td><a href="https://ethereum.org/foundation">Ethereum Foundation</a></td>
+<td><a href="https://github.com/ethcore/parity/releases/tag/v1.4.0">cpp-ethereum-v1.3.0</a></td>
+</tr>
+<tr>
+<td>[pyethapp]</td>
+<td>Python</td>
+<td><a href="https://ethereum.org/foundation">Ethereum Foundation</a></td>
+<td><a href="https://github.com/ethereum/pyethapp/release/v1.5.0">pyethapp-v1.5.0</a></td>
+</tr>
+<tr>
+<td>[ethereumjs-lib]</td>
+<td>js</td>
+<td><a href="https://ethereum.org/foundation">Ethereum Foundation</a></td>
+<td><a href="https://github.com/ethereumhereumjs-lib/releases/tag/v3.0.0">ethereumjs-lib-v3.0.0</a></td>
+</tr>
+<tr>
+<td>[Ethereum(J)]</td>
+<td>Java</td>
+<td><a href="http://www.ether.camp"><ether.camp></a></td>
+<td><a href="https://github.com/ethereum/ethereumj/releases/tag/1.3.1">ethereumJ-v1.3.1</a></td>
+</tr>
+<tr>
+<td>[ruby-ethereum]</td>
+<td>Ruby</td>
+<td><a href="https://github.com/janx/">Jan Xie</a></td>
+<td><a href="https://rubygemrg/gems/ruby-ethereum/versions/0.9.6">ruby-ethereum-v0.9.6</a></td>
+</tr>
+<tr>
+<td>[ethereumH]</td>
+<td>Haskell</td>
+<td><a href="http://www.blockapps.net/">BlockApps</a></td>
+<td>no Homestead release yet</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">我应该在桌面/笔记本电脑上安装什么？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>大多数用户可能会安装<a href="https://github.com/ethereum/mist">Mist / Ethereum钱包</a>，这将足够满足他们的需求。</p>
+<p>以太坊钱包是<strong> Mist浏览器</strong>的“单一的dapp”部署，这将是大都会发展阶段的核心，</p>
+<p>Mist带有捆绑的[go-ethereum]和[cpp-ethereum]二进制文件，如果你在Mist启动时没有运行命令行以太坊客户端，
+如果你想使用喷Mist奇偶，或者在专用网络上运行喷Mist，只需在喷Mist之前启动节点，而喷Mist将连接到你的节点</p>
+<p><strong>Work is underway to add Parity and other clients as "first-class entities" to Mist too.</strong></p>
+<p>如果你想在命令行中与Ethereum交互，并利用Javascript控制台，那么你将需要安装一个客户端
+按照上表中的链接进一步说明。</p>
+<p>如果你想开采，那么Mist将是不够的。
+查看[采矿]部分。</p>
+<h2 id="_4">我应该在手机/平板电脑上安装什么？<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>我们刚刚开始支持移动设备。
+Go团队正在发布实验性的iOS和Android库，一些开发人员正在使用这些库开始引导移动应用程序，但还没有任何可用的移动Ethereum客户端。</p>
+<p>在移动设备上使用以太坊的主要障碍是Light Client支持仍然不完整。
+已经完成的工作是在私人分支，只有Go客户端可用。
+doublethinkco将在接下来的几个月内开始为C ++客户开发Light Client。</p>
+<p>查看<a href="http://status.im">Status.im</a>，最初使用<a href="https://github.com/status-im/ethereumj-personal">ethereumj-personal</a>基于[Ethereum(J) ,]，但最近翻转到与Light Client交叉构建。</p>
+<h2 id="sbc">我应该在我的SBC上安装什么？<a class="headerlink" href="#sbc" title="Permanent link">&para;</a></h2>
+<p>你有一些选择，这取决于你的技能水平，以及你正在做什么。</p>
+<ul>
+<li>下载完整准备的图像(链接到页面，提供详细的下载和安装说明)</li>
+<li>如果你是新来的以太坊和SBC董事会，如树莓派，那么这是给你的！,只需下载特定于您正在使用的开发板的图像，将其刻录到SD卡，引导设备并运行以太坊！</li>
+<li>下载预编译的应用程序(链接到页面，提供详细的下载和安装说明)</li>
+<li>如果你已经有一个SBC运行，并有一个特定的，首选的操作系统或设置，你想保持，那么这是你最好的选择！,根据平台的不同，您可以简单地下载相应的可执行文件，并且只需将库和PATH设置的链接最小化，就可以在现有环境中运行以太坊。</li>
+<li>从源代码使用可定制的脚本(链接到更多的细节和单个SBC链接到<a href="https://github.com/ethembedded">链接</a>)</li>
+<li>希望执行自定义安装？,我们有脚本可以从“在设备上”进行编译。我们的脚本包含自动安装的依赖关系以及客户端本身。
+    这将允许您安装以太坊客户端的特定版本(i.e.-"develop", "master", etc.), 编译你自己的分支版本的客户端, 而且一般都是在构建过程中错综复杂的。</li>
+</ul>
+<h2 id="_5">与客户互动<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>为了以编程方式与以太坊客户端进行交互，请参阅[正在连接客户端]部分。</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../introduction/contributors/" title="贡献者" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                贡献者
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="cpp-ethereum/" title="概述" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                概述
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            版权 &copy; 2018 -  wohugb.github.io
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="http://wohugb.github.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/wohugb" class="md-footer-social__link fa fa-github-alt"></a>
+    
+      <a href="https://twitter.com/wohugb" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://linkedin.com/in/wohugb" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.6cdc17f0.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              <script src="../assets/javascripts/lunr/lunr.zh.js"></script>
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"0.17.2",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,4 +1,4 @@
-# Homestead-Guide
+# 家园版指南
 
 [![License](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![Gitter](https://badges.gitter.im/ethereum/homestead-guide.svg)](https://gitter.im/ethereum/homestead-guide?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -9,14 +9,14 @@ the Homestead release of the Ethereum project.
 [Hosted on
 ReadTheDocs](https://ethereum-homestead.readthedocs.org/en/latest/)
 
-## HOW YOU CAN HELP-------
+## 你可以帮助你
 
 **Homestead Documentation Initiative**
 
-It doesn\'t matter if you are a beginner or an expert, there are many
+It doesn't matter if you are a beginner or an expert, there are many
 ways to help.
 
-### Write Content to the Guide
+### 将内容写入指南
 
 Help transfer and update content from the Ethereum Wiki, Ethereum
 Frontier Guide, the Ethereum Stack Exchange, or any other reputable
@@ -27,7 +27,7 @@ Make sure the documentation you are porting over is still accurate and
 follows our guidelines for the Homestead docs
 (<https://ethereum-homestead.readthedocs.org/en/latest/about.html>).
 
-### Review What Has Been Written
+### 回顾已经写了什么
 
 Have a look at our guide
 (<https://ethereum-homestead.readthedocs.org/en/latest/>) and give us
@@ -35,29 +35,29 @@ feedback by visiting our Gitter Chatroom
 (<https://gitter.im/ethereum/homestead-guide>) or submit a pull request
 or issue to this repo. Too EZ.
 
-### What\'s In It For Me?
+### 这对我来说是什么？
 
 Your name will forever be immortalized, both in my heart and on the
 Contributors page in the guide. As a side effect, you may also get those
 good feels that you get when you help improve documentation :-)
 
-## GETTING STARTED------
+## 入门
 
 This project uses Sphinx
 (<http://www.sphinx-doc.org/en/stable/index.html>) to build html that is
 published to Read the Docs. To run this documentation on your computer,
 you should do the following:
 
-### Prerequisites
+### 先决条件
 
 -   Python 2.6 or later
 -   git
 
-### Install Sphinx, etc
+### 安装狮身人面像等
 
 For OSX/Linux users (based on instructions here:
 <https://read-the-docs.readthedocs.org/en/latest/getting_started.html>).
-Sphinx as of 1.4.0 no longer automatically installs sphinx\_rtd\_theme,
+Sphinx as of 1.4.0 no longer automatically installs sphinx_rtd_theme,
 hence its addition below.
 
 -   From command line: `sudo pip install sphinx sphinx_rtd_theme`
@@ -66,11 +66,11 @@ For Windows users:
 
 -   <http://www.sphinx-doc.org/en/stable/install.html#windows-install-python-and-sphinx>
 
-### Get source code
+### 获取源代码
 
 -   git clone: <https://github.com/ethereum/homestead-guide.git>
 
-### Build and view html
+### 构建和查看HTML
 
 -   In a terminal window, go to your homestead-guide directory.
 -   `make html`
@@ -79,9 +79,9 @@ For Windows users:
 -   Tip: each time you run `make html`, just reload your browser to view
     changes
 
-## RESOURCES
+## 资源
 
-**Homestead**
+**家园**
 
 -   Homestead Guide online:
     <https://ethereum-homestead.readthedocs.org/en/latest/index.html>
@@ -90,16 +90,16 @@ For Windows users:
 -   Google doc:
     <https://docs.google.com/document/d/1rVjrNgaDRAQdPp4rGqWrEk5fPgiHff0xsYGCyf06oM8/edit>
 
-**Legacy Docs**
+**旧版文档**
 
 -   Ethereum Wiki: <https://github.com/ethereum/wiki/wiki>
 -   Frontier Guide:
     <https://ethereum.gitbooks.io/frontier-guide/content/> (see below
     for converted files)
--   Souptacular\'s Giant List of Ethereum Resources:
+-   Souptacular's Giant List of Ethereum Resources:
     <https://souptacular.gitbooks.io/ethereum-tutorials-and-tips-by-hudson/content/giant_ethereum_resource_list.html>
 
-**Read the Docs and Sphinx**
+**阅读文档和狮身人面像**
 
 -   Read the Docs:
     <https://read-the-docs.readthedocs.org/en/latest/getting_started.html>
@@ -109,7 +109,7 @@ For Windows users:
 -   RST cheat sheet:
     <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>
 
-## Directory structure----------
+## 目录结构
 
 ``` {.sourceCode .}
 homestead-guide
@@ -123,7 +123,7 @@ homestead-guide
   Makefile - platforms with make to build docs
 ```
 
-## Roadmap for Homestead Guide (Old)------------------------
+## 家园指南路线图（旧）
 
 -   boilerplate using sphinx-quickstart
 -   settings in conf.py
@@ -137,7 +137,7 @@ homestead-guide
     content converted to rst)
 -   script to annotate entire wiki with legacy warning
 
-## Strategy for migrating old fronter-guide content (Old)---------------------------------------------
+## 迁移老前辈指南内容的策略（旧）
 
 -   temporaritly include resources about the documentation project
     within the book itself

@@ -64,14 +64,14 @@
     
         
     <url>
-     <loc>/clients/choosing-a-client/</loc>
+     <loc>/clients/</loc>
      <lastmod>2018-01-30</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/clients/cpp-ethereum/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
