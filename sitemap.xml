@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,49 +13,49 @@
         
     <url>
      <loc>/introduction/what-is-ethereum/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/introduction/how-to-use-this-guide/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/introduction/the-homestead-release/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/introduction/web3/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/introduction/history-of-ethereum/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/introduction/community/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/introduction/foundation/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/introduction/contributors/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -65,7 +65,7 @@
         
     <url>
      <loc>/clients/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -77,43 +77,43 @@
         
     <url>
      <loc>/clients/go-ethereum/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/clients/pyethapp/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/clients/ethereumjs-lib/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/clients/ethereumj/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/clients/ethereumh/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/clients/parity/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/clients/ruby-ethereum/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -123,31 +123,31 @@
         
     <url>
      <loc>/connecting-to-clients/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/connecting-to-clients/web3.js/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/connecting-to-clients/web3j/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/connecting-to-clients/nethereum/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/connecting-to-clients/ethereum-ruby/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -157,7 +157,7 @@
         
     <url>
      <loc>/account-management/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -167,7 +167,7 @@
         
     <url>
      <loc>/ether/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -177,13 +177,13 @@
         
     <url>
      <loc>/network/connecting-to-the-network/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/network/test-networks/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -193,37 +193,37 @@
         
     <url>
      <loc>/mining/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/mining/algorithm/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/mining/cpu/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/mining/gpu/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/mining/pools/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/mining/resources/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -233,19 +233,19 @@
         
     <url>
      <loc>/contracts-and-transactions/account-types-gas-and-transactions/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/contracts-and-transactions/contracts/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/contracts-and-transactions/accessing-contracts-and-transactions/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -257,19 +257,19 @@
         
     <url>
      <loc>/contracts-and-transactions/developer-tools/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/contracts-and-transactions/ethereum-tests/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/contracts-and-transactions/web3-base-layer-services/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -278,7 +278,7 @@
     
     <url>
      <loc>/faq/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -286,7 +286,7 @@
     
     <url>
      <loc>/glossary/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -294,7 +294,7 @@
     
     <url>
      <loc>/about/</loc>
-     <lastmod>2018-01-30</lastmod>
+     <lastmod>2018-02-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
